@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	double A, B;
+	cin >> A >> B;
+	cout.precision(9);
+	cout << A / B;
+	
+}
