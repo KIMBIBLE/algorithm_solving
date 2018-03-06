@@ -84,7 +84,7 @@ int main()
     cout << s << endl;
 
     // (2) 테스트
-    cout << getline(cin, s);
+    getline(cin, s);
     cout << s << endl;
 
     // iostate는 입력 성공 시 0으로 세팅됨.
