@@ -77,5 +77,5 @@ int main()
             return f(n-1) + f(n-2);
     };
 
-    cout << f(n);;
+    cout << f(n) << endl;
 }
