@@ -43,10 +43,16 @@
  * 
  * 
  * SOLVE 1> 
+ * multiset의 count의 성능 
+ * Logarithmic in size and linear in the number of matches.
+ * 
+ * 
  * multiset에 데이터를 저장하고, count를 출력하는 방식에서
  * timeout이 발생한다. multiset을 사용한는 것 보다
  * 효율적인 방식을 고민해야 할 듯.
- * O(NlogN)보다 빠른 방법을 찾아야 함.
+ * O(NlogN)보다 빠른 방법을 찾아야 함. => NlogN보다
+ * 빨리 풀 수 있는 방법이 있나??? 최적화 문제는 아닐까에
+ * 대한 고민도 해보자
  * 
  * 출력 포맷 정리
  * %d    -   int
