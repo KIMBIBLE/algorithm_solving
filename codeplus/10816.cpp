@@ -34,33 +34,39 @@
  * - 생각
  * 
  * 
- * SOLVE 1> 
+ * SOLVE 2> 
+ * 풀다가 못풀어서 백준 풀이 봤는데, 생각이 참신하다!!
+ * STL을 이런식으로 활용할 수 도 있구나!
+ * 중복된 수를 셀 때 이런식으로 소팅해놓고
+ * 'upper_bound() - lower_bound()'를 통해 사이의 요소만 구해버리면
+ * 속도면에서 훨씬 빠르다!
+ * 
+ * 참고> stl 컨테이너 간 '-' 연산 시에는 요소의 갯수가 나옴!(포인터랑 비슷)
  * 
 */
-
-// Solve 1
-#include <set>
+#include <algorithm>
 #include <iostream>
+#include <vector>
 using namespace std;
 
-int main()
-{
-    int N, M;
-    multiset<int> m;
-    int num;
-
-    scanf("%d", &N);
-    for(int i=0; i<N; i++)
-    {
-        scanf("%d", &num);
-        m.insert(num);
+int main() {
+    int n;
+    scanf("%d",&n);
+    vector<int> a(n);
+    for (int i=0; i<n; i++) {
+        scanf("%d",&a[i]);
     }
-
-    scanf("%d", &M);
-    for(int i=0; i<M; i++)
-    {
-        scanf("%d", &num);
-        printf("%lu ", m.count(num));
+ 
+    sort(a.begin(), a.end());
+    int m;
+    scanf("%d",&m);
+    for (int i=0; i<m; i++) {
+        int number;
+        scanf("%d",&number);
+        auto l = lower_bound(a.begin(), a.end(), number);
+        auto r = upper_bound(a.begin(), a.end(), number);
+        printf("%d ",r-l);
     }
-
+    printf("\n");
+    return 0;
 }
