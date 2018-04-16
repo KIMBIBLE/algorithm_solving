@@ -13,12 +13,11 @@ int main()
         scanf("%d", &x[i]);
         sum += x[i];
     }
-    sum /= 2;
 
     int res = 0;
     
     for(int i=0; i<n; i++){
-        res += x[i];
+        res += x[i] * 2;
         if(sum <= res) {
             printf("%d", i+1);
             break;
