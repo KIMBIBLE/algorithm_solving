@@ -49,6 +49,6 @@ int main()
     for(int i=0; i<n; i++){
         x[i] = a[i].second - i;
     }
-    cout << *max_element(x.begin(), x.end()) + 1 << endl;
 
+        cout << *max_element(x.begin(), x.end()) + 1 << endl;
 }
