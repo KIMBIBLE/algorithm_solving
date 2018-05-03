@@ -48,28 +48,3 @@ int main()
         cout << endl;
     }
 }
-
-/*
-int e[MAX][2];
-int cnt[MAX];
-
-int main()
-{
-    ios_base::sync_with_stdio(false), cin.tie(NULL);
-    int n, m; cin >> n >> m;
-    for(int i=0; i<m*2; i++){
-        cin >> a[i][0] >> a[i][1];
-    }
-
-    for(int i=0; i<m*2; i++){
-        cnt[a[i][0]] += 1;
-    }
-
-    for(int i=0; i<m; i++){
-        cout << i << " : " << cnt[i] << endl;
-    }
-    cout << endl;
-
-
-}
-*/
