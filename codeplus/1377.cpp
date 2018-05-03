@@ -50,5 +50,6 @@ int main()
         x[i] = a[i].second - i;
     }
 
+
         cout << *max_element(x.begin(), x.end()) + 1 << endl;
 }
