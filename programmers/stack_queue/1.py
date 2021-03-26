@@ -1,9 +1,7 @@
 def solution(bridge_length, weight, truck_weights):
-    answer      = 0  # time
-    bridge      = [0 for i in range(bridge_length)]
+    answer = 0  # time
+    bridge = [0 for i in range(bridge_length)]
     bridge_weight = 0
-    #bridge[len(bridge)-1]   = truck_weights[0]
-    #del truck_weights[0]
 
     # bridge가 비어있다면 종료
     #while sum(bridge) != 0 or len(truck_weights) != 0:
@@ -27,3 +25,6 @@ def solution(bridge_length, weight, truck_weights):
             bridge.append(0)
 
     return answer
+
+res = solution(2, 10, [7, 4, 5, 6])
+print(res)
