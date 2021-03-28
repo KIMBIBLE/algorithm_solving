@@ -6,3 +6,4 @@ out.txt
 output.txt
 *.txt
 *.pyc
+.vscode
