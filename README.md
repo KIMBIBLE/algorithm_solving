@@ -4,7 +4,7 @@
 
 ### a. [Data Structure](./cheatsheet/datastructure.md)
 
-### b. [Input](./cheatsheet/input_output.md)
+### b. [Input and Output](./cheatsheet/input_output.md)
 
 ### c. [Sort](./cheatsheet/sort.md)
 
