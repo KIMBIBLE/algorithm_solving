@@ -2,7 +2,7 @@
 
 ## 1. Cheat Sheet
 
-### a. [Sort](./cheatsheet/datastructure.md)
+### a. [Data Structure](./cheatsheet/datastructure.md)
 
 ### b. [Input](./cheatsheet/input.md)
 

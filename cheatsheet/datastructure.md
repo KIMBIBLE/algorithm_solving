@@ -70,9 +70,10 @@
 
         # c = [[0] * n] * n # 이 표현은 2차원 배열을 생성하고자 할 때 사용 불가능!
         ```
+
         <details>
         <summary>more</summary>
-            
+
             ```py
             a = [[0] * n for _ in range(n)]
             b = [[0 for _ in range(n)] for __ in range(n)]
@@ -89,7 +90,9 @@
             3   0x10ae83a00 0x10ae83b40 0x10ae83c80
             4   0x10ae83d80 0x10ae83840 0x10ae83c80
             """
+
             ```
+
         </details>
 
 ## 2. Stack
