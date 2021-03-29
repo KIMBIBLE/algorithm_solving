@@ -6,6 +6,7 @@
 
 ### b. [Input](./cheatsheet/input.md)
 
-
 ### c. [Sort](./cheatsheet/sort.md)
+
+### d. [Python](./cheatsheet/python.md)
 
