@@ -69,6 +69,7 @@
         b = [[0 for _ in range(n)] for __ in range(n)]
 
         # c = [[0] * n] * n # 이 표현은 2차원 배열을 생성하고자 할 때 사용 불가능!
+        # [[0] * n]이 compound object 이고, list의 multiplication operator인 '*'이 shallow copy 동작을 수행하기 때문!
         ```
         
         <details>
