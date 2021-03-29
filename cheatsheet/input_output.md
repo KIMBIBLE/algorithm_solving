@@ -17,6 +17,8 @@ n5, n6 = map(int, readline().split())
 ```
 
 ## 2. Array
+
+### a. Python
 * 정수 입력
 ```py
 import sys
@@ -30,7 +32,5 @@ for i in range(n):
         arr[i][j] = int(readline())
 ```
 
-
-### a. Python
 
 # Output
