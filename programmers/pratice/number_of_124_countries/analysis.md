@@ -58,11 +58,19 @@
 
     * testcase 1
 
-        14 =    a <span>&#215;</span> 3<sup>2</sup> + 
-                a <span>&#215;</span> 3<sup>1</sup> + 
-                b <span>&#215;</span> 3<sup>0</sup> 
+        14    = 1 <span>&#215;</span> 3<sup>2</sup> + 
+                1 <span>&#215;</span> 3<sup>1</sup> + 
+                2 <span>&#215;</span> 3<sup>0</sup> 
                 
         result = "aab" -> "112" 
+
+    * testcase 2
+
+        15    = 1 <span>&#215;</span> 3<sup>2</sup> + 
+                1 <span>&#215;</span> 3<sup>1</sup> + 
+                3 <span>&#215;</span> 3<sup>0</sup> 
+                
+        result = "aac" -> "114" 
 
     * conversion fomular
 
@@ -71,7 +79,7 @@
             ... + 
             *x*<sub>1</sub> <span>&#215;</span> 3<sup>1</sup> + 
             *x*<sub>0</sub> <span>&#215;</span> 3<sup>0</sup> 
-            (n, m은 자연수)
+            (`n, m은 자연수`, `X={1,2,3}`)
         
         res = *x*<sub>m-1</sub> + *x*<sub>m-2</sub> + ... + *x*<sub>1</sub> + *x*<sub>0</sub>
 
@@ -83,10 +91,13 @@
 
         - `높은 자리 수` 부터 변환: 
           - `m-1` 값을 먼저 구하고, `m-1` 부터 `0` 까지 `1씩 감소`시켜가며 계수 구하기 반복
+          - 이 방법의 경우는 해당 문제가 변형된 진법을 사용하기 때문에 적용하기 어려움.
         
         - `낮은 자리 수` 부터 변환: 
           - 가장 낮은 항부터 나머지 구한 후 해당 값 저장.
           - 이후 n에서 나머지를 빼주고, 다음 항을 divisor로 나머지 구하기 반복. 
           - n = 0 <span>&#215;</span> 3<sup>m</sup> = 0 까지 반복
           - 반복이 종료되면 문자열 뒤집기 -> NlgN
+          
+          - **나머지가 0인경우, 계수가 3인 것으로 생각해야 함!**
 
