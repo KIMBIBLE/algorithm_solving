@@ -19,18 +19,48 @@ n5, n6 = map(int, readline().split())
 ## 2. Array
 
 ### a. Python
-* 정수 입력
-```py
-import sys
-lambda readline: sys.stdin.readline()
+* 이차원 배열에 정수 입력 받기
+  * Case 1: 각 라인에 구분자가 없는 경우
+    ```
+    4 6
+    101111
+    101010
+    101011
+    111011
+    ```
 
-n, m = map(int, readline().split())
-arr = [[0] * m for _ in range(n)]
+    ```py
+    import sys
+    readline = lambda: sys.stdin.readline()
+    n, m = map(int, readline().split())
+    a = [list(map(int, input())) for _ in range(n)]
+    ```
 
-for i in range(n):
-    for j in range(m):
-        arr[i][j] = int(readline())
-```
+  * Case 2: 가장 일반적인 케이스로 구분자가 `' '`인 경우
+    ```
+    4 3
+    0 1 0
+    1 2 3
+    4 3 2
+    ```
 
+    ```py
+    import sys
+    lambda readline: sys.stdin.readline()
+
+    n, m = map(int, readline().split())
+    arr = [[0] * m for _ in range(n)]
+
+    # Multiline 
+    for i in range(n):
+        for j in range(m):
+            arr[i][j] = int(readline())
+
+    # Oneline
+    n, m = map(int, readline().split())
+    a = []
+    ```
+
+  * Case 3: 몇개 입력할지 알려주지 않고, 입력이 끝날 때 까지 입력을 받는 경우(`EOF`)
 
 # Output
