@@ -84,3 +84,31 @@ n5, n6 = map(int, readline().split())
 
 
 # Output
+
+## 1. 요소마다 개행('\n')을 붙여서 출력
+
+### a. Python
+  * print() 일반 출력 예시
+  
+    ```py
+    for i in range(3):
+        print i
+    
+    # result
+    # 0
+    # 1
+    # 2
+    ```
+
+## 1. 모든 요소를 한줄에 출력
+
+### a. Python
+  * print에 comma를 붙여 사용
+    
+    ```py
+    for i in range(5):
+        print i,
+    
+    # result
+    # 0 1 2 3 4
+    ```
