@@ -2,9 +2,9 @@
 
 ## 1. Array
 
-### a. Python
+### a. 1차원 배열
 
-1. 1차원 배열 (One Dimensional Array) : List(Mutable Object)
+1. Python : List(Mutable Object)
 
     * 선언
         ```py
@@ -59,8 +59,8 @@
             * `== 연산자` : 두 객체의 content나 value가 동일한지
             * `is 연산자` : 두 객체가 동일한 객체인지
 
-
-2. 2차원 배열 (Two Dimensional Array) : List (Mutable Object)
+### b. 2차원 배열 (Two Dimensional Array)
+1. Python : List (Mutable Object)
 
     * 선언
         ```py
@@ -102,3 +102,15 @@
 
 
 ## 4. Graph
+
+### a. 인접 행렬(adjacent Matrix)
+1. Python
+
+2. Edge Cases
+
+### b. 인접 리스트(adjacent List)
+1. Python
+
+2. Edge Cases
+
+## 5. Tree
