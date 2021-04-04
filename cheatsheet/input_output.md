@@ -82,6 +82,28 @@ n5, n6 = map(int, readline().split())
             break
     ```
 
+## 2. Graph
+
+### a. Python
+* type 1: programmers
+    * case a
+        ```
+        n: 3 
+        data: [[1,1,0], [1,1,0], [0,1,2]
+        ```
+
+  * type 2: boj
+    * case a
+        ```
+        line 1 -> N: Node 갯수, M: 간선의 갯수, V: 탐색을 시작할 정점
+        line 2 ~ line M+1 -> 간선을 연결하는 두 정점의 번호
+        4 5 1
+        1 2
+        1 3
+        1 4
+        2 4
+        3 4
+        ```
 
 # Output
 
