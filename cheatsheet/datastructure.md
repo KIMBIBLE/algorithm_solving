@@ -131,8 +131,6 @@
 
     ```
 
-2. Edge Cases
-
 
 ### c. 인접 리스트(adjacent List)
 1. Python
@@ -147,10 +145,15 @@
         graph[dest].append(src)
     ```
 
-1. Edge Cases
+### d. 간선 리스트(Edge List)
+1. Python
+    ```py
+    ```
+
+### e. Edge Cases
 
 ## 5. Tree
 1. Python
    ```py
-   
+
    ```
