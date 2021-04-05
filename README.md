@@ -2,11 +2,15 @@
 
 ## 1. Cheat Sheet
 
-### a. [Data Structure](./cheatsheet/datastructure.md)
+### a. [Problem Solving](./cheatsheet/problem_solving.md)
 
-### b. [Input and Output](./cheatsheet/input_output.md)
+### a. [Time Complixity](./cheatsheet/time_complixity.md)
 
-### c. [Sort](./cheatsheet/sort.md)
+### b. [Data Structure](./cheatsheet/datastructure.md)
 
-### d. [Python](./cheatsheet/python.md)
+### c. [Input and Output](./cheatsheet/input_output.md)
+
+### d. [Sort](./cheatsheet/sort.md)
+
+### e. [Python](./cheatsheet/python.md)
 
