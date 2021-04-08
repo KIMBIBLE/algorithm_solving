@@ -8,9 +8,11 @@
 
 ### c. [Data Structure](./cheatsheet/datastructure.md)
 
-### d. [Input and Output](./cheatsheet/input_output.md)
+### d. [Algorithm Overview](./cheatsheet/algo.md)
 
-### e. [Sort](./cheatsheet/sort.md)
+### e. [Input and Output](./cheatsheet/input_output.md)
 
-### f. [Python](./cheatsheet/python.md)
+### f. [Sort](./cheatsheet/sort.md)
+
+### g. [Python](./cheatsheet/python.md)
 
