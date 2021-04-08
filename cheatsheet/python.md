@@ -96,3 +96,17 @@
       * assignment( `=` ) 사용: 새로운 참조를 통해 original list의 변화를 주고 싶을 때!(e.g. call by reference로 함수 전달)
       * deep-copy( `copy.deepcopy(original)` ) 사용: 새로운 참조를 객체의 값만 읽을 때 사용하고, 객체 내부를 변경하고 싶지 않을 때!(e.g. call by value로 함수 전달)
 
+
+## 3. recursion limit
+
+* 파이썬 인터프리터의 재귀 깊이(default): 1000
+  ```py
+  import sys
+  sys.getrecursionlimit() # 1000
+  ```
+
+* 파이썬 인터프리터의 재귀 깊이 재 설정
+  ```py
+  limit = 2000
+  sys.setrecursionlimit(limit)
+  ```
