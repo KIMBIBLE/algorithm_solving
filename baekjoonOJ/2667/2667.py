@@ -37,7 +37,6 @@ if __name__ == '__main__':
             if val != '0':
                 squareMap[i][j] = NOT_VISITED
 
-
     mark_num = 0
     res = []
     for i in range(1, n + 1):
