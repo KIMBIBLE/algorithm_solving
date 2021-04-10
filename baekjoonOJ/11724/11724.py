@@ -27,12 +27,32 @@ def printGraph(graph):
     for idx, each in enumerate(graph):
         print('{nodeNum} : {nodes} '.format(nodeNum=idx, nodes=each))
 
+"""
+메모리: 63756 KB
+시간 : 760 ms
+"""
 def dfs(graph, visited, cur_node):
     visited[cur_node] = True
 
     for next_node in graph[cur_node]:
         if visited[next_node] == False:
             dfs(graph, visited, next_node)
+
+"""
+pypy 실행 시(python3 실행은 시간 초과)
+메모리: 221616 KB
+시간 : 4424 ms
+"""
+def dfs2(graph, visited, cur_node):
+    stack = [cur_node]
+
+    while stack:
+        cur_node = stack.pop()
+        visited[cur_node] = True
+
+        for next_node in graph[cur_node]:
+            if visited[next_node] == False:
+                stack.append(next_node)
 
 if __name__ == '__main__':
     n, m = map(int, readline().split())
@@ -44,7 +64,7 @@ if __name__ == '__main__':
     for node in range(1, n + 1):
         if visited[node] == False:
             linked_component_counter += 1
-            dfs(graph, visited, node)
+            dfs2(graph, visited, node)
 
     print(linked_component_counter)    
 
