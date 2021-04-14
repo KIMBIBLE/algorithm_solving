@@ -8,6 +8,8 @@
 
 인접 리스트 구현 시 DFS/BFS: O((N + M)) <= O(N + N^2)
 인접 행렬 구현 시 DFS/BFS: O((N^2)) <= O(N^2)
+
+모든 노드에 대해 방문해야하니까 O(N^2) * O(N) = O(N^3)
 """
 
 import sys
@@ -31,28 +33,37 @@ def printGraph(graph):
 메모리: 63756 KB
 시간 : 760 ms
 """
-def dfs(graph, visited, cur_node):
+def dfs_recursive(graph, visited, cur_node):
+    """
+    if visited[cur_node] == False:
+        print(cur_node)
+    """
     visited[cur_node] = True
 
     for next_node in graph[cur_node]:
         if visited[next_node] == False:
-            dfs(graph, visited, next_node)
+            dfs_recursive(graph, visited, next_node)
 
 """
 pypy 실행 시(python3 실행은 시간 초과)
 메모리: 221616 KB
 시간 : 4424 ms
 """
-def dfs2(graph, visited, cur_node):
+def dfs_iterative(graph, visited, cur_node):
     stack = [cur_node]
 
     while stack:
-        cur_node = stack.pop()
-        visited[cur_node] = True
+        node = stack.pop()
+        """
+        if visited[node] == False:
+            print(node)
+        """
+        visited[node] = True
 
-        for next_node in graph[cur_node]:
+        for next_node in graph[node][::-1]:
             if visited[next_node] == False:
                 stack.append(next_node)
+
 
 if __name__ == '__main__':
     n, m = map(int, readline().split())
@@ -64,10 +75,7 @@ if __name__ == '__main__':
     for node in range(1, n + 1):
         if visited[node] == False:
             linked_component_counter += 1
-            dfs2(graph, visited, node)
+            dfs_recursive(graph, visited, node)
+            #dfs_iterative(graph, visited, node)
 
     print(linked_component_counter)    
-
-
-    
-    
