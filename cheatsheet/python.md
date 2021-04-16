@@ -110,3 +110,7 @@
   limit = 2000
   sys.setrecursionlimit(limit)
   ```
+
+## 4. Error Case
+* `TypeError: '---' object is not callable`
+  * str, list 등의 변수명을 파이썬의 내장 함수명과 겹치게 네이밍할 때 자주 발생!
