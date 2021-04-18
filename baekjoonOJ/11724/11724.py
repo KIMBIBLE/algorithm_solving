@@ -38,31 +38,108 @@ def dfs_recursive(graph, visited, cur_node):
     if visited[cur_node] == False:
         print(cur_node)
     """
+
     visited[cur_node] = True
 
     for next_node in graph[cur_node]:
         if visited[next_node] == False:
+            #start_time = time.time()
             dfs_recursive(graph, visited, next_node)
+            #print("--- %.40f seconds ---" % (time.time() - start_time))
+            
 
 """
-pypy 실행 시(python3 실행은 시간 초과)
-메모리: 221616 KB
-시간 : 4424 ms
+1. python3
+메모리: 63000 KB
+시간 : 856 ms
+
+2. pypy3
+메모리: 188480 KB
+시간 : 488 ms
+
 """
 def dfs_iterative(graph, visited, cur_node):
+    ''' stack = Stack()
+    stack.push(cur_node) '''
     stack = [cur_node]
 
+    ''' while stack.isEmpty() != True: '''
     while stack:
+        #start_time = time.time()
         node = stack.pop()
-        """
-        if visited[node] == False:
-            print(node)
-        """
-        visited[node] = True
+        
+        print(node)
 
-        for next_node in graph[node][::-1]:
+        #print(graph[node][::-1])
+        for next_node in graph[node]:
             if visited[next_node] == False:
                 stack.append(next_node)
+                visited[next_node] = True
+
+        
+        #print("--- %.40f seconds ---" % (time.time() - start_time))
+
+
+"""
+1. python3
+메모리: 70948 KB
+시간 : 1904 ms
+
+2. pypy3
+메모리: 233540 KB
+시간 : 6788 ms
+
+"""
+class Stack:
+    def __init__(self, size = 1000000):
+        self.size = size
+        self.stack = [None] * self.size
+        self.cur = 0
+
+    def isEmpty(self):
+        if self.cur == 0:
+            return True
+
+        else:
+            return False
+
+    def isFull(self):
+        if self.cur == self.size:
+            return True
+
+        else:
+            return False
+
+    def pop(self):
+        if self.isEmpty():
+            raise Exception('Stack is Empty')
+
+        item = self.stack[self.cur - 1]
+        self.cur -= 1
+        return item
+
+    def push(self, item):
+        if self.isFull():
+            raise Exception('Stack is Full')
+
+        self.stack[self.cur] = item
+        self.cur += 1
+
+def dfs_iterative_with_custom_stack(graph, visited, cur_node):
+    stack = Stack()
+    stack.push(cur_node)
+
+    while stack.isEmpty() != True:
+        #start_time = time.time()
+        node = stack.pop()
+        
+        ''' if visited[node] == False:
+            print(node) '''
+        
+        for next_node in graph[node]:
+            if visited[next_node] == False:
+                stack.push(next_node)
+                visited[next_node] = True
 
 
 if __name__ == '__main__':
@@ -75,7 +152,11 @@ if __name__ == '__main__':
     for node in range(1, n + 1):
         if visited[node] == False:
             linked_component_counter += 1
-            dfs_recursive(graph, visited, node)
-            #dfs_iterative(graph, visited, node)
+            #start_time = time.time()
+            #dfs_recursive(graph, visited, node)
+            #print("--- %.40f seconds ---" % (time.time() - start_time))
+            dfs_iterative(graph, visited, node)
+            #dfs_iterative_with_custom_stack(graph, visited, node)
+            
 
     print(linked_component_counter)    
