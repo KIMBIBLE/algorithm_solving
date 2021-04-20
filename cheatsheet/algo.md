@@ -23,7 +23,14 @@
       - 스택의 최상단 노드를 `pop`함.
       - `DFS의 노드 탐색 순서를 출력해야 하는 경우, pop된 요소를 출력하면 됨.`
       - 스택에서 `pop`된 노드(`current node`)를 기준으로, 인접해있는 모든 노드 중 아직 방문하지 않은 노드를 모두 스택에 `push`하고 `방문 처리`함.
-    
+
+
+    <details>
+      <summary>Show Example Graph</summary>
+
+      <img src="./figure/graph_example_01.png" style="width: 50%; margin-left: auto; margin-right: auto; display:block;">
+    </details>
+
     <details>
       <summary>Python Implementation</summary>
 
@@ -52,27 +59,31 @@
             스택에서 pop된 노드가 아직 방문하지 않은 노드인 경우만 출력.
             스택에 동일한 정점이 2번 들어갈 수 있기 때문.
             """
-            if (not visited[s]):
+            if (not self.visited[s]):
               print(s, end=" ")
-              visited[s] = True
+              self.visited[s] = True
 
             """
             정점 s와 연결된 모든 정점에 대해 순차적으로
             해당 정점이 아직 방문하지 않은 정점이라면, 스택에 삽입함.
             """
-            for node in self.adj[s]:
-              if (not visited[node]):
+            for node in self.adj[s][::-1]:
+              if (not self.visited[node]):
                 stack.append(node)
         
         
-        g = Graph(5)
-        g.addEdge(2, 1)
+        g = Graph(8)
+        g.addEdge(1, 2)
         g.addEdge(1, 3)
-        g.addEdge(3, 2)
-        g.addEdge(1, 4)
-        g.addEdge(2, 5)
+        g.addEdge(1, 8)
+        g.addEdge(2, 7)
+        g.addEdge(3, 4)
+        g.addEdge(3, 5)
+        g.addEdge(4, 5)
+        g.addEdge(6, 7)
+        g.addEdge(7, 8)
 
-        print(g.dfs())
+        g.dfs() # 1 -> 2 -> 7 -> 6 -> 8 -> 3 -> 4 -> 5
 
       ```
 
