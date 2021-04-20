@@ -28,7 +28,9 @@
     <details>
       <summary>Show Example Graph</summary>
 
-      <img src="./figure/graph_example_01.png" style="width: 50%; margin-left: auto; margin-right: auto; display:block;">
+      <p align="center">
+        <img width="50%" src="./figure/graph_example_01.png"/>
+      </p>
     </details>
 
     <details>
