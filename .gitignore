@@ -7,3 +7,4 @@ output.txt
 *.txt
 *.pyc
 .vscode
+.DS_Store
