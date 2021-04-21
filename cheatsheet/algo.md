@@ -1,4 +1,4 @@
-bㅠ# Algorithm Overview
+bbbㅠ# Algorithm Overview
 
 ## :one:&nbsp; Greedy
 
@@ -26,6 +26,12 @@ bㅠ# Algorithm Overview
 
       :point_right:&nbsp; ***Idea for iterative DFS algorithm Implementation***
 
+      > 방문은 언제 수행?: 스택에서 pop한 노드가 방문되지 않았을 때
+      > 
+      > 노드 출력은 언제?: 스택에서 pop한 노드가 방문되지 않았을 때
+
+      </br>
+      
       - `stack` 생성 및 초기화
         - `stack`: 방문을 진행하고자하는 노드들을 저장할 스택 생성(뒤에서부터 방문).
         - 첫 번째로 방문을 수행할 노드를 스택에 삽입
@@ -35,10 +41,6 @@ bㅠ# Algorithm Overview
           - *"DFS의 노드 탐색 순서를 출력해야 하는 경우, pop된 요소를 `출력`하면 됨."*
         - 스택에서 `pop`된 노드(`current node`)를 기준으로, 인접해있는 모든 노드 중 아직 방문하지 않은 노드를 모두 스택에 `push`.
           - *"특정 노드에서 이동 가능한 노드가 2가지 이상이 있을 때, DFS의 방문 기준은 해당 부분에서 스택(`방문할 노드 시퀀스`)에 어떤 순서로 삽입하느냐에 따라 달라짐."*
-
-      > 방문은 언제 수행?: 스택에서 pop한 노드가 방문되지 않았을 때
-      > 
-      > 노드 출력은 언제?: 스택에서 pop한 노드가 방문되지 않았을 때
       
 
       <details>
