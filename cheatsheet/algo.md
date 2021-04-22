@@ -10,10 +10,12 @@ bbbbbㅠ# Algorithm Overview
 
     :point_right:&nbsp; ***Overview***
     - 루트 노드를 기준으로 탐색 시작 (그래프의 경우 임의의 노드를 지정)
-    - 현재 노드를 기준으로 갈 수 있는 만큼 노드 탐색을 수행하고, 더 이상 못가는 지점에 도달한다면 백트래킹을 수행(`pop`).
+    - 현재 노드를 기준으로 갈 수 있는 만큼 노드 탐색을 수행하고, 더 이상 못가는 지점에 도달한다면 백트래킹을 수행(`pop/ret`).
     - 아직 방문하지 않은 모든 노드들에 대해 해당 과정 반복
 
     </br>
+
+    :point_right:&nbsp; ***Iterative DFS***
     <details>
       <summary>Show Example Graph</summary>
 
@@ -22,10 +24,8 @@ bbbbbㅠ# Algorithm Overview
       </p>
     </details>
 
-    </br>
-
     <details>
-      <summary>💡&ensp; Idea</summary>
+      <summary>💡&ensp; Implementation Idea</summary>
 
       > - 방문은 언제 수행?: 스택에서 pop한 노드가 방문되지 않았을 때
       > 
@@ -54,7 +54,6 @@ bbbbbㅠ# Algorithm Overview
           - *"특정 노드에서 이동 가능한 노드가 2가지 이상이 있을 때, DFS의 방문 기준은 해당 부분에서 스택(`방문할 노드 시퀀스`)에 어떤 순서로 삽입하느냐에 따라 달라짐."*
     </details>
 
-    </br>
 
     - Implementation 1
 
@@ -447,19 +446,41 @@ bbbbbㅠ# Algorithm Overview
 
     </br>
 
-    :point_right:&nbsp; ***Idea for Recursive DFS algorithm***
-    - dummy
+    :point_right:&nbsp; ***Recursive DFS***
+    
+    <details>
+      <summary>Show Example Graph</summary>
 
+      <p align="center">
+        <img width="50%" src="./figure/graph_example_01.png"/>
+      </p>
+    </details>
 
     <details>
-      <summary>Python Implementation</summary>
+      <summary>💡&ensp; Implementation Idea</summary>
 
-      ```py
-
-      ```
+      > - 탐색 시작 정점부터 시작하여 연결된 노드들이 아직 방문하지 않은 노드라면 DFS 탐색 수행
 
     </details>
 
+    - Implementation 1
+      <details>
+        <summary>Python Code</summary>
+
+        ```py
+
+        ```
+
+      </details>
+
+      <details>
+        <summary>Result</summary>
+
+        ```py
+
+        ```
+
+      </details>
 
     :point_right:&nbsp; ***언제 사용할까?***
       - 그래프의 완전 탐색 시 활용 가능
