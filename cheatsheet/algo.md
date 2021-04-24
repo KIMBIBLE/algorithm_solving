@@ -510,7 +510,41 @@
 
 :point_right:&nbsp; ***언제 사용할까?***
 - 그래프의 완전 탐색 시 활용 가능
+
 - 그래프의 연결 요소 개수 구할 때 활용 가능
+
+- 가중치(`weighted`) 그래프의 경우, 그래프의 DFS traversal은 최소 신장 트리(`mininum spanning tree`)와 최단 경로(`shortest path`) tree의 모든 쌍을 구할 수 있음.
+  <details>
+  <summary>Spanning Tree?</summary>
+
+  - 신장 트리(Spanning Tree): 그래프의 최소 연결 부분 그래프(그래프에서 일부 간선을 선택하여 만든 그래프)
+  
+  - spanning tree의 조건?
+    - 원본 그래프의 모든 노드를 포함
+    - 모든 노드가 서로 연결되어있어야 함
+    - 트리 속성을 만족(사이클이 없어야 함)
+  
+  -  최소 신장 트리(`Minimun Spanning Tree`)?: Spanning Tree 중에 간선의 가중치 합이 최소인 트리
+      > 엣지의 가중치의 합이 최소인 신장 트리
+
+  - 원본 그래프에서 MST(Minimum Spanning Tree)를 찾아내는 대표적 기법에는 `크루스칼 알고리즘(Kruskal's algorithm)`과 `Prim's algorithm`이 있음.
+  </details>
+
+- 그래프의 cycle 검사
+  - 그래프에는 DFS 수행 중 백엣지(`back edge`)가 표시되는 경우에만 사이클이 있음. 따라서, 그래프에 대해 DFS를 수행하고, 백엣지(`back edge`)를 검사하는 방법을 사용하면 됨.
+  - [참고 링크](http://people.csail.mit.edu/thies/6.046-web/recitation9.txt)
+
+- 경로 탐색(Path Finding)
+  - vertex u, z가 주어졌을 때, 두 vertex간의 경로를 탐색하기 위해 DFS를 사용 가능
+
+- 위상 정렬(Topology Sort)
+
+- 이분 그래프(Bipartite Graph) 테스트
+
+- 그래프의 강한 결합/연결 요소(Strongly Connected Component) 찾기
+
+- 해답이 1개인 퍼즐 풀기
+  - 미로 관련 문제, 장애물이 있는 matrix
 
 </br>
 
