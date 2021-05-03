@@ -17,3 +17,5 @@
 :pushpin:&ensp; f. [Sort](./cheatsheet/sort.md)
 
 :pushpin:&ensp; g. [Python](./cheatsheet/python.md)
+
+:pushpin:&ensp; ㅗ. [Math](./cheatsheet/math.md)
