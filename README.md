@@ -18,4 +18,4 @@
 
 :pushpin:&ensp; g. [Python](./cheatsheet/python.md)
 
-:pushpin:&ensp; ㅗ. [Math](./cheatsheet/math.md)
+:pushpin:&ensp; h. [Math](./cheatsheet/math.md)
