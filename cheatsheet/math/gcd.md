@@ -5,7 +5,7 @@
 > 2개의 자연수(n, m)의 최대공약수를 구하는 알고리즘
 
 1. 원리
-> $n > m$인 2개의 자연수($n$, $m$)에 대해 $n\mod m = r$ 이라 하면,
+> <!-- n \geq m --> <img src="https://chart.apis.google.com/chart?cht=tx&chl= n%5C%20%5Cgeq%5C%20m" />인 2개의 자연수($n$, $m$)에 대해 $n\mod m = r$ 이라 하면,
 > 
 > $gcd(n, m) = gcd(m, r)$이다.
 
