@@ -1,4 +1,4 @@
-# Combinations: $nCr =$$n \choose r$$= \frac{n!\times r!}{(n-r)!}$
+# Combinations
 
 <img src="https://chart.apis.google.com/chart?cht=tx&chl=nCr%5C%20%3D%5C%20%5C%20%7Bn%5C%20%5Cchoose%5C%20r%7D%5C%20%3D%5C%20%5Cfrac%7Bn!%5C%20%5Ctimes%5C%20r!%7D%7B(n%5C%20-%5C%20r)!%7D" /><br/>
 
