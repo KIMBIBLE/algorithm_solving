@@ -13,7 +13,7 @@
 ## 2. 이항계수의 성질
 
 ### 1) 성질 1
-<img src="https://chart.apis.google.com/chart?cht=tx&chl=%7Bn%5C%20%5Cchoose%5C%20r%7D%5C%20%3D%5C%20%7Bn%5C%20%5Cchoose%5C%20n%5C%20-%5C%20k%7D" />
+<img src="https://chart.apis.google.com/chart?cht=tx&chl=%7Bn%5C%20%5Cchoose%5C%20k%7D%5C%20%3D%5C%20%7Bn%5C%20%5Cchoose%5C%20n%5C%20-%5C%20k%7D" />
 
 <br/>
 
@@ -39,4 +39,4 @@
 
 ## 4. 시간복잡도
 
-    <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(%5C%20%7Bn%5C%20%5Cchoose%5C%20k%7D%5C%20)%5C%20%3D%5C%20O(%5C%20min(%5C%20n%5Ek%2C%5C%20n%5E%7Bn%5C%20-%5C%20k%7D%5C%20)%5C%20)" />
+<img src="https://chart.apis.google.com/chart?cht=tx&chl=O(%5C%20%7Bn%5C%20%5Cchoose%5C%20k%7D%5C%20)%5C%20%3D%5C%20O(%5C%20min(%5C%20n%5Ek%2C%5C%20n%5E%7Bn%5C%20-%5C%20k%7D%5C%20)%5C%20)" />
