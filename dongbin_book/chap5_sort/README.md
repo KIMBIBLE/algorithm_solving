@@ -53,12 +53,8 @@ print('after:  {}'.format(sorted_data))
     <thead>
         <tr>
             <th><img src="https://chart.apis.google.com/chart?cht=tx&chl=Algorithms" /></th>
-            <th></th>
-            <th><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(C)" /></th>
-            <th></th>
-            <th></th>
-            <th><img src="https://chart.apis.google.com/chart?cht=tx&chl=Times(N)_%7Bsec%7D" /></th>
-            <th></th>
+            <th colspan="3" align="center"><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(C)" /></th>
+            <th colspan="3" align="center"><img src="https://chart.apis.google.com/chart?cht=tx&chl=Times(N)_%7Bsec%7D" /></th>
         </tr>
         <tr>
             <th></th>
