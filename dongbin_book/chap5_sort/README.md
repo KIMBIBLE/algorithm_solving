@@ -148,6 +148,17 @@ N: 데이터의 갯수, r 정렬될 수의 범위.
             <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=N" /></td>
             <td>-</td>
         </tr>
+        <tr>
+            <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+            <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+            <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+            <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+            <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+            <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+            <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+            <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+            <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+        </tr>
     </tbody>
 </table><br/>
 
