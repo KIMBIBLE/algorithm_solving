@@ -30,8 +30,8 @@ print('after:  {}'.format(sorted_data))
 # before: [3, 2, 4, 0, 5, 2, 1, 7, 1, 7]
 # after:  [0, 1, 1, 2, 2, 3, 4, 5, 7, 7]
 ```
-</details>
 
+</details></br>
 
 
 ### 2. 삽입정렬
@@ -48,9 +48,98 @@ print('after:  {}'.format(sorted_data))
 
 각 정렬에 소요되는 비교 횟수를 <img src="https://chart.apis.google.com/chart?cht=tx&chl=C" />라고 했을 때, 비교 횟수의 평균은 <img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bave%7D" />, 최대는 <img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bmax%7D" />, 최소는 <img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bmin%7D" />으로 표기함. 
 
-|알고리즘|<img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bave%7D" />| <img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bmax%7D" /> | <img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bmin%7D" /> |
-|-|-|-|-|
-|선택 정렬|<img src="https://chart.apis.google.com/chart?cht=tx&chl=%7BO_n%7D%5E2" />|<img src="https://chart.apis.google.com/chart?cht=tx&chl=%7BO_n%7D%5E2" />|<img src="https://chart.apis.google.com/chart?cht=tx&chl=%7BO_n%7D%5E2" />|
+
+<table>
+    <thead>
+        <tr>
+            <th><img src="https://chart.apis.google.com/chart?cht=tx&chl=Algorithms" /></th>
+            <th></th>
+            <th><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(C)" /></th>
+            <th></th>
+            <th></th>
+            <th><img src="https://chart.apis.google.com/chart?cht=tx&chl=Times(N)_%7Bsec%7D" /></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th><img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bmin%7D" /></th>
+            <th><img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bmax%7D" /></th>
+            <th><img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bave%7D" /></th>
+            <th>N=100</th>
+            <th>N=1,000</th>
+            <th>N=10,000</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>선택 정렬</td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N%5E2)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N%5E2)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N%5E2)" /></td>
+            <td>0.0123</td>
+            <td>0.354</td>
+            <td>15.475</td>
+        </tr>
+        <tr>
+            <td>삽입 정렬</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>퀵 정렬</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>0.00156</td>
+            <td>0.00343</td>
+            <td>0.0312</td>
+        </tr>
+        <tr>
+            <td>내장 정렬 라이브러리</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>0.00000753</td>
+            <td>0.0000365</td>
+            <td>0.000248</td>
+        </tr>
+        <tr>
+            <td>계수 정렬</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>버블 정렬</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>병합 정렬</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table><br/>
+
+
+* 각 소팅 알고리즘의 시간 측정 환경: Intel(R) Core(TM)i7-7500U CPU @ 2.70GHz. 2 Core 환경
+* [더 많은 정렬 알고리즘과 각 알고리즘의 분류](https://ko.wikipedia.org/wiki/%EC%A0%95%EB%A0%AC_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
 
 ### 1. 선택정렬
 
