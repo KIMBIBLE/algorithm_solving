@@ -44,7 +44,7 @@ print('after:  {}'.format(sorted_data))
 
 
 ---
-## 소팅 알고리즘의 시간복잡도 비교
+## 소팅 알고리즘의 시간복잡도/공간복잡도 비교
 
 각 정렬에 소요되는 비교 횟수를 <img src="https://chart.apis.google.com/chart?cht=tx&chl=C" />라고 했을 때, 비교 횟수의 평균은 <img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bave%7D" />, 최대는 <img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bmax%7D" />, 최소는 <img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bmin%7D" />으로 표기함. 
 
@@ -55,17 +55,18 @@ print('after:  {}'.format(sorted_data))
             <th>Algorithms</th>
             <th colspan="3" align="center"><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(C)" /></th>
             <th colspan="3" align="center"><img src="https://chart.apis.google.com/chart?cht=tx&chl=Times(N)_%7Bsec%7D" /></th>
-            <th><img src="https://chart.apis.google.com/chart?cht=tx&chl=memory_%7Bworst%7D" /></th>
+            <th colspan="2" align="center">Space Complexity</th>
         </tr>
         <tr>
-            <th></th>
+            <th>&nbsp;</th>
             <th><img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bmin%7D" /></th>
             <th><img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bmax%7D" /></th>
             <th><img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bave%7D" /></th>
             <th>N=100</th>
             <th>N=1,000</th>
             <th>N=10,000</th>
-            <th></th>
+            <th><img src="https://chart.apis.google.com/chart?cht=tx&chl=mem_%7Bworst%7D" /></th>
+            <th><img src="https://chart.apis.google.com/chart?cht=tx&chl=mem_%7Bavg%7D" /></th>
         </tr>
     </thead>
     <tbody>
@@ -77,7 +78,8 @@ print('after:  {}'.format(sorted_data))
             <td>0.0123</td>
             <td>0.354</td>
             <td>15.475</td>
-            <td></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=1" /></td>
+            <td>-</td>
         </tr>
         <tr>
             <td>삽입 정렬</td>
@@ -87,7 +89,8 @@ print('after:  {}'.format(sorted_data))
             <td>-</td>
             <td>-</td>
             <td>-</td>
-            <td></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=1" /></td>
+            <td>-</td>
         </tr>
         <tr>
             <td>퀵 정렬</td>
@@ -97,7 +100,8 @@ print('after:  {}'.format(sorted_data))
             <td>0.00156</td>
             <td>0.00343</td>
             <td>0.0312</td>
-            <td></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=N" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=%5Clog_%7B%7DN" /></td>
         </tr>
         <tr>
             <td>내장 정렬 라이브러리</td>
@@ -107,6 +111,8 @@ print('after:  {}'.format(sorted_data))
             <td>0.00000753</td>
             <td>0.0000365</td>
             <td>0.000248</td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=N" /></td>
+            <td>-</td>
         </tr>
         <tr>
             <td>계수 정렬</td>
@@ -116,7 +122,8 @@ print('after:  {}'.format(sorted_data))
             <td>-</td>
             <td>-</td>
             <td>-</td>
-            <td></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=N%2Br" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=N%2Br" /></td>
         </tr>
         <tr>
             <td>버블 정렬</td>
@@ -126,7 +133,8 @@ print('after:  {}'.format(sorted_data))
             <td>-</td>
             <td>-</td>
             <td>-</td>
-            <td></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=1" /></td>
+            <td>-</td>
         </tr>
         <tr>
             <td>병합 정렬</td>
@@ -136,7 +144,8 @@ print('after:  {}'.format(sorted_data))
             <td>-</td>
             <td>-</td>
             <td>-</td>
-            <td></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=N" /></td>
+            <td>-</td>
         </tr>
     </tbody>
 </table><br/>
