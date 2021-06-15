@@ -1,6 +1,6 @@
 # Sort
 
-* python sort
+## python sort
 ```py
 a = [ 1, 5, 3, 4, 9, 2]
 b = sorted(a) # 기존 리스트를 변경하지 않고 새로운 리스트 반환
@@ -16,3 +16,7 @@ e = sorted(d, key = lambda x : (x[0], x[1]))
 f = sorted(d, key = lambda x : (x[1], x[0])) 
 # x[1]를 기준으로 정렬 -> x[0]를 기준으로 정렬
 # [[0, 4], [1, 4], [3, 5], [0, 6], [5, 7], [5, 7], [3, 8], [5, 9], [6, 10], [8, 11], [8, 12], [12, 14]]
+```
+
+## Sorting 알고리즘
+* [소팅 알고리즘 종류/구현/시간복잡도/공간복잡도](../dongbin_book/chap5_sort/README.md)
