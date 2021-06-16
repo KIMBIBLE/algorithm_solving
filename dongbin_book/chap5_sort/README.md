@@ -4,7 +4,7 @@
 
 ### 1. 선택정렬
 
-> 최소값 찾기(선택)를 반복하는 알고리즘. 무작위 데이터 리스트에서 가장 작은 값을 선택하여 리스트의 맨 앞의 요소와 교환함. 이후 선택이 완료된 데이터 리스트의 맨 앞 요소를 제외한 나머지 데이터들에 대해 최소값 찾기를 반복함.
+> 데이터를 하나하나 확인해가며, 각 데이터를 적절한 위치에 삽입하는 방식의 정렬 알고리즘. 정렬이 필요한 원본 데이터(`data_array`)를 정렬이 된 그룹(`sorted_array`)과 정렬을 수행해야하는 그룹(`unsorted_array`)으로 나눔. 이후 `unsorted_array`에서 순차적으로 하나씩 정렬할 데이터를 `선택`하고, 선택된 데이터를 `sorted_array`의 데이터들과 대소 비교를 수행하여 적절한 위치에 삽입하는 동작을 반복함.
 
 <details><summary>python code</summary>
 
@@ -12,12 +12,13 @@
 import random
 
 def selection_sort(data_to_sort):
-    for i in range(len(data_to_sort) - 1):
-        min_idx = i
-        for j in range(i + 1, len(data_to_sort)):
-            if data_to_sort[min_idx] > data_to_sort[j]:
-                min_idx = j
-        data_to_sort[i], data_to_sort[min_idx] = data_to_sort[min_idx], data_to_sort[i]
+    for i in range(1, len(data_to_sort)):
+        for j in range(i, 0, -1):
+            if data_to_sort[j - 1] > data_to_sort[j]:
+                data_to_sort[j - 1], data_to_sort[j] = data_to_sort[j], data_to_sort[j -1]
+            
+            else:
+                break
 
     return data_to_sort
 
@@ -27,8 +28,8 @@ sorted_data = selection_sort(unsorted_data)
 print('after:  {}'.format(sorted_data))
 
 # Sample Output
-# before: [3, 2, 4, 0, 5, 2, 1, 7, 1, 7]
-# after:  [0, 1, 1, 2, 2, 3, 4, 5, 7, 7]
+# before: [0, 8, 1, 1, 4, 1, 9, 7, 9, 7]
+# after:  [0, 1, 1, 1, 4, 7, 7, 8, 9, 9]
 ```
 
 </details></br>
