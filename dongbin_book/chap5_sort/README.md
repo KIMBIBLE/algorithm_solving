@@ -161,9 +161,9 @@ print('after:  {}'.format(sorted_data))
         </tr>
         <tr>
             <th>&nbsp;</th>
-            <th>Worst(<img src="https://chart.apis.google.com/chart?cht=tx&chl=O" />) </th>
-            <th>Best(<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5COmega" />)</th>
-            <th>Average(<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta" />)</th>
+            <th>Worst<br/><img src="https://chart.apis.google.com/chart?cht=tx&chl=O" /> </th>
+            <th>Best<br/><img src="https://chart.apis.google.com/chart?cht=tx&chl=%5COmega" /></th>
+            <th>Average<br/><img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta" /></th>
             <th>N=100</th>
             <th>N=1,000</th>
             <th>N=10,000</th>
@@ -224,8 +224,8 @@ print('after:  {}'.format(sorted_data))
             <td>-</td>
             <td>-</td>
             <td>-</td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=n%2Br" /></td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=n%2Br" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%2Br)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(n%2Br)" /></td>
         </tr>
         <tr>
             <td>버블 정렬</td>
