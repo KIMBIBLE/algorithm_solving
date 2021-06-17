@@ -18,3 +18,6 @@ unsorted_data = [random.randint(0, 10) for _ in range(10)]
 print('before: {}'.format(unsorted_data))
 sorted_data = selection_sort(unsorted_data)
 print('after:  {}'.format(sorted_data))
+
+# before: [7, 10, 0, 8, 8, 7, 6, 0, 4, 5]
+# after:  [0, 0, 4, 5, 6, 7, 7, 8, 8, 10]
