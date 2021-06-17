@@ -149,23 +149,21 @@ print('after:  {}'.format(sorted_data))
 ---
 ## 소팅 알고리즘의 시간복잡도/공간복잡도 비교
 
-각 정렬에 소요되는 비교 횟수를 <img src="https://chart.apis.google.com/chart?cht=tx&chl=C" />라고 했을 때, 비교 횟수의 평균은 <img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bave%7D" />, 최대는 <img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bmax%7D" />, 최소는 <img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bmin%7D" />으로 표기함. 
-
-N: 데이터의 갯수, r 정렬될 수의 범위.
+> `n`: 데이터의 갯수, `r` 정렬될 수의 범위.
 
 <table>
     <thead>
         <tr>
             <th>Algorithms</th>
-            <th colspan="3" align="center"><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(C)" /></th>
-            <th colspan="3" align="center"><img src="https://chart.apis.google.com/chart?cht=tx&chl=Times(N)_%7Bsec%7D" /></th>
+            <th colspan="3" align="center">Time Complixity</th>
+            <th colspan="3" align="center"><img src="https://chart.apis.google.com/chart?cht=tx&chl=times(n)_%7Bsec%7D" /></th>
             <th colspan="2" align="center">Space Complexity</th>
         </tr>
         <tr>
             <th>&nbsp;</th>
-            <th><img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bmin%7D" /></th>
-            <th><img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bmax%7D" /></th>
-            <th><img src="https://chart.apis.google.com/chart?cht=tx&chl=C_%7Bave%7D" /></th>
+            <th>Worst(<img src="https://chart.apis.google.com/chart?cht=tx&chl=O" />) </th>
+            <th>Best(<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5COmega" />)</th>
+            <th>Average(<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta" />)</th>
             <th>N=100</th>
             <th>N=1,000</th>
             <th>N=10,000</th>
@@ -176,79 +174,79 @@ N: 데이터의 갯수, r 정렬될 수의 범위.
     <tbody>
         <tr>
             <td>선택 정렬</td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N%5E2)" /></td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N%5E2)" /></td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N%5E2)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%5E2)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=%5COmega(n%5E2)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(n%5E2)" /></td>
             <td>0.0123</td>
             <td>0.354</td>
             <td>15.475</td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=1" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" /></td>
             <td>-</td>
         </tr>
         <tr>
             <td>삽입 정렬</td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N)" /></td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N%5E2)" /></td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N%5E2)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n^2)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=%5COmega(n)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(n%5E2)" /></td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=1" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" /></td>
             <td>-</td>
         </tr>
         <tr>
             <td>퀵 정렬</td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%5Clog_%7B%7D%5C%20n)" /></td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N%5E2)" /></td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%5Clog_%7B%7D%5C%20n)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%5E2)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=%5COmega(n%5Clog_%7B%7D%5C%20n)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(n%5Clog_%7B%7D%5C%20n)" /></td>
             <td>0.00156</td>
             <td>0.00343</td>
             <td>0.0312</td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=N" /></td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=%5Clog_%7B%7DN" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(%5Clog_%7B%7DN)" /></td>
         </tr>
         <tr>
             <td>내장 정렬 라이브러리</td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N)" /></td>
             <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%5Clog_%7B%7Dn)" /></td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%5Clog_%7B%7Dn)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=%5COmega(N)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(n%5Clog_%7B%7Dn)" /></td>
             <td>0.00000753</td>
             <td>0.0000365</td>
             <td>0.000248</td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=N" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n)" /></td>
             <td>-</td>
         </tr>
         <tr>
             <td>계수 정렬</td>
-            <td>-</td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N%2Br)" /></td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N%2Br)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%2Br)" /></td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=N%2Br" /></td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=N%2Br" /></td>
+            <td>-</td>
+            <td>-</td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=n%2Br" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=n%2Br" /></td>
         </tr>
         <tr>
             <td>버블 정렬</td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N)" /></td>
             <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N^2)" /></td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N^2)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=%5COmega(N)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(N%5E2)" /></td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=1" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" /></td>
             <td>-</td>
         </tr>
         <tr>
             <td>병합 정렬</td>
             <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%5Clog_%7B%7D%5C%20n)" /></td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%5Clog_%7B%7D%5C%20n)" /></td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%5Clog_%7B%7D%5C%20n)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=%5COmega(n%5Clog_%7B%7D%5C%20n)" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(n%5Clog_%7B%7D%5C%20n)" /></td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
-            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=N" /></td>
+            <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n)" /></td>
             <td>-</td>
         </tr>
         <tr>
@@ -263,8 +261,7 @@ N: 데이터의 갯수, r 정렬될 수의 범위.
             <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
         </tr>
     </tbody>
-</table><br/>
-
+</table>
 
 * 각 소팅 알고리즘의 시간 측정 환경: Intel(R) Core(TM)i7-7500U CPU @ 2.70GHz. 2 Core 환경
 * [더 많은 정렬 알고리즘과 각 알고리즘의 분류](https://ko.wikipedia.org/wiki/%EC%A0%95%EB%A0%AC_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
@@ -273,3 +270,12 @@ N: 데이터의 갯수, r 정렬될 수의 범위.
 ### 1. 선택정렬
 
 <img src="https://chart.apis.google.com/chart?cht=tx&chl=%5C%5BC_%7Bmin%7D%5C%20%3D%5C%20C_%7Bave%7D%5C%20%3D%5C%20C_%7Bmax%7D%5C%20%3D%5C%20%5C%20%5Csum_%7Bi%3D1%7D%5E%7BN-1%7D%5C%20N%5C%20-%5C%20i%5C%20%5C%20%3D%5C%20%5Cfrac%7BN(N%5C%20-%5C%201)%7D%7B2%7D%5C%20%3D%5C%20O(N%5E2)%5C%5D" />
+
+
+
+<br/><br/>
+
+---
+## 읽어볼만한 문서
+
+* [What are Sorting Algorithms?](https://lamfo-unb.github.io/2019/04/21/Sorting-algorithms/): 각 정렬 알고리즘에 대한 시간/공간 복잡도 정리가 잘 되어있음.
