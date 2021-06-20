@@ -98,4 +98,4 @@ sorted(dicts, key = lambda x: x["idx"])
 ---
 ## :three:&nbsp; Sorting 알고리즘
 
-* [소팅 알고리즘 종류 / 구현 / 시간복잡도 / 공간복잡도 정리 및 비교 분석](../dongbin_book/chap5_sort/README.md)
+* [소팅 알고리즘 종류 / 구현 / 시간복잡도 / 공간복잡도 정리 및 비교 분석](../../dongbin_book/chap6_sort/README.md)
