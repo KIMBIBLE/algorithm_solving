@@ -507,6 +507,7 @@ print('after:  {}'.format(sorted_data))
 
 <br/>
 
+---
 ### 2. 삽입정렬
 
 :point_right:&nbsp; Worst-Case Performance
@@ -530,6 +531,7 @@ print('after:  {}'.format(sorted_data))
 
 <br/>
 
+---
 ### 3. 퀵정렬
 
 :point_right:&nbsp; Worst-Case Performance: <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%5E2)" />
@@ -544,6 +546,7 @@ print('after:  {}'.format(sorted_data))
 
 <br/>
 
+---
 ### 4. 계수정렬
 
 > 모든 데이터가 양의정수이고, 데이터 갯수가 `N`, 데이터 중 최대값의 크기가 `K`인 상태.
