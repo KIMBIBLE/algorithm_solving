@@ -3,7 +3,7 @@
 
 ## :one:&nbsp; 정렬 알고리즘
 
-* [정렬 알고리즘의 문제 유형 및 구현](./cheatsheet/../algorithms/sort.md)
+* [정렬 알고리즘의 문제 유형 및 정렬 라이브러리](./cheatsheet/../algorithms/sort.md)
 
 * [정렬 알고리즘의 종류, 구현, 시간/공간 복잡도 정리 및 분석](../dongbin_book/chap6_sort/README.md)
 
