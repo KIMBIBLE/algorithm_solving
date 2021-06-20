@@ -1,21 +1,35 @@
-# Daily Algorithm Solving
+# Algorithm Solving
+
+## :one:&ensp; Daily Algorithm Solving
 
 [![bbkim's solved.ac](http://mazassumnida.wtf/api/v2/generate_badge?boj=jotun9935)](https://solved.ac/profile/jotun9935)
 
-## :one:&ensp; Cheat Sheet
+:point_right:&ensp; `문제 코드` and `writeup`
+1. [BOJ](./baekjoonOJ/)
 
-:pushpin:&ensp; a. [Problem Solving Basic](./cheatsheet/problem_solving.md)
+2. [codeforce](./codeforce/)
 
-:pushpin:&ensp; b. [Time Complixity](./cheatsheet/time_complixity.md)
+3. [programmers](./programmers/)
 
-:pushpin:&ensp; c. [Data Structure](./cheatsheet/datastructure.md)
+4. [euler](./euler)
 
-:pushpin:&ensp; d. [Algorithm Overview](./cheatsheet/algo.md)
+<br/>
 
-:pushpin:&ensp; e. [Input and Output](./cheatsheet/input_output.md)
+---
+## :two:&ensp; Cheat Sheet
 
-:pushpin:&ensp; f. [Sort](./cheatsheet/sort.md)
+1. [Problem Solving Basic](./cheatsheet/problem_solving.md)
 
-:pushpin:&ensp; g. [Python](./cheatsheet/python.md)
+2. [Time Complixity](./cheatsheet/time_complixity.md)
 
-:pushpin:&ensp; h. [Math](./cheatsheet/math.md)
+3. [Data Structure](./cheatsheet/datastructure.md)
+
+4. [Algorithm Overview](./cheatsheet/algo.md)
+
+5. [Input and Output](./cheatsheet/input_output.md)
+
+6. [Sort](./cheatsheet/sort.md)
+
+7. [Python](./cheatsheet/python.md)
+
+8. [Math](./cheatsheet/math.md)
