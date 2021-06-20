@@ -15,6 +15,7 @@
 <tr>
 <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" /></td>
 <td>단순 계산(a+b, 배열 접근 연산)</td>
+<td>-</td>
 </tr>
 <tr>
 <td><img src="https://chart.apis.google.com/chart?cht=tx&chl=O(%5Clog_%7B%7D%7BN%7D)" /></td>
