@@ -24,12 +24,10 @@
 
 3. [Data Structure](./cheatsheet/datastructure.md)
 
-4. [Algorithm Overview](./cheatsheet/algo.md)
+4. [Algorithm Overview](./cheatsheet/algo_overviw.md)
 
 5. [Input and Output](./cheatsheet/input_output.md)
 
-6. [Sort](./cheatsheet/sort.md)
+6. [Python](./cheatsheet/python.md)
 
-7. [Python](./cheatsheet/python.md)
-
-8. [Math](./cheatsheet/math.md)
+7. [Math](./cheatsheet/math.md)
