@@ -35,7 +35,7 @@
 ```
 </details>
 
-<details><summary>python code</summary>
+<details><summary>Python Code</summary>
 
 ```py
 import random
@@ -111,7 +111,7 @@ V
 </details>
 
 
-<details><summary>python code</summary>
+<details><summary>Python Code</summary>
 
 ```py
 import random
@@ -259,7 +259,7 @@ V        (V V)---------- 엇갈린 상태: bigdata_idx > smalldata_idx
 ```
 </details>
 
-<details><summary>Code</summary>
+<details><summary>Python Code</summary>
 
 ```python
 import random
@@ -324,7 +324,7 @@ print('after:  {}'.format(data))
   
   * 하지만 코딩테스트에서 `기수 정렬`의 출제 빈도는 매우 낮은 편.
 
-<details><summary>code</summary>
+<details><summary>Python Code</summary>
 
 ```python
 import random
@@ -362,8 +362,6 @@ print('after:  {}'.format(sorted_data))
 [[뒤로](../../cheatsheet/sort.md)] / [[위로](#sort)]
 
 ## :two:&nbsp; 소팅 알고리즘의 시간복잡도/공간복잡도 비교
-
-> `n`: 데이터의 갯수, `r` 정렬될 수의 범위.
 
 <table>
     <thead>
@@ -477,6 +475,8 @@ print('after:  {}'.format(sorted_data))
     </tbody>
 </table>
 
+* `n`: 데이터의 갯수, `r` 정렬될 수의 범위.
+
 * 각 소팅 알고리즘의 시간 측정 환경: Intel(R) Core(TM)i7-7500U CPU @ 2.70GHz. 2 Core 환경
 
 * [더 많은 정렬 알고리즘과 각 알고리즘의 분류](https://ko.wikipedia.org/wiki/%EC%A0%95%EB%A0%AC_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
@@ -485,6 +485,9 @@ print('after:  {}'.format(sorted_data))
 
   * 내부적으로 C 기반으로 구현되었고, 최적화 테크닉이 들어가 훨씬 빠르게 동작함.
 
+<br/>
+
+---
 ### 1. 선택정렬
 
 :point_right:&nbsp; Worst-Case Performance
