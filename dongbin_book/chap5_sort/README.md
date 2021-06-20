@@ -441,9 +441,64 @@ print('after:  {}'.format(data))
 
 ### 1. 선택정렬
 
-<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5C%5BC_%7Bmin%7D%5C%20%3D%5C%20C_%7Bave%7D%5C%20%3D%5C%20C_%7Bmax%7D%5C%20%3D%5C%20%5C%20%5Csum_%7Bi%3D1%7D%5E%7BN-1%7D%5C%20N%5C%20-%5C%20i%5C%20%5C%20%3D%5C%20%5Cfrac%7BN(N%5C%20-%5C%201)%7D%7B2%7D%5C%20%3D%5C%20O(N%5E2)%5C%5D" />
+:point_right:&nbsp; Worst-Case Performance
+
+* 비교 연산: <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%5E2)" /> 번 비교 동작 수행.
+
+* Swap 연산: <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n)" /> 번 swap 수행.
+
+:point_right:&nbsp; Best-Case  Performance
+
+* 비교 연산: <img src="https://chart.apis.google.com/chart?cht=tx&chl=%5COmega(n%5E2)" /> 번 비교 동작 수행.
+
+* Swap 연산: <img src="https://chart.apis.google.com/chart?cht=tx&chl=%5COmega(1)" /> 번 swap 수행.
+
+:point_right:&nbsp; Average    Performance
+
+* 비교 연산: <img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(n%5E2)" /> 번 비교 동작 수행.
+
+* Swap 연산: <img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(n)" /> 번 swap 수행.
+
+<br/>
+
+### 2. 삽입정렬
+
+:point_right:&nbsp; Worst-Case Performance
+
+* 비교 연산: <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%5E2)" /> 번 비교 동작 수행.
+
+* Swap 연산: <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%5E2)" /> 번 swap 수행.
+
+:point_right:&nbsp; Best-Case  Performance
+
+* 비교 연산: <img src="https://chart.apis.google.com/chart?cht=tx&chl=%5COmega(n)" /> 번 비교 동작 수행.
+
+* Swap 연산: <img src="https://chart.apis.google.com/chart?cht=tx&chl=%5COmega(1)" /> 번 swap 수행.
+
+:point_right:&nbsp; Average    Performance
+
+* 비교 연산: <img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(n%5E2)" /> 번 비교 동작 수행.
+
+* Swap 연산: <img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(n%5E2)" /> 번 swap 수행.
 
 
+<br/>
+
+### 3. 퀵정렬
+
+:point_right:&nbsp; Worst-Case Performance
+
+* <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%5E2)" />
+
+:point_right:&nbsp; Best-Case  Performance
+
+* Simple Partition: <img src="https://chart.apis.google.com/chart?cht=tx&chl=n%5Clog_%7B%7D%7Bn%7D" />
+
+* Three-way Partition and equal keys: <img src="https://chart.apis.google.com/chart?cht=tx&chl=%5COmega(n)" />
+
+:point_right:&nbsp; Average    Performance
+
+* <img src="https://chart.apis.google.com/chart?cht=tx&chl=n%5Clog%7B%7D%7Bn%7D" />
 
 <br/><br/>
 
