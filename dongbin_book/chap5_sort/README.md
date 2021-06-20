@@ -1,5 +1,7 @@
 # Sort
 
+[[뒤로](../../cheatsheet/sort.md)]
+
 ## :one:&nbsp; 소팅 알고리즘의 종류
 
 ### 1. 선택정렬(Selection Sort)
@@ -357,6 +359,8 @@ print('after:  {}'.format(sorted_data))
 
 ---
 <!-- ################################################### -->
+[[뒤로](../../cheatsheet/sort.md)] / [[위로](#sort)]
+
 ## :two:&nbsp; 소팅 알고리즘의 시간복잡도/공간복잡도 비교
 
 > `n`: 데이터의 갯수, `r` 정렬될 수의 범위.
