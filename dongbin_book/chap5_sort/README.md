@@ -65,7 +65,7 @@ print('after:  {}'.format(sorted_data))
 
 ---
 <!-- ################################################### -->
-### 2. 삽입정렬
+### 2. 삽입정렬(Insertion Sort)
 
 > 데이터를 하나하나 확인해가며, 각 데이터를 적절한 위치에 삽입하는 방식의 정렬 알고리즘. 정렬이 필요한 원본 데이터(`data_array`)를 정렬이 된 그룹(`sorted_array`)과 정렬을 수행해야하는 그룹(`unsorted_array`)으로 나눔. 이후 `unsorted_array`에서 순차적으로 하나씩 정렬할 데이터를 `선택`하고, 선택된 데이터를 `sorted_array`의 데이터들과 대소 비교를 수행하여 적절한 위치에 삽입하는 동작을 반복함.
 
@@ -141,7 +141,7 @@ print('after:  {}'.format(sorted_data))
 
 ---
 <!-- ################################################### -->
-### 3. 퀵정렬
+### 3. 퀵정렬(Quick Sort)
 
 > 정렬 대상 내의 특정 데이터가 정렬 이후 위치할 곳을 찾는 방식으로, 리스트의 모든 요소를 대상으로 반복적으로 수행됨. 기준 데이터(`Pivot`)를 설정하고 해당 데이터보다 `작은` 데이터들은 `좌측`으로 `큰` 데이터들은 `우측`으로 모두 위치하도록 순서를 변경함. 이를 통해 정렬 이후 리스트 내에서 `기준 데이터가 위치할 인덱스가 결정됨`. 특정 Pivot을 대상으로 정렬이 완료되면, Pivot 값 좌측은 Pivot 값보다 작은 값만, 우측은 Pivot 값보다 큰 값만 위치하기 때문에, 이후 `분할 정복` 방식으로 Pivot을 선택하고 정렬하는 과정을 수행할 수 있음.
 
@@ -255,7 +255,7 @@ V        (V V)---------- 엇갈린 상태: bigdata_idx > smalldata_idx
         [새로운 피벗]: 6
 
 ```
-</details><br/>
+</details>
 
 <details><summary>Code</summary>
 
@@ -312,7 +312,45 @@ print('after:  {}'.format(data))
 
 ---
 <!-- ################################################### -->
-### 4. 계수정렬
+### 4. 계수정렬(Counting Sort)
+
+> 데이터의 크기 범위가 제한되어, 정수 형태로 표현이 가능할 때만 사용 가능한 매우 빠른 정렬 알고리즘. 데이터의 갯수가 `N`개 이고, 데이터 중 최대값이 `K`일 때, 최악의 경우에도 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N%5C%20%2B%5C%20K)" />의 수행 시간을 보장함. 데이터의 정렬 정보를 저장하는 배열에, 데이터 값을 인덱스로하여 값을 저장하는 방식을 사용. 
+
+* 일반적으로 가장 큰 데이터와 가장 작은 데이터의 차가 `1,000,000(백만)`을 넘지 않을 때 효과적으로 사용 가능.
+
+* 계수 정렬과 (약간 느리지만)유사한 성능을 갖지만, 계수 정렬 보다 처리할 수 있는 정수의 범위가 더 큰 정렬 알고리즘으로는 `기수(Radix) 정렬`이 있음.
+  
+  * 하지만 코딩테스트에서 `기수 정렬`의 출제 빈도는 매우 낮은 편.
+
+<details><summary>code</summary>
+
+```python
+import random
+
+def counting_sort(data):
+    sorted_data = []
+    count = [0] * (max(data) + 1)
+
+    for i in range(len(data)):
+        count[data[i]] += 1
+
+    for i in range(len(count)):
+        for j in range(count[i]):
+            # print(i, end=' ')
+            sorted_data.append(i)
+
+    return sorted_data
+
+unsorted_data = [random.randint(0, 10) for _ in range(10)]
+print('before: {}'.format(unsorted_data))
+sorted_data = counting_sort(unsorted_data)
+print('after:  {}'.format(sorted_data))
+
+# before: [7, 3, 5, 7, 5, 6, 3, 10, 4, 8]
+# after:  [3, 3, 4, 5, 5, 6, 7, 7, 8, 10]
+```
+
+</details>
 
 
 <br/><br/>
@@ -436,8 +474,12 @@ print('after:  {}'.format(data))
 </table>
 
 * 각 소팅 알고리즘의 시간 측정 환경: Intel(R) Core(TM)i7-7500U CPU @ 2.70GHz. 2 Core 환경
+
 * [더 많은 정렬 알고리즘과 각 알고리즘의 분류](https://ko.wikipedia.org/wiki/%EC%A0%95%EB%A0%AC_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
+
 * 파이썬의 built-in sort 함수는 [Timsort 알고리즘](https://en.wikipedia.org/wiki/Timsort)을 사용함.
+
+  * 내부적으로 C 기반으로 구현되었고, 최적화 테크닉이 들어가 훨씬 빠르게 동작함.
 
 ### 1. 선택정렬
 
@@ -486,21 +528,73 @@ print('after:  {}'.format(data))
 
 ### 3. 퀵정렬
 
-:point_right:&nbsp; Worst-Case Performance
-
-* <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%5E2)" />
+:point_right:&nbsp; Worst-Case Performance: <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%5E2)" />
 
 :point_right:&nbsp; Best-Case  Performance
 
-* Simple Partition: <img src="https://chart.apis.google.com/chart?cht=tx&chl=n%5Clog_%7B%7D%7Bn%7D" />
+* Simple Partition: <img src="https://chart.apis.google.com/chart?cht=tx&chl=%5COmega(n%5Clog_%7B%7D%7Bn%7D)" />
 
 * Three-way Partition and equal keys: <img src="https://chart.apis.google.com/chart?cht=tx&chl=%5COmega(n)" />
 
-:point_right:&nbsp; Average    Performance
+:point_right:&nbsp; Average    Performance: <img src="https://chart.apis.google.com/chart?cht=tx&chl=n%5Clog%7B%7D%7Bn%7D" />
 
-* <img src="https://chart.apis.google.com/chart?cht=tx&chl=n%5Clog%7B%7D%7Bn%7D" />
+<br/>
 
-<br/><br/>
+### 4. 계수정렬
+
+> 모든 데이터가 양의정수이고, 데이터 갯수가 `N`, 데이터 중 최대값의 크기가 `K`인 상태.
+
+:point_right:&nbsp; 시간 복잡도: <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N%5C%20%2B%5C%20K)" />
+  
+* 정렬 정보를 저장하는 배열에 데이터를 삽입하는 동작: <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N)" />
+  
+* 정렬 정보를 저장하는 배열을 순차적으로 방문하는 동작: <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(K)" />
+
+
+:point_right:&nbsp; 공간 복잡도: <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N%5C%20%2B%5C%20K)" />
+
+<table>
+<thead>
+<tr>
+<th>배열 크기</th>
+<th>할당 메모리(MB)</th>
+<th>할당 시간(sec)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100,000(십만)</td>
+<td>0.7MB</td>
+<td>0.00007 sec</td>
+</tr>
+<tr>
+<td>1,000,000(백만)</td>
+<td>7MB</td>
+<td>0.00128 sec</td>
+</tr>
+<tr>
+<td>10,000,000(천만)</td>
+<td>76MB</td>
+<td>0.01291 sec</td>
+</tr>
+<tr>
+<td>100,000,000(억)</td>
+<td>762MB</td>
+<td>0.60375 sec</td>
+</tr>
+</tbody>
+</table>
+
+```python
+sys.getsizeof([0]*100000) // (2 ** 20)      # 십만, 0.7 MB, 0.00007 sec
+sys.getsizeof([0]*1000000) // (2 ** 20)     # 백만,   7 MB, 0.00128 sec
+sys.getsizeof([0]*10000000) // (2 ** 20)    # 천만,  76 MB, 0.01291 sec
+sys.getsizeof([0]*100000000) // (2 ** 20)   # 일억, 762 MB, 0.60375 sec
+
+[0 for _ in range(size)] # List Comprehension으로 생성할 경우 현저히 느려짐.
+```
+
+<br/>
 
 ---
 ## 읽어볼만한 문서
