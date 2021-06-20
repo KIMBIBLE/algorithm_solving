@@ -1,6 +1,4 @@
-# Sort
-
-[[뒤로](../../cheatsheet/algorithms/sort.md)]
+# 정렬 Sorting
 
 ## :one:&nbsp; 소팅 알고리즘의 종류
 
@@ -359,7 +357,7 @@ print('after:  {}'.format(sorted_data))
 
 ---
 <!-- ################################################### -->
-[[뒤로](../../cheatsheet/algorithms/sort.md)] / [[위로](#sort)]
+[[위로](#sort)]
 
 ## :two:&nbsp; 소팅 알고리즘의 시간복잡도/공간복잡도 비교
 
@@ -607,7 +605,7 @@ sys.getsizeof([0]*100000000) // (2 ** 20)   # 일억, 762 MB, 0.60375 sec
 <br/>
 
 ---
-## 읽어볼만한 문서
-[[뒤로](../../cheatsheet/algorithms/sort.md)] / [[위로](#sort)]
+## :three:&nbsp; 읽어볼만한 문서
+[[위로](#sort)]
 
 * [What are Sorting Algorithms?](https://lamfo-unb.github.io/2019/04/21/Sorting-algorithms/): 각 정렬 알고리즘에 대한 시간/공간 복잡도 정리가 잘 되어있음.
