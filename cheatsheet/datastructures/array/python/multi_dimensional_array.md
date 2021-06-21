@@ -4,7 +4,7 @@
 
 
 <p align="center">
-    <img  width="60%" src="./figure/python_object_copy.png" /><br/>
+    <img  width="60%" src="../figure/python_object_copy.png" /><br/>
     <a href="https://medium.com/@thawsitt/assignment-vs-shallow-copy-vs-deep-copy-in-python-f70c2f0ebd86">[그림 출처]</a>
 </p>
 
