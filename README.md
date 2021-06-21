@@ -24,7 +24,7 @@
 
 3. [Data Structure](./cheatsheet/datastructures/datastructure.md)
 
-4. [Algorithm Overview](./cheatsheet/algo_overviw.md)
+4. [Algorithm Overview](./cheatsheet/algo_overview.md)
 
 5. [Input and Output](./cheatsheet/input_output_style/input_output.md)
 
