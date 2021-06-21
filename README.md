@@ -22,11 +22,11 @@
 
 2. [Time Complixity](./cheatsheet/time_complixity.md)
 
-3. [Data Structure](./cheatsheet/datastructure.md)
+3. [Data Structure](./cheatsheet/datastructures/datastructure.md)
 
 4. [Algorithm Overview](./cheatsheet/algo_overviw.md)
 
-5. [Input and Output](./cheatsheet/input_output.md)
+5. [Input and Output](./cheatsheet/input_output_style/input_output.md)
 
 6. [Python](./cheatsheet/python.md)
 
