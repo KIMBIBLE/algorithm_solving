@@ -99,22 +99,22 @@ a == c          # True
 
 <tbody>
 <tr>
-    <td><center><code>=  연산자</code></cetnter></td>
+    <td align="center"><code>=  연산자</code></td>
     <td>객체의 메모리 주소를 대상 변수에 그대로 복사함.</td>
 </tr>
 <tr>
-    <td rowspan="2"><center><code>copy()</code></center></td>
+    <td align="center" rowspan="2"><code>copy()</code></td>
     <td>객체의 내용을 복사함(<code>shallow copy</code>). 이 때 리스트 요소들의 값이 그대로 새로운 객체로 복사됨. </td>
 </tr>
 <tr>
     <td>1차원 배열의 경우 <code>deep copy</code>를 고려할 필요는 없음. 이는 파이썬에서 다른 객체를 포함하는 <code>복합 객체(compound object)</code>가 아니라면, <code>shallow copy</code>와 <code>deep copy</code>간에 차이가 없기 때문.</td>
 </tr>
 <tr>
-    <td><center><code>== 연산자</code></center></td>
+    <td align="center"><code>== 연산자</code></td>
     <td>두 객체의 content와 value가 동일한지?</td>
 </tr>
 <tr>
-    <td><center><code>is 연산자</code></center></td>
+    <td align="center"><code>is 연산자</code></td>
     <td>두 객체가 동일한 객체인지?</td>
 </tr>
 
