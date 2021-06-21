@@ -4,9 +4,9 @@
 
 ### 1. Python
 
-* [1차원 배열의 주요 메서드와 특징: List](./datastructures/array/python/one_dimensional_array.md)
+* [1차원 배열의 주요 메서드와 특징: List](./array/python/one_dimensional_array.md)
 
-* [다차원(2차원 이상) 배열의 생성 및 사용: List](./datastructures/array/python/multi_dimensional_array.md)
+* [다차원(2차원 이상) 배열의 생성 및 사용: List](./array/python/multi_dimensional_array.md)
 
 * [[외부 링크] Python, Memory, and Objects](https://towardsdatascience.com/python-memory-and-objects-e7bec4a2845): mutable object, immutable object, interning 개념 설명 잘되어있음.
 
@@ -20,9 +20,9 @@
 
 ### 1. Python
 
-* [List를 활용한 구현](./datastructures/stack/python/stack_list.md)
+* [List를 활용한 구현](./stack/python/stack_list.md)
 
-* [deque 모듈 사용](./datastructures/stack/python/stack_deque.md)
+* [deque 모듈 사용](./stack/python/stack_deque.md)
 
 <br/>
 
@@ -30,9 +30,9 @@
 ## :two:&ensp; 큐
 
 ### 1. Python
-* [List를 활용한 구현](./datastructures/queue/python/queue_list.md)
+* [List를 활용한 구현](./queue/python/queue_list.md)
 
-* [deque 모듈 사용](./datastructures/queue/python/queue_deque.md)
+* [deque 모듈 사용](./queue/python/queue_deque.md)
 
 <br/>
 
