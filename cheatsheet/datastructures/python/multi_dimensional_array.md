@@ -1,13 +1,14 @@
 # 다차원(2차원 이상) 배열의 생성 및 사용 (Multi Dimensional Array)
 
-> 파이선의 List는 객체 생성 후, 객체의 값을 수정할 수 있는 `Mutable Object`이다. ㅇ
-> 
+> 파이썬에서 2차원 배열을 생성하는 경우, 다음 그림과 같이 객체가 복합객체(`compound object`)인지 여부를 꼭 주의해야 함!
+
 
 <p align="center">
     <img  width="60%" src="./figure/python_object_copy.png" /><br/>
     <a href="https://medium.com/@thawsitt/assignment-vs-shallow-copy-vs-deep-copy-in-python-f70c2f0ebd86">[그림 출처]</a>
 </p>
 
+---
 ## :one:&ensp; 이차원 배열 활용 방법
 
 ### 1. 선언
