@@ -1,66 +1,54 @@
 # Data Structrue
 
-## 1. Array
+## :one:&ensp; 배열
 
-### a. 1차원 배열
+### 1. Python
 
-1. Python : List(Mutable Object)
+* [1차원 배열의 주요 메서드와 특징: List](./datastructures/python/one_dimensional_array.md)
 
-    * 선언
-        ```py
-        a = []
-        a = list()
-        a = [] * 10 # []
-        a = [0] * 10 # [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        a = [[]] * 10 # [[], [], [], [], [], [], [], [], [], []]
-        ```
+* [다차원(2차원 이상) 배열의 생성 및 사용: List](./datastructures/python/multi_dimensional_array.md)
 
-    * 추가
-        ```py
-        a.append(1) # [1]
-        a.append(2) # [1, 2]
+* [(외부 링크) Python, Memory, and Objects](https://towardsdatascience.com/python-memory-and-objects-e7bec4a2845): mutable object, immutable object, interning 개념 설명 잘되어있음.
 
-        b = a * 3 # [1, 2, 1, 2, 1, 2]
-        c = [3]
-        a + c # [1, 2, 3]
-        ```
+* [shallow copy vs deep copy](./datastructures/python/shallow_copy_deep_copy.md)
 
-    * 슬라이싱
-        ```py
-        a = [1, 2, 3, 4, 5]
-        b = a[0:2] # [1, 2] 리스트 새로 생성하여 반환
-        ```
+* [(외부 링크) assignment vs shallow copy vs deep copy](https://medium.com/@thawsitt/assignment-vs-shallow-copy-vs-deep-copy-in-python-f70c2f0ebd86)
 
-    * mutable object, immutable object, interning 개념 : [링크](https://towardsdatascience.com/python-memory-and-objects-e7bec4a2845)
-    
-        * 파이썬에서 mutable object를 쓸 때는 이거 주의해야 함!
-            ```py
-            a = [1, 2, 3]
-            b = a # b = [1, 2, 3]
 
-            # id(a) == id(b)
-            a.append(4)
-            print(b) # [1, 2, 3, 4]
+<br/>
 
-            b.append(5)
-            print(a) # [1, 2, 3, 4, 5]
-            ```
+---
+## :two:&ensp; 스택
 
-        * 변수 a, b가 동일한 mutable object를 가리키는 레퍼런스이기 때문
 
-    * 복사 (Shallow Copy & Deep Copy)
-        * Shallow Copy Examples
-            ```py
-            a = [1, 2, 3]
-            b = a
-            c = a.copy()
+<br/>
 
-            a is b # True
-            a is c # False
-            a == c # True
-            ```
-            * `== 연산자` : 두 객체의 content나 value가 동일한지
-            * `is 연산자` : 두 객체가 동일한 객체인지
+---
+## :two:&ensp; 큐
+
+<br/>
+
+---
+## :three:&ensp; 그래프
+
+
+
+<br/>
+
+---
+## :four:&ensp; 트리
+
+
+---
+
+<br/>
+
+## :five:&ensp; 해시 테이블
+
+
+---
+
+<br/>
 
 ### b. 2차원 배열 (Two Dimensional Array)
 1. Python : List (Mutable Object)
