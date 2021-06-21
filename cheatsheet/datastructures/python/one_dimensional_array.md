@@ -1,4 +1,6 @@
-# 1차원 배열의 주요 `메서드`와 `특징`
+# 1차원 배열의 주요 `메서드`와 `특징`: List
+
+> 파이썬에서 일차원 배열을 표현할 수 있는 방법은 다양하지만, 해당 문서는 가장 대표적인 방법인 `List`를 활용한 방법에 대해 다룹니다.
 
 ## :one:&ensp; 1차원 배열의 주요 메서드
 
@@ -90,11 +92,14 @@ a == c          # True
     <td>객체의 메모리 주소를 대상 변수에 그대로 복사함.</td>
 </tr>
 <tr>
-    <td><code>copy()</code></td>
-    <td>객체의 내용을 복사함(shallow copy). 1차원 배열의 경우 deep copy를 고려할 필요는 없음.</td>
+    <td rowspan="2"><code>copy()</code></td>
+    <td>객체의 내용을 복사함(<code>shallow copy</code>). 이 때 리스트 요소들의 값이 그대로 새로운 객체로 복사됨. </td>
 </tr>
 <tr>
-    <td><code>== 연산자 &ensp;&ensp;&ensp;&ensp;&ensp;</code></td>
+    <td>1차원 배열의 경우 <code>deep copy</code>를 고려할 필요는 없음. 이는 파이썬에서 다른 객체를 포함하는 <code>복합 객체(compound object)</code>가 아니라면, <code>shallow copy</code>와 <code>deep copy</code>간에 차이가 없기 때문.</td>
+</tr>
+<tr>
+    <td><code>== 연산자</code></td>
     <td>두 객체의 content와 value가 동일한지?</td>
 </tr>
 <tr>
