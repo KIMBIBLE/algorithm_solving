@@ -1,13 +1,21 @@
 # List를 활용한 Stack 구현
 
-## 1. 스택 생성
+## 1. 스택 생성 
 
 ```py
 stack = []          # empty stack
 stack = [1, 2, 3]   # stack initialize
 ```
 
+* `stack[2]`가 스택의 top이 됨.
+
+<br/>
+
 ## 2. 스택 연산
+
+> push: 리스트의 맨 앞부터 데이터를 추가
+>
+> pop: 리스트의 맨 끝 요소를 pop
 
 ```py
 top = stack.pop()   # stack pop
