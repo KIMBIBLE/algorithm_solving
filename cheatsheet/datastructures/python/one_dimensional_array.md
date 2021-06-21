@@ -44,9 +44,20 @@ b = a[0:2]              # [1, 2] 리스트를 새로 생성하여 반환
 ## :two: 1차원 배열의 주요 특징
 
 ### 1. Mutable Object인 Python List
-
 > 파이썬의 List는 대표적인 `Mutable Object`! 따라서 파이썬에서 mutable object를 쓸 때는 이거 주의해야 함! 
 
+:point_right:&ensp; `Mutable Object` VS `Immuable Object`?
+
+* Mutable Object
+  * 객체 생성 후, 객체의 값을 수정할 수 있는 객체.
+
+  * 파이썬의 Mutable Object: `list, set, dict`
+
+* Immutable Object
+  * 객체 생성 후 객체의 값 수정이 불가능한 객체를 `immutable` 객체라고 함.
+  
+  * 파이썬의 immutalbe object: `int, float, complex, bool, string, tuple, frozen set`
+  
 
 ```py
 a = [1, 2, 3]
@@ -81,29 +92,29 @@ a == c          # True
 <table>
 <thead>
 <tr>
-    <th>연산자 및 메서드</th>
+    <th width="20%"><center>연산자 및 메서드</center></th>
     <th>내용</th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-    <td><code>=  연산자</code></td>
+    <td><center><code>=  연산자</code></cetnter></td>
     <td>객체의 메모리 주소를 대상 변수에 그대로 복사함.</td>
 </tr>
 <tr>
-    <td rowspan="2"><code>copy()</code></td>
+    <td rowspan="2"><center><code>copy()</code></center></td>
     <td>객체의 내용을 복사함(<code>shallow copy</code>). 이 때 리스트 요소들의 값이 그대로 새로운 객체로 복사됨. </td>
 </tr>
 <tr>
     <td>1차원 배열의 경우 <code>deep copy</code>를 고려할 필요는 없음. 이는 파이썬에서 다른 객체를 포함하는 <code>복합 객체(compound object)</code>가 아니라면, <code>shallow copy</code>와 <code>deep copy</code>간에 차이가 없기 때문.</td>
 </tr>
 <tr>
-    <td><code>== 연산자</code></td>
+    <td><center><code>== 연산자</code></center></td>
     <td>두 객체의 content와 value가 동일한지?</td>
 </tr>
 <tr>
-    <td><code>is 연산자</code></td>
+    <td><center><code>is 연산자</code></center></td>
     <td>두 객체가 동일한 객체인지?</td>
 </tr>
 
