@@ -37,7 +37,7 @@ len(stack) == 0     # isempty
     ```
 
     <details>
-    <summary>최대 할당 가능 사이즈 in <code>Objects/listobject.c</code></summary>
+    <summary>파이썬의 리스트 최대 할당 가능 사이즈 in <code>Objects/listobject.c</code></summary>
 
     ```cpp
     /* Ensure enough temp memory for 'need' array slots is available.
