@@ -30,3 +30,4 @@
 
 ## :four:&nbsp; Binary Search
 
+* [배열 이진탐색](./../dongbin_book/chap7_binary_search/README.md)
