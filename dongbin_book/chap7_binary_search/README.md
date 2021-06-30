@@ -25,8 +25,7 @@
 
 <details><summary>입출력 데이터</summary>
 
-```py
-"""
+```bash
 # Input Data 1 
 7
 1 3 5 7 9 11 13 15 17 19
@@ -41,7 +40,6 @@
 
 # Output 2
 Cannot find 7 in list
-"""
 ```
 
 </details><br/>
