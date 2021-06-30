@@ -50,34 +50,27 @@
 
 * [간선리스트 구현](./graph/python/edge_list.md)
 
+* Edge Cases
 
 <br/>
 
 ---
 ## :four:&ensp; 트리
+### 1. Python 
 
-
----
 
 <br/>
+
+---
 
 ## :five:&ensp; 해시 테이블
+### 1. Python 
 
-
----
 
 <br/>
 
+---
 
 
-## 4. Graph
 
 
-
-### e. Edge Cases
-
-## 5. Tree
-1. Python
-   ```py
-
-   ```
