@@ -76,3 +76,35 @@ if __name__ == '__main__':
     else:
         print(result + 1)
 ```
+
+<br/>
+
+:point_right:&ensp; 반복문을 통한 구현
+
+```py
+import sys
+readline = lambda: sys.stdin.readline().rstrip()
+
+def binary_search(array, target, start, end):
+    while start <= end:
+        mid = (start + end) // 2
+        if array[mid] == target:
+            return mid
+        elif array[mid] > target:
+            end = mid - 1
+        else:
+            start = mid + 1
+
+    return None
+
+
+if __name__ == '__main__':
+    target = int(readline())
+    array = list(map(int, readline().split()))
+
+    result = binary_search(array, target, 0, len(array) - 1)
+    if result == None:
+        print('Cannot find {} in list'.format(target))
+    else:
+        print(result + 1)
+```
