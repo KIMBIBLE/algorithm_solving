@@ -12,6 +12,7 @@
 
 * [[외부 링크] assignment("=") vs shallow copy vs deep copy](https://medium.com/@thawsitt/assignment-vs-shallow-copy-vs-deep-copy-in-python-f70c2f0ebd86)
 
+* [배열 내 데이터의 탐색: 순차탐색](./array/python/sequential_search.md)
 
 <br/>
 
