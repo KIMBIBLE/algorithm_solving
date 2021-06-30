@@ -14,6 +14,8 @@
 
 * [배열 내 데이터의 탐색: 순차탐색](./array/python/sequential_search.md)
 
+* [배열 내 데이터의 탐색: 이진탐색](./../../dongbin_book/chap7_binary_search/README.md)
+
 <br/>
 
 ---
