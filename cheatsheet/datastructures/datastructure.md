@@ -23,8 +23,9 @@
 
 ### 0. Overview
 
-원소 삽입 삭제의 시간복잡도가 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" />로 매우 빠름. 하지만 이론상 스택의 top을 제외한 나머지 스택 내 데이터의 탐색 시 원소를 하나씩 꺼내어 옮겨 담으면서 수행해야하는 단점이 있음.
+> Last in First Out(LIFO) 구조의 자료형. 원소 삽입 삭제의 시간복잡도가 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" />으로 매우 빠름. 하지만 이론상 스택의 top을 제외한 나머지 스택 내 데이터의 탐색 시 원소를 하나씩 꺼내어 옮겨 담으면서 수행해야하는 단점이 있음.
 
+<br/>
 
 :bulb:&ensp; 언제 사용할까?
 
@@ -32,7 +33,7 @@
 
 <br/>
 
-:bulb:&ensp; 대표적인 스택 문제
+:bulb:&ensp; 스택 자료형을 사용하는 대표적인 문제
 
 * 괄호 검사
 
@@ -56,10 +57,40 @@
 ---
 ## :two:&ensp; 큐
 
-### 1. Python
+### 0. Overview
+
+> First in First Out(FIFO) 구조의 자료형. 원소 삽입 삭제의 시간복잡도가 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" />으로 매우 빠름.
+
+<br/>
+
+:bulb:&ensp; 언제 사용할까?
+* 데이터를 입력된 순서대로 처리하는 경우
+
+* BFS 구현 시
+
+<br/>
+
+:bulb:&ensp; 큐 자료형을 사용하는 대표적인 문제
+
+* BFS 문제
+
+* 콜센터 대기 순서
+
+* 프로세스 관리
+
+<br/>
+
+### 1. 구현
+
+#### :pushpin:&ensp; Python 구현
+
 * [List를 활용한 구현](./queue/python/queue_list.md)
 
 * [deque 모듈 사용](./queue/python/queue_deque.md)
+
+* 선형 큐 구현
+
+* 순환 큐 구현
 
 <br/>
 
