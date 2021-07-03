@@ -21,11 +21,35 @@
 ---
 ## :two:&ensp; 스택
 
-### 1. Python
+### 0. Overview
+
+원소 삽입 삭제의 시간복잡도가 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" />로 매우 빠름. 하지만 이론상 스택의 top을 제외한 나머지 스택 내 데이터의 탐색 시 원소를 하나씩 꺼내어 옮겨 담으면서 수행해야하는 단점이 있음.
+
+
+:bulb:&ensp; 언제 사용할까?
+
+> 재귀 알고리즘이나 백트래킹이 필요한 작업에서 활용하기 좋음.
+
+<br/>
+
+:bulb:&ensp; 대표적인 스택 문제
+
+* 괄호 검사
+
+* 역순 문자열 만들기
+
+* 후위 표기법으로의 변환
+
+<br/>
+
+### 1. 구현
+
+#### :pushpin:&ensp; Python 구현
 
 * [List를 활용한 구현](./stack/python/stack_list.md)
 
 * [deque 모듈 사용](./stack/python/stack_deque.md)
+
 
 <br/>
 
