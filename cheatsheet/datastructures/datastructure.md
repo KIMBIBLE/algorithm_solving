@@ -45,7 +45,7 @@
 
 ### 1. 구현
 
-#### :pushpin:&ensp; Python 구현
+#### :pushpin:&ensp; Python 구현
 
 * [List를 활용한 구현](./stack/python/stack_list.md)
 
@@ -82,7 +82,7 @@
 
 ### 1. 구현
 
-#### :pushpin:&ensp; Python 구현
+#### :pushpin:&ensp; Python 구현
 
 * [List를 활용한 구현](./queue/python/queue_list.md)
 
