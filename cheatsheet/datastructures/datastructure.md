@@ -1,6 +1,28 @@
 # Data Structrue
 
-## :one:&ensp; 배열
+## Table of Contents
+
+1. <a href="#ds-1">Array</a>
+
+2. <a href="#ds-2">Linked List</a>
+
+3. <a href="#ds-3">Stack</a>
+
+4. <a href="#ds-4">Queue</a>
+
+5. <a href="#ds-5">Tree</a>
+
+6. <a href="#ds-6">Binary Heap</a>
+
+7. <a href="#ds-7">Red Black Tree</a>
+
+8. <a href="#ds-8">Hash Table</a>
+
+9. <a href="#ds-9">Graph</a>
+
+---
+
+<h2 id="ds-1">1️⃣  Array</h2>
 
 ### 1. Python
 
@@ -19,7 +41,12 @@
 <br/>
 
 ---
-## :two:&ensp; 스택
+<h2 id="ds-2">2️⃣  Linked List</h2>
+
+<br/>
+
+---
+<h2 id="ds-3">3️⃣  Stack</h2>
 
 ### 0. Overview
 
@@ -51,13 +78,10 @@
 
 * [deque 모듈 사용](./stack/python/stack_deque.md)
 
-
 <br/>
 
 ---
-## :two:&ensp; 큐
-
-### 0. Overview
+<h2 id="ds-4">4️⃣  Queue</h2>
 
 > First in First Out(FIFO) 구조의 자료형. 원소 삽입 삭제의 시간복잡도가 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" />으로 매우 빠름.
 
@@ -95,7 +119,27 @@
 <br/>
 
 ---
-## :three:&ensp; 그래프
+<h2 id="ds-5">5️⃣  Tree</h2>
+
+<br/>
+
+---
+<h2 id="ds-6">6️⃣  Binary Heap</h2>
+
+<br/>
+
+---
+<h2 id="ds-7">7️⃣  Red Black Tree</h2>
+
+<br/>
+
+---
+<h2 id="ds-8">8️⃣  Hash Table</h2>
+
+<br/>
+
+---
+<h2 id="ds-9">9️⃣  Graph</h2>
 
 ### 1. Python 
 
@@ -106,26 +150,5 @@
 * [간선리스트 구현](./graph/python/edge_list.md)
 
 * Edge Cases
-
-<br/>
-
----
-## :four:&ensp; 트리
-### 1. Python 
-
-
-<br/>
-
----
-
-## :five:&ensp; 해시 테이블
-### 1. Python 
-
-
-<br/>
-
----
-
-
 
 
