@@ -24,7 +24,9 @@
 
 <h2 id="ds-1">1️⃣  Array</h2>
 
-### 1. Python
+### 1. 구현
+
+:pushpin:&ensp; Python 구현
 
 * [1차원 배열의 주요 메서드와 특징: List](./array/python/one_dimensional_array.md)
 
@@ -124,7 +126,7 @@
 <br/>
 
 ---
-<h2 id="ds-6">6️⃣  Binary Heap</h2>
+<h2 id="ds-6">6️⃣  Heap</h2>
 
 <br/>
 
