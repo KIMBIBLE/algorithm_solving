@@ -31,3 +31,10 @@ A deque (double-ended queue) is represented `internally as a doubly linked list`
 |extendleft |<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(k)" />|<img src="https://chart.apis.google.com/chart?cht=tx&chl=O(k)" />|
 |rotate     |<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(k)" />|<img src="https://chart.apis.google.com/chart?cht=tx&chl=O(k)" />|
 |remove     |<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(n)" />|<img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n)" />|
+
+<br/>
+
+---
+## 참고
+
+* https://wiki.python.org/moin/TimeComplexity
