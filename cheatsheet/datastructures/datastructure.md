@@ -12,7 +12,7 @@
 
 5. <a href="#ds-5">Tree</a>
 
-6. <a href="#ds-6">Binary Heap</a>
+6. <a href="#ds-6">Heap</a>
 
 7. <a href="#ds-7">Red Black Tree</a>
 
