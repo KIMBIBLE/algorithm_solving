@@ -40,6 +40,8 @@
 
 * [배열 내 데이터의 탐색: 이진탐색](./../../dongbin_book/chap7_binary_search/README.md)
 
+* [Python Built-in List 자료형의 Operation 별 시간복잡도 정리](./array/timecomplexity.md)
+
 <br/>
 
 ---
