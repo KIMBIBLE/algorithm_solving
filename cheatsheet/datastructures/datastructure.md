@@ -87,6 +87,8 @@
 ---
 <h2 id="ds-4">4️⃣  Queue</h2>
 
+### 0. Overview
+
 > First in First Out(FIFO) 구조의 자료형. 원소 삽입 삭제의 시간복잡도가 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" />으로 매우 빠름.
 
 <br/>
