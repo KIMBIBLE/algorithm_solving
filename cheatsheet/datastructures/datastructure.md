@@ -114,7 +114,7 @@
 
 * [List를 활용한 구현](./queue/python/queue_list.md)
 
-* [deque 모듈 사용](./queue/python/queue_deque.md)
+* [collections.deque 모듈 사용 방법 및 Operation 별 Time Complexity 정리](./queue/python/queue_deque.md)
 
 * 선형 큐 구현
 
