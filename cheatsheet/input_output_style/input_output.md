@@ -3,7 +3,9 @@
 ## 1. Integer
 
 ### a. Python
+
 * 정수 입력
+
 ```py
 type(input()) # <class 'str'>
 n1 = int(input())
@@ -22,8 +24,11 @@ n5, n6 = map(int, readline().split())
 ## 2. Array
 
 ### a. Python
+
 * 이차원 배열에 정수 입력 받기
+
   * Case 1: 각 라인에 구분자가 없는 경우
+
     ```
     4 6
     101111
@@ -41,6 +46,7 @@ n5, n6 = map(int, readline().split())
     ```
 
   * Case 2: 가장 일반적인 케이스로 구분자가 `' '`인 경우
+    
     ```
     4 3
     0 1 0
@@ -67,6 +73,7 @@ n5, n6 = map(int, readline().split())
     ```
 
   * Case 3: 몇개 입력할지 알려주지 않고, 입력이 끝날 때 까지 입력을 받는 경우(`EOF`)
+    
     ```py
     import sys
     readline = lambda: sys.stdin.readline()
@@ -85,52 +92,69 @@ n5, n6 = map(int, readline().split())
 ## 2. Graph
 
 ### a. Python
-* type 1: programmers
-    * case a
-        ```
-        n: 3 
-        data: [[1,1,0], [1,1,0], [0,1,2]
-        ```
 
-  * type 2: boj
-    * case a
-        ```
-        line 1 -> N: Node 갯수, M: 간선의 갯수, V: 탐색을 시작할 정점
-        line 2 ~ line M+1 -> 간선을 연결하는 두 정점의 번호
-        4 5 1
-        1 2
-        1 3
-        1 4
-        2 4
-        3 4
-        ```
+* type 1: programmers
+
+  * case a
+
+    ```
+    n: 3 
+    data: [[1,1,0], [1,1,0], [0,1,2]
+    ```
+
+* type 2: boj
+
+  * case a
+
+    ```
+    line 1 -> N: Node 갯수, M: 간선의 갯수, V: 탐색을 시작할 정점
+    line 2 ~ line M+1 -> 간선을 연결하는 두 정점의 번호
+    4 5 1
+    1 2
+    1 3
+    1 4
+    2 4
+    3 4
+    ```
 
 # Output
 
 ## 1. 요소마다 개행('\n')을 붙여서 출력
 
 ### a. Python
-  * print() 일반 출력 예시
   
-    ```py
-    for i in range(3):
-        print i
-    
-    # result
-    # 0
-    # 1
-    # 2
-    ```
+* print() 일반 출력 예시
+  
+  ```py
+  for i in range(3):
+      print i
+  
+  # result
+  # 0
+  # 1
+  # 2
+  ```
 
 ## 1. 모든 요소를 한줄에 출력
 
 ### a. Python
-  * print에 comma를 붙여 사용
-    
-    ```py
-    for i in range(5):
-        print i,
-    
-    # result
-    # 0 1 2 3 4
-    ```
+  
+* `Python2`: print에 comma를 붙여 사용
+
+  ```py
+  for i in range(5):
+    print i,
+  
+  # result
+  # 0 1 2 3 4
+  ```
+
+* `Python3`: print의 `end` 인자 활용
+
+  ```py
+  for i in range(5):
+    print(i, end = ' ')
+
+  # result
+  # 0 1 2 3 4
+  ```
