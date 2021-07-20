@@ -20,7 +20,7 @@
 
 1. [Problem Solving Basic](./cheatsheet/problem_solving.md)
 
-2. [Time Complixity](./cheatsheet/time_complixity.md)
+2. [Time complexity](./cheatsheet/time_complexity.md)
 
 3. [Data Structure](./cheatsheet/datastructures/datastructure.md)
 
