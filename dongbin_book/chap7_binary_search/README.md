@@ -2,7 +2,7 @@
 
 ## :one:&ensp; 배열 이진탐색
 
-> 코딩테스트에서 이진 탐색 알고리즘을 사용하는 경우는 탐색의 범위가 매우 큰 경우가 대다수임. 만약 탐색의 범위가 1,000만 이상인 경우 이진탐색과 같이 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n%5Clog%7B%7D%7Bn%7D)" /> 복잡도의 알고리즘을 활용해야 함.
+> 코딩테스트에서 이진 탐색 알고리즘을 사용하는 경우는 탐색의 범위가 매우 큰 경우가 대다수임. 만약 탐색의 범위가 `1,000만 이상`인 경우 이진탐색과 같이 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(%5Clog%7B%7D%7Bn%7D)" /> 복잡도의 알고리즘을 활용해야 함.
 
 <br/>
 
