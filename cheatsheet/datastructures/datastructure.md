@@ -25,28 +25,28 @@
 ---
 <h2 id="ds-1">1️⃣  Array</h2>
 
-### 1. 구현
+### 0. Overview
 
-:pushpin:&ensp; Python 구현 
+### 1. 구현 및 참고자료
 
-* [1차원 배열의 주요 메서드와 특징: List](./array/python/one_dimensional_array.md)
-
-* [다차원(2차원 이상) 배열의 생성 및 사용: List](./array/python/multi_dimensional_array.md)
-
-* [[외부 링크] Python, Memory, and Objects](https://towardsdatascience.com/python-memory-and-objects-e7bec4a2845): mutable object, immutable object, interning 개념 설명 잘되어있음.
-
-* [[외부 링크] assignment("=") vs shallow copy vs deep copy](https://medium.com/@thawsitt/assignment-vs-shallow-copy-vs-deep-copy-in-python-f70c2f0ebd86)
-
-* [배열 내 데이터의 탐색: 순차탐색](./array/python/sequential_search.md)
-
-* [배열 내 데이터의 탐색: 이진탐색](./../../dongbin_book/chap7_binary_search/README.md)
-
-* [Python Built-in List 자료형의 Operation 별 시간복잡도 정리](./array/timecomplexity.md)
+|Lang   |Material|
+|:-:    |-|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[1차원 배열의 주요 메서드와 특징: List](./array/python/one_dimensional_array.md)|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[다차원(2차원 이상) 배열의 생성 및 사용: List](./array/python/multi_dimensional_array.md)|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[[외부 링크] Python, Memory, and Objects](https://towardsdatascience.com/python-memory-and-objects-e7bec4a2845): mutable object, immutable object, interning 개념 설명 잘되어있음.|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[[외부 링크] assignment("=") vs shallow copy vs deep copy](https://medium.com/@thawsitt/assignment-vs-shallow-copy-vs-deep-copy-in-python-f70c2f0ebd86)|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[배열 내 데이터의 탐색: 순차탐색](./array/python/sequential_search.md)|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[배열 내 데이터의 탐색: 이진탐색](./../../dongbin_book/chap7_binary_search/README.md)|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[Python Built-in List 자료형의 Operation 별 시간복잡도 정리](./array/timecomplexity.md)|
 
 <br/>
 
 ---
 <h2 id="ds-2">2️⃣  Linked List</h2>
+
+### 0. Overview
+
+### 1. 구현
 
 <br/>
 
@@ -77,11 +77,10 @@
 
 ### 1. 구현
 
-#### :pushpin:&ensp; Python 구현
-
-* [List를 활용한 구현](./stack/python/stack_list.md)
-
-* [deque 모듈 사용](./stack/python/stack_deque.md)
+|Lang   |Material|
+|:-:    |-|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[List를 활용한 구현](./stack/python/stack_list.md)|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[deque 모듈 사용](./stack/python/stack_deque.md)|
 
 <br/>
 
@@ -113,15 +112,13 @@
 
 ### 1. 구현
 
-#### :pushpin:&ensp; Python 구현
 
-* [List를 활용한 구현](./queue/python/queue_list.md)
-
-* [collections.deque 모듈 사용 방법 및 Operation 별 Time Complexity 정리](./queue/python/queue_deque.md)
-
-* 선형 큐 구현
-
-* 순환 큐 구현
+|Lang   |Material|
+|:-:    |-|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[List를 활용한 구현](./queue/python/queue_list.md)|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[collections.deque 모듈 사용 방법 및 Operation 별 Time Complexity 정리](./queue/python/queue_deque.md)|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |선형 큐 구현|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |순환 큐 구현|
 
 <br/>
 
@@ -132,30 +129,7 @@
 
 계층적 관계(Hierarchical Relationship)을 표현하는 비선형 자료구조. 파일시스템과 같이 큰 데이터를 처리하는 소프트웨어들은 대부분 빠른 탐색을 위해, 데이터를 트리 자료구조 형태로 저장하여, 이진 탐색과 같은 탐색 기법을 활용함. 트리 구현을 위해서는 회로 Cycle이 존재하지 않아야 함.
 
-|Tree Terminology       |Description|
-|-                      |-          |
-|Node                   |트리를 구성하는 각각의 요소를 의미. 트리 자료구조의 노드는 정보의 단위로서 어떠한 정보를 가지고 있는 개체를 뜻함.|
-|Edge                   |노드와 노드를 연결하는 선을 의미.|
-|Root Node              |트리 구조에서 최상위에 위치한 노드를 의미.|
-|Terminal Node(=Leaf Node, 단말 노드) |하위에 다른 노드가 연결되어있지 않은 노드를 의미.|
-|Internal Node(내부노드, 비단말 노드)    |단말 노드를 제외한 모든 노드를 의미. 루트노드를 포함함.|
-|Sub Tree               |트리 자료구조는 트리 자료구조의 일부를 떼어내도 트리 구조를 유지하며, 뗴어낸 트리를 서브 트리라고 함.|
-|Left Chile Node        |왼쪽 서브 트리의 노드를 의미.|
-|Right Chile Node       |오른쪽 서브 트리의 노드를 의미.|
-|Parent Node            |그 노드를 자식으로 하는 노드를 의미.|
-|Sibling Node           |부모가 같은 두 노드를 의미.|
-|Degree(노드의 차수)       |자식의 수|
-|Leaf Node              |차수가 0인 노드. 다시말해 자식이 없는 노드를 의미.|
-|Path                   |-|
-|Length                 |경로를 포함하는 방향 간선의 수. 시작점과 출발점이 같은 경로의 길이는 0|
-|Ancestor Node          |두 노드 사이에 양수 길이의 경로가 존재한다면, 시작점 노드를 도착점 노드의 조상 노드라고 함.|
-|Descendant Node        |두 노드 사이에 양수 길이의 경로가 존재한다면, 도착점 노드를 시작점 노드의 자손 노드라고 함.|
-|Depth                  |노드의 깊이를 의미하며, 루트 노드에서 자신까지 가는 경로의 길이. 루트 노드의 깊이는 0.|
-|Level                  |루트 노드에서 자신까지 가는 경로의 길이 + 1.이 때, 루트노드의 레벨은 1이 됨. 간혹 트리의 특정 깊이를 가지는 노드의 집합을 레벨이라고 하기도 함. `Level = Depth` or `Level = Depth + 1`이 혼용되어 사용되는 듯.|
-|Hight                  |특정 노드와 단말 노드 사이의 경로의 최대 길이.|
-|Size                   |자기 자신 및 모든 자손 노드의 수.|
-
-:bulb:&ensp; 트리 용어는 잘 표준화되어있지 않기 때문에, 문헌마다 차이가 있을 수 있음
+:bulb:&ensp; [Tree 자료구조의 Terminology](./tree/terminology.md)
 
 <br/>
 
@@ -259,11 +233,10 @@
 
 ### 3. 구현
 
-#### :pushpin:&ensp; Python 구현
-
-* Binary Search Tree 구현
-
-* 주어진 트리가 이진트리인지 여부를 확인하는 알고리즘 구현
+|Lang   |Material|
+|:-:    |-|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |Binary Search Tree 구현|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |주어진 트리가 이진트리인지 여부를 확인하는 알고리즘 구현|
 
 <br/>
 
@@ -275,18 +248,29 @@
 ---
 <h2 id="ds-7">7️⃣  Hash Table</h2>
 
+### 0. Overview
+
+### 1. 구현
+
+|Lang   |Material|
+|:-:    |-|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[Dictionary 자료형](./hashtable/python/dictionary.md)|
+
+
 <br/>
 
 ---
 <h2 id="ds-8">8️⃣  Graph</h2>
 
-### 1. Python 
+### 0. Overview
 
-* [인접행렬 구현](./graph/python/adjacent_matrix.md)
+### 1. 구현
 
-* [인접 리스트 구현](./graph/python/adjacent_list.md)
-
-* [간선리스트 구현](./graph/python/edge_list.md)
+|Lang   |Material|
+|:-:    |-|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[인접행렬 구현](./graph/python/adjacent_matrix.md)|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[인접 리스트 구현](./graph/python/adjacent_list.md)|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[간선리스트 구현](./graph/python/edge_list.md)|
 
 ### 2.  Edge Cases
 
@@ -299,6 +283,8 @@
 
 `집합(Set)`은 `원소(Member)`라는 구별되는 객체들이 연관되어 모인 것을 말하며, `서로 다른 연관된 원소`들의 `순서 없는` 모임이다.
 
-### 1. Python
+### 1. 구현
 
-* [set 자료형](./set/python/set.md)
+|Lang   |Material|
+|:-:    |-|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[set 자료형](./set/python/set.md)|
