@@ -20,7 +20,7 @@ N개의 떡의 높이들: <img src="https://chart.apis.google.com/chart?cht=tx&c
 
 ### :bulb: H를 어떻게 정해야할까?
 
-1. 브포로 H값들을 순차 탐색?
+1. 브포로 `H`값들을 순차 탐색?
 
     떡의 높이의 최댓값이 10억이기 떄문에, <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(H)" />의 시간 복잡도를 갖는 순차 탐색 방법은 사용 불가능함.
 
@@ -44,6 +44,17 @@ N개의 떡의 높이들: <img src="https://chart.apis.google.com/chart?cht=tx&c
     * Case 2: `total >= M`
 
         떡을 덜 잘라야하므로, `start = start, end = H`로 다시 탐색.
+
+
+    :bulb:&ensp; 시간복잡도?
+
+    이진 탐색의 범위(`R`)가 `10억 미만`이고, end 값을 찾는 과정에서 선형 탐색을 한번 진행했으니 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N)%5C%20%2B%5C%20O(%5Clog%7B%7D%7BR%7D)" />의 시간 복잡도가 나옴.
+
+    최악의 케이스 연산 시간 계산
+    
+    * 이진 탐색의 범위가 `10억 - 1`이기 떄문에, <img src="https://chart.apis.google.com/chart?cht=tx&chl=%5Clog%7B%7D%7B1%2C000%2C000%2C000%7D%5C%20%5Capprox%5C%2020" />회의 연산이 필요
+    
+    * 범위의 최댓값 도출을 위한 선형 탐색 시 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N)%5C%20%3D%5C%20O(1,000,000)" />이 나옴. <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(N)" />복잡도의 알고리즘은 N값이 1억정도가 될 때 1초가 소요되기 떄문에, 제한 시간 2초 안에 넉넉하게 수행 가능.
 
 <br/>
 
