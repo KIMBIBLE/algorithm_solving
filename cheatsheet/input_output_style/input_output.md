@@ -1,8 +1,8 @@
-# Input
+# :hocho:&ensp; Input
 
-## 1. Integer
+## :one:&ensp; Integer
 
-### a. Python
+### 1. Python
 
 * 정수 입력
 
@@ -21,9 +21,12 @@ n4 = int(readline())
 n5, n6 = map(int, readline().split())
 ```
 
-## 2. Array
+<br/>
 
-### a. Python
+---
+## :two:&ensp; Array
+
+### 1. Python
 
 * 이차원 배열에 정수 입력 받기
 
@@ -89,9 +92,12 @@ n5, n6 = map(int, readline().split())
             break
     ```
 
-## 2. Graph
+<br/>
 
-### a. Python
+---
+## :three:&ensp; Graph
+
+### 1. Python
 
 * type 1: programmers
 
@@ -117,11 +123,14 @@ n5, n6 = map(int, readline().split())
     3 4
     ```
 
-# Output
+<br/>
 
-## 1. 요소마다 개행('\n')을 붙여서 출력
+---
+# :hocho:&ensp;Output
 
-### a. Python
+## :one:&ensp; 요소마다 개행('\n')을 붙여서 출력
+
+### 1. Python
   
 * print() 일반 출력 예시
   
@@ -135,9 +144,12 @@ n5, n6 = map(int, readline().split())
   # 2
   ```
 
-## 1. 모든 요소를 한줄에 출력
+<br/>
 
-### a. Python
+---
+## :two:&ensp; 모든 요소를 한줄에 출력
+
+### 1. Python
   
 * `Python2`: print에 comma를 붙여 사용
 
