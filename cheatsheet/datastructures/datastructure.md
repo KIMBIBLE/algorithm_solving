@@ -18,13 +18,16 @@
 
 8. <a href="#ds-8">Graph</a>
 
----
+9. <a href="#ds-9">Set</a>
 
+<br/>
+
+---
 <h2 id="ds-1">1️⃣  Array</h2>
 
 ### 1. 구현
 
-:pushpin:&ensp; Python 구현
+:pushpin:&ensp; Python 구현 
 
 * [1차원 배열의 주요 메서드와 특징: List](./array/python/one_dimensional_array.md)
 
@@ -262,7 +265,6 @@
 
 * 주어진 트리가 이진트리인지 여부를 확인하는 알고리즘 구현
 
-
 <br/>
 
 ---
@@ -271,12 +273,12 @@
 <br/>
 
 ---
-<h2 id="ds-7">8️⃣  Hash Table</h2>
+<h2 id="ds-7">7️⃣  Hash Table</h2>
 
 <br/>
 
 ---
-<h2 id="ds-8">9️⃣  Graph</h2>
+<h2 id="ds-8">8️⃣  Graph</h2>
 
 ### 1. Python 
 
@@ -288,4 +290,15 @@
 
 ### 2.  Edge Cases
 
+<br/>
 
+---
+<h2 id="ds-9">9️⃣  Set</h2>
+
+### 0. Overview
+
+`집합(Set)`은 `원소(Member)`라는 구별되는 객체들이 연관되어 모인 것을 말하며, `서로 다른 연관된 원소`들의 `순서 없는` 모임이다.
+
+### 1. Python
+
+* [set 자료형](./set/python/set.md)
