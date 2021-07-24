@@ -1,4 +1,4 @@
-# 다차원(2차원 이상) 배열의 생성 및 사용 (Multi Dimensional Array)
+# <a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="22px"/></a>&ensp; 다차원(2차원 이상) 배열의 생성 및 사용 (Multi Dimensional Array)
 
 > 파이썬에서 2차원 배열을 생성하는 경우, 다음 그림과 같이 객체가 복합객체(`compound object`)인지 여부를 꼭 주의해야 함!
 

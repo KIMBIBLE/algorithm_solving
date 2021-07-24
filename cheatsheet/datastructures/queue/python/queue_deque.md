@@ -1,4 +1,4 @@
-# collections.deque를 활용한 Queue 구현 및 Operation Time Complexity
+# <a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="22px"/></a>&ensp; `collections.deque`를 활용한 Queue 구현 및 Operation Time Complexity
 
 ## 1. 큐 생성 
 

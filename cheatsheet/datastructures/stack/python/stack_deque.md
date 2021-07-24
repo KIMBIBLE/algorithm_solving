@@ -1,4 +1,4 @@
-# deque를 활용한 Stack 구현
+# <a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="22px"/></a>&ensp; `collections.deque`를 활용한 Stack 구현
 
 ## 1. 스택 생성 
 

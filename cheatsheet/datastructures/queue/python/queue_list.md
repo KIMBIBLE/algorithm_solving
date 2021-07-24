@@ -1,4 +1,4 @@
-# List를 활용한 Queue 구현
+# <a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="22px"/></a>&ensp; List를 활용한 Queue 구현
 
 > 해당 문서의 내용은 엄밀히 말해 Queue를 구현하는 것이 아니라, 파이썬의 내장 자료형인 List를 Queue의 특성에 맞게 사용하는 방법임.
 

@@ -1,4 +1,4 @@
-# Python `set` 자료형
+# <a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="22px"/></a>&ensp; Python `set` 자료형
 
 Python은 집합에 관한 연산을 처리하는 기능을 내장 자료형인 `set`을 통해 제공한다.
 

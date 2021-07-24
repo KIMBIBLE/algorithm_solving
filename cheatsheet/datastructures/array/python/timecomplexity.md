@@ -1,4 +1,4 @@
-# Python Built-in List 자료형의 Operation 별 시간복잡도 분석
+# <a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="22px"/></a>&ensp; Python Built-in List 자료형의 Operation 별 시간복잡도 분석
 
 The Average Case assumes parameters generated uniformly at random.
 
