@@ -1,7 +1,8 @@
-# 1차원 배열의 주요 `메서드`와 `특징`: List
+# <a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="22px"/></a>&ensp; 1차원 배열의 주요 `메서드`와 `특징`: List
 
-> 파이썬에서 일차원 배열을 표현할 수 있는 방법은 다양하지만, 해당 문서는 가장 대표적인 방법인 `List`를 활용한 방법에 대해 다룹니다.
+파이썬에서 일차원 배열을 표현할 수 있는 방법은 다양하지만, 해당 문서는 가장 대표적인 방법인 `List`를 활용한 방법에 대해 다룹니다.
 
+---
 ## :one:&ensp; 1차원 배열의 주요 메서드
 
 ### 1. 선언
@@ -40,7 +41,6 @@ b = a[0:2]              # [1, 2] 리스트를 새로 생성하여 반환
 
 
 ---
-
 ## :two: 1차원 배열의 주요 특징
 
 ### 1. Mutable Object인 Python List

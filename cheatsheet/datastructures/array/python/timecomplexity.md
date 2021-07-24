@@ -6,6 +6,7 @@ Internally, a list is represented as an array; `the largest costs` come from `gr
 
 <br/>
 
+---
 ## Time Complexity
 
 |Operation  |Average Case   |Amortized Worst Case   |

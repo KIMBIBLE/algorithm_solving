@@ -4,7 +4,7 @@
 
 <br/>
 
-
+---
 ## :one:&ensp; 입력 포맷
 
 * 코딩테스트 Graph 문제의 입력값 제공 방식에 대한 기본 예시: [more samples](../../../input_output_style/input_output.md)
@@ -30,6 +30,7 @@
 
 <br/>
 
+---
 ## :two:&ensp; 인접 행렬(adjacent Matrix)
 
 ```py

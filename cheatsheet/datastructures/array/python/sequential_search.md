@@ -1,7 +1,10 @@
-# 1차원 배열의 탐색: 순차탐색
+# <a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="22px"/></a>&ensp; 1차원 배열의 탐색: 순차탐색
 
-> 배열 내 데이터를 찾기 위해 배열의 맨 앞에서부터 차례로 데이터를 검색하는 탐색방식. <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n)" />의 시간복잡도를 가짐.
+배열 내 데이터를 찾기 위해 배열의 맨 앞에서부터 차례로 데이터를 검색하는 탐색방식. <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n)" />의 시간복잡도를 가짐.
 
+<br/>
+
+---
 ## :one:&ensp; 탐색 코드
 
 ### 1. 직접 구현

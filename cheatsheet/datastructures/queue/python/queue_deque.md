@@ -1,13 +1,16 @@
 # <a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="22px"/></a>&ensp; `collections.deque`를 활용한 Queue 구현 및 Operation Time Complexity
 
-## 1. 큐 생성 
+## :one:&ensp; 큐 생성 
 
 ```py
 from collections import deque
 queue = deque([1, 2, 3])
 ```
 
-## 2. 큐 연산
+<br/>
+
+---
+## :two:&ensp; 큐 연산
 
 ```py
 top = queue.popleft()   # front item in queue
@@ -16,7 +19,10 @@ queue.append(4)         # queue push
 len(queue)              # isempty
 ```
 
-## 3. Time Complexity
+<br/>
+
+---
+## :three:&ensp; Time Complexity
 
 A deque (double-ended queue) is represented `internally as a doubly linked list`. (Well, `a list of arrays rather than objects, for greater efficiency`.) Both ends are accessible, but even looking at the middle is slow, and adding to or removing from the middle is slower still.
 

@@ -1,6 +1,6 @@
 # <a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="22px"/></a>&ensp; List를 활용한 Stack 구현
 
-## 1. 스택 생성 
+## :one:&ensp; 스택 생성 
 
 ```py
 stack = []          # empty stack
@@ -11,7 +11,8 @@ stack = [1, 2, 3]   # stack initialize
 
 <br/>
 
-## 2. 스택 연산
+---
+## :two:&ensp; 스택 연산
 
 > push: 리스트의 맨 앞부터 데이터를 추가
 >
