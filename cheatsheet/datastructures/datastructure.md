@@ -23,7 +23,7 @@
 <br/>
 
 ---
-<h2 id="ds-1">1️⃣  Array</h2>
+<h2 id="ds-1">1️⃣&ensp; Array</h2>
 
 ### 0. Overview
 
@@ -42,7 +42,7 @@
 <br/>
 
 ---
-<h2 id="ds-2">2️⃣  Linked List</h2>
+<h2 id="ds-2">2️⃣&ensp; Linked List</h2>
 
 ### 0. Overview
 
@@ -51,7 +51,7 @@
 <br/>
 
 ---
-<h2 id="ds-3">3️⃣  Stack</h2>
+<h2 id="ds-3">3️⃣&ensp; Stack</h2>
 
 ### 0. Overview
 
@@ -85,7 +85,7 @@
 <br/>
 
 ---
-<h2 id="ds-4">4️⃣  Queue</h2>
+<h2 id="ds-4">4️⃣&ensp; Queue</h2>
 
 ### 0. Overview
 
@@ -123,7 +123,7 @@
 <br/>
 
 ---
-<h2 id="ds-5">5️⃣  Tree</h2>
+<h2 id="ds-5">5️⃣&ensp; Tree</h2>
 
 ### 0. Overview
 
@@ -241,12 +241,12 @@
 <br/>
 
 ---
-<h2 id="ds-6">6️⃣  Heap</h2>
+<h2 id="ds-6">6️⃣&ensp; Heap</h2>
 
 <br/>
 
 ---
-<h2 id="ds-7">7️⃣  Hash Table</h2>
+<h2 id="ds-7">7️⃣&ensp; Hash Table</h2>
 
 ### 0. Overview
 
@@ -260,7 +260,7 @@
 <br/>
 
 ---
-<h2 id="ds-8">8️⃣  Graph</h2>
+<h2 id="ds-8">8️⃣&ensp; Graph</h2>
 
 ### 0. Overview
 
@@ -277,7 +277,7 @@
 <br/>
 
 ---
-<h2 id="ds-9">9️⃣  Set</h2>
+<h2 id="ds-9">9️⃣&ensp; Set</h2>
 
 ### 0. Overview
 
@@ -288,3 +288,16 @@
 |Lang   |Material|
 |:-:    |-|
 |<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[set 자료형](./set/python/set.md)|
+
+<br/>
+
+---
+## References
+
+- https://www.geeksforgeeks.org/data-structures/
+
+- https://www.tutorialspoint.com/data_structures_algorithms/index.htm
+
+- https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/DataStructure
+
+- 동빈북
