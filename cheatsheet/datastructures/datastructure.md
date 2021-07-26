@@ -10,9 +10,9 @@
 
 4. <a href="#ds-4">Queue</a>
 
-5. <a href="#ds-5">Tree</a>
+5. <a href="#ds-5">Tree-Basic</a>
 
-6. <a href="#ds-6">Heap</a>
+6. <a href="#ds-6">Tree-Advanced</a>
 
 7. <a href="#ds-7">Hash Table</a>
 
@@ -123,7 +123,7 @@
 <br/>
 
 ---
-<h2 id="ds-5">5️⃣&ensp; Tree</h2>
+<h2 id="ds-5">5️⃣&ensp; Tree-Basic</h2>
 
 ### 0. Overview
 
@@ -133,7 +133,9 @@
 
 <br/>
 
-### 1. Tree의 종류
+### 1. Tree의 종류(Basic)
+
+이번 챕터에서는 Tree 자료구조의 기초인 `Binary Tree`, `Perfect Binary Tree`, `Perfect Binary Tree`, `Complete Binary Tree`, `Binary Search Tree(BST)`에 대해 알아본다. 더 복잡한 형태의 Tree 자료구조에 대해 궁금하다면 [Tree-Advanced 챕터](ds-5)에서 알아보자.
 
 * Binary Tree(이진 트리)
 
@@ -206,18 +208,6 @@
 
 <br/>
 
-* Red Black Tree
-
-    > 
-
-<br/>
-
-* Balanced Binary Tree(균형 이진 트리)
-
-    >
-
-<br/>
-
 ### 2. 트리의 탐색/순회(Tree Traversal)
 
 이진트리 및 전반적인 트리 구조에서 각가의 노드를 정확히 한 번만, 체계적으로 방문하는 과정을 말함. Tree Traversal 방식은 노드를 방문하는 순서에 따라 다음과 같이 분류됨. 아래의 트리 순회 방식 각각에 대한 설명은 이진 트리를 기준으로 작성되었지만, 다른 트리의 형태에도 일반화가 가능함.
@@ -241,7 +231,25 @@
 <br/>
 
 ---
-<h2 id="ds-6">6️⃣&ensp; Heap</h2>
+<h2 id="ds-6">6️⃣&ensp; Tree-Advanced</h2>
+
+### 1. Heap
+
+<br/>
+
+### 2. Red Black Tree
+
+<br/>
+
+### 3. Balanced Binary Tree(균형 이진 트리)
+
+<br/>
+
+### 4. AVL Tree
+
+<br/>
+
+### 5. Spanning Tree
 
 <br/>
 
@@ -301,3 +309,5 @@
 - https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/DataStructure
 
 - 동빈북
+
+- 파이썬 알고리즘 인터뷰
