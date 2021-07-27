@@ -303,7 +303,10 @@
 
 이는 서로 다른 두개의 데이터에 대해 해시 함수가 동일한 `hashcode`를 반환하는 `Hash Collision`이 발생할 수 있기 때문이다. (해시 테이블에서는 `Collision`을 해결하고자 `access/store` 과정에서 해시 충돌을 회피하는 로직이 추가된다.) 이렇게 되면 서로 다른 두개의 데이터가 같은 인덱스로 계산되는 동일한 키 값(hashcode)를 갖기 때문에, 배열 내에 데이터를 저장할 때 해당 인덱스로 접근되는 동일한 위치에 데이터가 저장되야 하는 현상(`Collision`)이 발생한다. Collision을 조금 더 깊게 이해하기 위해, 해시 테이블보다 단순한 형태인 `Direct-address Table`을 먼저 한번 살펴보자.
 
-![DAT](../figure/direct_address_table.png)
+<div align="center">
+    <img src="../figure/direct_address_table.png" />
+    <a href="https://web.stanford.edu/class/archive/cs/cs161/cs161.1168/lecture9.pdf">https://web.stanford.edu/class/archive/cs/cs161/cs161.1168/lecture9.pdf</a>
+</div><br/>
 
 Direct-address Table은 Hash Table과 달리 data의 key를 직접적으로 버킷의 인덱스로 활용하는 자료구조이다. 이 때 Direct-address Table은 해시 테이블의 크기와 동일한 키 갯수를 사용하기 때문에, Collision 문제가 발생하지 않는다는 장점이 있다. 하지만 `전체 키 집합(U)`에 비해 `실제 사용하는 키 집합(K)`이 작은 경우, 사용되지 않는 키를 위한 메모리 할당을 해야하기 때문에 메모리 효율성이 크게 떨어지게 된다.
 
@@ -379,19 +382,24 @@ Collision이 많아질 수록 Search 에 필요한 Time Complexity가 <img src="
 
 3. **Universal Hashing**
 
-    Universal Hashing은 다수의 해시 함수를 만들고, 이 해시 함수의 집합 `H`에서 무작위로 해시 함수를 선택해 해시 값을 만드는 기법이다. Universal Hashing의 목적은 `H`에서 무작위로 해시 함수를 선택했을 때, 임의의 키 값이 임의의 해시 값에 매핑된 확률을 `1/m`으로 만드는 것이다. 
-    
+    사실, 해시 함수는 다대일(many-to-one) 대응이기 때문에, `비둘기집 원리(Pigeonhole principle)`에 의해 해시 함수값이 충돌하는 입력 값들의 집합이 반드시 존재하게 된다. 하지만 해시 함수를 사용할 때, 대부분 입력 값 집합에 대해 충돌이 적게 나는 해시함수를 사용하기를 원하는데, 수학적으로, 해시 함수에 충돌이 나는 입력 값 집합이 들어오지 않는다고 보장하는 것은 불가능하다.
+
     확률론적 알고리즘(Probabilistic Algorithms)은 해시 함수가 충돌을 일으키는 특정 입력값 집합을 만나지 않게 될 것에 대한 증명 방법을 제공한다. 어떠한 주어진 입력값의 집합에 대해서도 임의의 해시 값을 생성하는 해시 함수들의 유니버설 집합(한쪽으로 훅 쏠리지 않는 집합)을 만들 수 있다. 여기에서 중요한 것은 주어진 입력 값에 대해 랜덤한 해시 값을 내는 해시 함수를 선택해준다는 것이다. 따라서 단순히 유니버설 집합으로부터 적절한 랜덤 함수를 선택하는 것만으로 어떠한 입력값에 대해서도 해시 값의 기대값이 임의적으로 분포한다고 증명할 수 있다.
+
+    정리하자면, Universal Hashing은 다수의 해시 함수를 만들고, 이 해시 함수의 집합 `H`에서 무작위로 해시 함수를 선택해 해시 값을 만드는 기법이다. Universal Hashing의 목적은 `H`에서 무작위로 해시 함수를 선택했을 때, 임의의 키 값이 임의의 해시 값에 매핑된 확률을 `1/m`으로 만드는 것이다. 
 
 <br/>
 
-사실, 해시 함수는 다대일(many-to-one) 대응이기 때문에, `비둘기집 원리(Pigeonhole principle)`에 의해 해시 함수값이 충돌하는 입력 값들의 집합이 반드시 존재하게 된다. 하지만 해시 함수를 사용할 때, 대부분 입력 값 집합에 대해 충돌이 적게 나는 해시함수를 사용하기를 원하는데, 수학적으로, 해시 함수에 충돌이 나는 입력 값 집합이 들어오지 않는다고 보장하는 것은 불가능하다.
+
 
 <br/>
 
 #### :two:&ensp; **Collision 발생 시, 이를 적절히 대응하기**
 
 
+다음으로, 일까? :thinking:
+
+이를 위한 
 
 * **Open Addressing 방식(개방 주소법)**
 
