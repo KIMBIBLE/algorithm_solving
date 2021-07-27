@@ -10,9 +10,9 @@
 
 4. <a href="#ds-4">Queue</a>
 
-5. <a href="#ds-5">Tree-Basic</a>
+5. <a href="#ds-5">Tree(Basic)</a>
 
-6. <a href="#ds-6">Tree-Advanced</a>
+6. <a href="#ds-6">Tree(Advanced)</a>
 
 7. <a href="#ds-7">Hash Table</a>
 
@@ -46,7 +46,7 @@
 
 ### 0. Overview
 
-### 1. 구현
+### 1. 구현 및 참고자료
 
 <br/>
 
@@ -75,7 +75,7 @@
 
 <br/>
 
-### 1. 구현
+### 1. 구현 및 참고자료
 
 |Lang   |Material|
 |:-:    |-|
@@ -110,7 +110,7 @@
 
 <br/>
 
-### 1. 구현
+### 1. 구현 및 참고자료
 
 
 |Lang   |Material|
@@ -123,7 +123,7 @@
 <br/>
 
 ---
-<h2 id="ds-5">5️⃣&ensp; Tree-Basic</h2>
+<h2 id="ds-5">5️⃣&ensp; Tree(Basic)</h2>
 
 ### 0. Overview
 
@@ -221,7 +221,7 @@
 
 <br/>
 
-### 3. 구현
+### 3. 구현 및 참고자료
 
 |Lang   |Material|
 |:-:    |-|
@@ -231,7 +231,7 @@
 <br/>
 
 ---
-<h2 id="ds-6">6️⃣&ensp; Tree-Advanced</h2>
+<h2 id="ds-6">6️⃣&ensp; Tree(Advanced)</h2>
 
 ### 1. Heap
 
@@ -258,7 +258,169 @@
 
 ### 0. Overview
 
-### 1. 구현
+해시 테이블은 associative 방식으로 데이터를 저장하는 자료구조이다. 해시 테이블에서 데이터는 각 데이터 값에 `고유한 인덱스 값이 있는 배열 형식`으로 저장된다. 해시 테이블에서 저장하고자 하는 데이터에 대한 고유한 인덱스 값은 `Hashing Algorithm`을 이용하여 생성되고, 이 인덱스 값이 배열에 저장한다. 이처럼 `각각의 데이터에 대한 인덱스가 존재`하기 때문에, 원하는 데이터의 인덱스를 알면, 데이터의 크기와 관계 없이 매우 빠른 속도(average case에 대해 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" />)로 데이터 액세스가 가능하다.
+
+<div>
+    <img width="60%" src="../figure/hashtable.png">
+    <p><a href="https://en.wikipedia.org/wiki/Hash_function">https://en.wikipedia.org/wiki/Hash_function</a></p><br/>
+</div>
+
+#### :bulb:&ensp; **해시 테이블 자료구조의 Primary Operations**
+
+|Operations|Description|Time Complexity|
+|-|-|-|
+|Search|해시 테이블에서 요소를 검색.|일반적으로 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" />|
+|Insert|해시 테이블에 새로운 요소를 추가.|일반적으로 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" />|
+|Delete|해시 테이블에 저장된 요소를 삭제.|일반적으로 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" />|
+
+<br/>
+
+### 1. Terminology
+
+|Basic Terminology|Description|
+|-|-|
+|`Hash Function`|데이터의 효율적 관리를 목적으로 임의의 길이를 가진 데이터를 고정된 길이의 데이터로 매핑하는 함수.|
+|`Hash Key`|Hash Function에 의해 고정된 길이의 데이터로 매핑되는 원본 데이터의 값.|
+|`Hashcode`/`Hash Value`(`Index`)|Hash Function에 의해 생성된 고정된 길이의 데이터.|
+|`Hashing`|매핑하는 과정 자체를 의미.|
+|`Hashing Algorithm`|Hashing에 사용되는 알고리즘.|
+|`Hash Table`|Hash Function을 사용하여 Hash Key를 Hash Value로 매핑하고, 이 Hash Value를 index(key)로 하여 데이터를 저장하는 형태의 자료구조.|
+|`Bucket`/`Slot`|Hash Table에서 데이터가 저장되는 공간. 데이터 저장 위치는 Hash Key에 대응됨.|
+|`Hash Collision`|서로 다른 두 개의 Key를 동일한 Hash Function을 통해 변환하였을 때, 동일한 Hash Value를 갖는 현상. 리얼 월드에서 Hash Table을 활용할 때, Hash Function은 대개 고정된 길이의 Hash Value가 표현 가능한 범위보다 더 많은 Key 값이 사용될 수 있고, 이는 Hash Collision을 야기할 수 있음.|
+
+<br/>
+
+### 2. Deep Dive into `Hash Table` and `Hash Collision`
+
+해시 테이블에서 Hash Function(해시 함수)은 데이터의 고유한 인덱스 값을 생성하고자 할 때 사용된다. 여기서 해시 함수는 `임의의 길이의 데이터를 고정된 길이의 데이터로 매핑`하는 함수를 뜻하며, 해시 함수에 의해 반환된 데이터의 고유한 값을 `hashcode`라고 한다. 이와 같이 해시 테이블은 `데이터를 저장`할 때 해시 함수에 의해 생성된 `hashcode 값을 배열에 저장`하기 때문에, 일반적인 경우 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" /> access가 가능하다.
+
+<br/>
+
+#### :bulb:&ensp; **Direct-address Table**
+
+이처럼 Hash Table은 배열의 인덱스를 통해 자료를 저장하는 자료구조인데, 왜 데이터의 `access/store`에 대한 Time Complexity가 균일하게 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" />이 나오는 것이 아니라 average case에 대해서만 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" />이 나오는 것일까? :thinking:
+
+
+이는 서로 다른 두개의 데이터에 대해 해시 함수가 동일한 `hashcode`를 반환하는 `Hash Collision`이 발생할 수 있기 때문이다. (해시 테이블에서는 `Collision`을 해결하고자 `access/store` 과정에서 해시 충돌을 회피하는 로직이 추가된다.) 이렇게 되면 서로 다른 두개의 데이터가 같은 인덱스로 계산되는 동일한 키 값(hashcode)를 갖기 때문에, 배열 내에 데이터를 저장할 때 해당 인덱스로 접근되는 동일한 위치에 데이터가 저장되야 하는 현상(`Collision`)이 발생한다. Collision을 조금 더 깊게 이해하기 위해, 해시 테이블보다 단순한 형태인 `Direct-address Table`을 먼저 한번 살펴보자.
+
+![DAT](../figure/direct_address_table.png)
+
+Direct-address Table은 Hash Table과 달리 data의 key를 직접적으로 버킷의 인덱스로 활용하는 자료구조이다. 이 때 Direct-address Table은 해시 테이블의 크기와 동일한 키 갯수를 사용하기 때문에, Collision 문제가 발생하지 않는다는 장점이 있다. 하지만 `전체 키 집합(U)`에 비해 `실제 사용하는 키 집합(K)`이 작은 경우, 사용되지 않는 키를 위한 메모리 할당을 해야하기 때문에 메모리 효율성이 크게 떨어지게 된다.
+
+따라서 보통 Direct-address Table을 그대로 사용하기보다는, `해시 테이블의 크기(m)이 실제 사용하는 키의 갯수(n)보다 적은 해시 테이블`을 운용한다. 이처럼 해시 테이블의 크기를 실제 사용하는 키보다 적게 운용하기 때문에, 서로 다른 데이터에 대한 Hash Value가 동일하게 산출되는 Collision이 발생하게 되는 것이다. 이 때, `Hash Collision이 발생을 정량화하기 위한 지표`로, 해시 테이블의 한 버킷에 평균 몇개의 키가 매핑되는가를 나타내는 `load factor(적재율)`를 활용한다.
+
+<div align="center">
+    <img src="https://chart.apis.google.com/chart?cht=tx&chl=load%5C%20factor(%5Calpha)%5C%20%3D%5C%20%5Cfrac%7Bn%7D%7Bm%7D" />
+</div>
+
+Direct-address Table의 load factor는 1 이하이며, load factor가 1 보다 큰 경우 Hash Collision 문제가 발생하게 된다.
+
+<br/>
+
+### 3. How to Resolve Hash Collision?
+
+앞서 Direct-address Table에서 살펴보았듯이, Hash Function를 무조건 1:1 로 만드는 것보다 Collision 을 최소화하는 방향으로 설계하고, 발생하는 Collision 에 대비해 어떻게 대응할 것인가가 더 중요하다. 1:1 대응이 되도록 만드는 것이 거의 불가능하기도 하지만 그런 hash function를 만들어봤자 그건 array 와 다를바 없고 메모리를 너무 차지하게 된다.
+
+Collision이 많아질 수록 Search 에 필요한 Time Complexity가 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" />에서 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n)" />에 가까워진다. 어설픈 hash function는 hash 를 hash 답게 사용하지 못하도록 한다.
+
+그렇다면 이러한 Hashmap 자료구조를 설계할 때, `Collision을 해결하기 위해 어떤 대응책`을 세울 수 있을까? :thinking:
+
+일반적으로 Hashmap 자료구조의 Collision을 해결하기 위한 접근 방법은 `크게 두 가지`로, Collision을 낮추는 방향으로의 접근인 `좋은 Hash Function을 사용하는 방법`과 `Collision이 발생하더라도 이를 적절히 대응`하는 접근 방법으로 나눌 수 있다.
+
+<br/>
+
+#### :one:&ensp; **좋은 Hash Function을 사용하기**
+
+먼저, 좋은 Hash Function은 `어떤 조건`들을 가지고 있을까? :thinking:
+
+좋은 Hash Function의 조건은 `Simple Uniform Hash`를 만드는 것을 말하며, Simple Uniform Hash의 조건은 다음과 같다.(좋은 Hash Function에 대해 더 깊게 알고싶다면 [링크 1](https://www.usna.edu/Users/cs/crabbe/IC312/current/units/06/unit.html), [링크 2](https://en.wikipedia.org/wiki/SUHA_(computer_science))를 읽어보자.)
+
+    1. 버킷 배열의 크기가 m일 때, Hash Value들이 0 ~ m-1 사이의 범위에 해당되는 정수 값으로 균일한(uniform) 확률로 나타나야 함.
+
+    2. Hash Function에 의해 생성된 각각의 Hash Value들은 서로 연관성을 가지지 않아야 함.(독립적으로 생성되야 함.)
+
+이를 간단히 말하면, 좋은 Hash Function은 특정 값에 치우치지 않고 해시값을 고르게 생성하는 Hash Function이라고 할 수 있다. 
+
+좋은 Hash Function을 지향하는 Hash Function은 정말 다양하지만, 이들 중 대표적인 방법 3가지 정도만 살펴보자.
+
+1. **Division Method**
+
+    Division Method는 modular 연산을 활용해, 가장 간단하면서도 빠른 연산이 가능한 Hash Function이다. Division Method의 Hashing은 <img src="https://chart.apis.google.com/chart?cht=tx&chl=h(k)%5C%20%3D%5C%20k%5C%20%5Cbmod%5C%20m" />을 통해 수행되며, 생성되는 Key는 `0 ~ m-1`의 범위 내에서 생성된다. 한편, Division Method를 사용하는 경우 `m`값을 어떻게 설정하는지가 매우 중요하다.
+
+    먼저, `m`을 어떻게 설정하는지에 따라 해시 테이블의 성능이 크게 좌우되는데, m의 크기는 보통 Key의 수의 3배수가 적당하다고 한다.(적재율이 30% 정도쯤까지는 Collision 발생이 거의 일어나지 않음.)
+
+    다음으로, `m` 값은 소수(Prime Number) 형태를 권장한다. `m`값이 <img src="https://chart.apis.google.com/chart?cht=tx&chl=m%5C%20%3D%5C%202%5E3%5C%20%3D%5C%2000001000%5C%20(2)" />과 같이 2의 거듭 제곱 형태라면, 2진수의 4자리 이하의 숫자만 Hash Value에 영향을 주게되기 때문이다.
+
+        m   = 0x00001000
+        k1  = 0x10111001
+        k2  = 0x00001001
+        h(k1) = h(k2) = 1
+
+    정리하자면, Division Method을 활용하여 Hashing할 때의 최적의 `m`의 크기는 `key의 갯수의 3배 정도`이며, `2의 exponential에 근접한 Prime Number`를 선택해야 한다.
+
+<br/>
+
+2. **Multiplication Method**
+
+    숫자로 된 키가 `k`이고 `A`가 0과 1 사이의 실수일 때, Multiplication Method는 다음과 같이 정의됨. 이는 키를 0과 1 사이의 소수로 변환하고, 테이블의 크기 만큼 범위를 팽창시킨 것을 의미.
+
+    <div align="center">
+        <img src="https://chart.apis.google.com/chart?cht=tx&chl=h(k)%5C%20%3D%5C%20(kA%5C%20%5Cbmod%5C%201)%5C%20%5Ctimes%5C%20m" />
+    </div>
+
+    보통 `m`값은 얼마가 되든 크게 중요하지 않으며, 2진수 연산에 최적화된 컴퓨터 구조를 고려하여, 보통 2의 제곱수로 정한다고 함. Multiplicion를 사용하여 Hashing하는 것은 Division Method를 사용하는 방식보다 다소 느리다고 함.
+
+        m = 2 ** 12
+        A = 0.12345
+        k = 875654454
+        hash_value = int((x * A) % 1 * m)
+
+<br/>
+
+3. **Universal Hashing**
+
+    Universal Hashing은 다수의 해시 함수를 만들고, 이 해시 함수의 집합 `H`에서 무작위로 해시 함수를 선택해 해시 값을 만드는 기법이다. Universal Hashing의 목적은 `H`에서 무작위로 해시 함수를 선택했을 때, 임의의 키 값이 임의의 해시 값에 매핑된 확률을 `1/m`으로 만드는 것이다. 
+    
+    확률론적 알고리즘(Probabilistic Algorithms)은 해시 함수가 충돌을 일으키는 특정 입력값 집합을 만나지 않게 될 것에 대한 증명 방법을 제공한다. 어떠한 주어진 입력값의 집합에 대해서도 임의의 해시 값을 생성하는 해시 함수들의 유니버설 집합(한쪽으로 훅 쏠리지 않는 집합)을 만들 수 있다. 여기에서 중요한 것은 주어진 입력 값에 대해 랜덤한 해시 값을 내는 해시 함수를 선택해준다는 것이다. 따라서 단순히 유니버설 집합으로부터 적절한 랜덤 함수를 선택하는 것만으로 어떠한 입력값에 대해서도 해시 값의 기대값이 임의적으로 분포한다고 증명할 수 있다.
+
+<br/>
+
+사실, 해시 함수는 다대일(many-to-one) 대응이기 때문에, `비둘기집 원리(Pigeonhole principle)`에 의해 해시 함수값이 충돌하는 입력 값들의 집합이 반드시 존재하게 된다. 하지만 해시 함수를 사용할 때, 대부분 입력 값 집합에 대해 충돌이 적게 나는 해시함수를 사용하기를 원하는데, 수학적으로, 해시 함수에 충돌이 나는 입력 값 집합이 들어오지 않는다고 보장하는 것은 불가능하다.
+
+<br/>
+
+#### :two:&ensp; **Collision 발생 시, 이를 적절히 대응하기**
+
+
+
+* **Open Addressing 방식(개방 주소법)**
+
+
+<br/>
+
+* **Separate Chaining 방식(분리 연결법)**
+
+
+<br/>
+
+#### :bulb:&ensp; `Open Addressing` vs `Seperate Chaining`
+
+|                   |Time Complexity    |Bucket Resize|
+|-                  |-                  |-|
+|Open Addressing    |||
+|Separate Chaining  |||
+
+* 
+
+<br/>
+
+### 4. 해시 버킷 동적 확장(Resize)
+
+
+
+<br/>
+
+### 5. 구현 및 참고자료
 
 |Lang   |Material|
 |:-:    |-|
@@ -272,7 +434,7 @@
 
 ### 0. Overview
 
-### 1. 구현
+### 1. 구현 및 참고자료
 
 |Lang   |Material|
 |:-:    |-|
@@ -291,7 +453,7 @@
 
 `집합(Set)`은 `원소(Member)`라는 구별되는 객체들이 연관되어 모인 것을 말하며, `서로 다른 연관된 원소`들의 `순서 없는` 모임이다.
 
-### 1. 구현
+### 1. 구현 및 참고자료
 
 |Lang   |Material|
 |:-:    |-|
@@ -302,6 +464,8 @@
 ---
 ## References
 
+### Overall
+
 - https://www.geeksforgeeks.org/data-structures/
 
 - https://www.tutorialspoint.com/data_structures_algorithms/index.htm
@@ -311,3 +475,21 @@
 - 동빈북
 
 - 파이썬 알고리즘 인터뷰
+
+### Hash Table
+
+- https://web.stanford.edu/class/archive/cs/cs161/cs161.1168/lecture9.pdf
+
+- https://ratsgo.github.io/data%20structure&algorithm/2017/10/25/hash/
+
+- https://ict-nroo.tistory.com/76
+
+- https://baeharam.netlify.app/posts/data%20structure/hash-table
+
+- https://bcho.tistory.com/1072
+
+- https://d2.naver.com/helloworld/831311
+
+- https://en.wikipedia.org/wiki/Hash_table
+
+- https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%88%EB%B2%84%EC%84%A4_%ED%95%B4%EC%8B%B1
