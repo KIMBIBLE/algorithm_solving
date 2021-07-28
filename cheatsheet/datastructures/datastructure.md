@@ -135,7 +135,7 @@
 
 ### 1. Tree의 종류(Basic)
 
-이번 챕터에서는 Tree 자료구조의 기초인 `Binary Tree`, `Perfect Binary Tree`, `Perfect Binary Tree`, `Complete Binary Tree`, `Binary Search Tree(BST)`에 대해 알아본다. 더 복잡한 형태의 Tree 자료구조에 대해 궁금하다면 [Tree-Advanced 챕터](ds-5)에서 알아보자.
+이번 챕터에서는 Tree 자료구조의 기초인 `Binary Tree`, `Perfect Binary Tree`, `Perfect Binary Tree`, `Complete Binary Tree`, `Binary Search Tree(BST)`에 대해 알아본다. 더 복잡한 형태의 Tree 자료구조에 대해 궁금하다면 [Tree-Advanced 챕터](#ds-6)에서 알아보자.
 
 * Binary Tree(이진 트리)
 
@@ -261,7 +261,7 @@
 해시 테이블은 associative 방식으로 데이터를 저장하는 자료구조이다. 해시 테이블에서 데이터는 각 데이터 값에 `고유한 인덱스 값이 있는 배열 형식`으로 저장된다. 해시 테이블에서 저장하고자 하는 데이터에 대한 고유한 인덱스 값은 `Hashing Algorithm`을 이용하여 생성되고, 이 인덱스 값이 배열에 저장한다. 이처럼 `각각의 데이터에 대한 인덱스가 존재`하기 때문에, 원하는 데이터의 인덱스를 알면, 데이터의 크기와 관계 없이 매우 빠른 속도(average case에 대해 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" />)로 데이터 액세스가 가능하다.
 
 <div>
-    <img width="60%" src="../figure/hashtable.png">
+    <img width="50%" src="../figure/hashtable.png">
     <p><a href="https://en.wikipedia.org/wiki/Hash_function">https://en.wikipedia.org/wiki/Hash_function</a></p><br/>
 </div>
 
@@ -386,10 +386,7 @@ Collision이 많아질 수록 Search 에 필요한 Time Complexity가 <img src="
 
     확률론적 알고리즘(Probabilistic Algorithms)은 해시 함수가 충돌을 일으키는 특정 입력값 집합을 만나지 않게 될 것에 대한 증명 방법을 제공한다. 어떠한 주어진 입력값의 집합에 대해서도 임의의 해시 값을 생성하는 해시 함수들의 유니버설 집합(한쪽으로 훅 쏠리지 않는 집합)을 만들 수 있다. 여기에서 중요한 것은 주어진 입력 값에 대해 랜덤한 해시 값을 내는 해시 함수를 선택해준다는 것이다. 따라서 단순히 유니버설 집합으로부터 적절한 랜덤 함수를 선택하는 것만으로 어떠한 입력값에 대해서도 해시 값의 기대값이 임의적으로 분포한다고 증명할 수 있다.
 
-    정리하자면, Universal Hashing은 다수의 해시 함수를 만들고, 이 해시 함수의 집합 `H`에서 무작위로 해시 함수를 선택해 해시 값을 만드는 기법이다. Universal Hashing의 목적은 `H`에서 무작위로 해시 함수를 선택했을 때, 임의의 키 값이 임의의 해시 값에 매핑된 확률을 `1/m`으로 만드는 것이다. 
-
-<br/>
-
+    정리하자면, Universal Hashing은 다수의 해시 함수를 만들고, 이 해시 함수의 집합 `H`에서 무작위로 해시 함수를 선택해 해시 값을 만드는 기법이다. Universal Hashing의 목적은 `H`에서 무작위로 해시 함수를 선택했을 때, 임의의 키 값이 임의의 해시 값에 매핑된 확률을 `1/m`으로 만드는 것이다.
 
 
 <br/>
@@ -397,38 +394,19 @@ Collision이 많아질 수록 Search 에 필요한 Time Complexity가 <img src="
 #### :two:&ensp; **Collision 발생 시, 이를 적절히 대응하기**
 
 
-다음으로, 일까? :thinking:
+앞서 말했듯이 해시함수는 many-to-one 대응이기 때문에 collision이 발생하지 않는 것을 항상 보장할 수는 없다. 그렇다면 collision의 발생을 전제하고, 어떻게하면 발생된 collision을 대처할 수 있을까? :thinking:
 
-이를 위한 
+이를 위한 방법은 여러 가지가 있는데, 대표적인 2가지만 꼽자면 해시 테이블의 크기를 고정시키고 저장할 위치를 잘 찾고자 하는 <sup>1)</sup>`Open Addressing` 방식과,  chaining을 사용해, 해시 테이블의 크기를 유연하게 만드는 <sup>2)</sup>`Separate Chaining` 방식이 있다. (각 방식에 대한 자세한 설명은 아래 표 내의 문서에 별도로 정리하였으니 관심있으면 읽어보자.)
 
-* **Open Addressing 방식(개방 주소법)**
-
-
-<br/>
-
-* **Separate Chaining 방식(분리 연결법)**
-
+|Type   |Material|
+|:-:    |-|
+|:book:|[Open Addressing(개방 주소법) 방식의 개념 및 삽입/삭제/탐색 연산에 대한 시간복잡도](./hashtable/open_addressing.md)|
+|:book:|[Separate Chaining(분리 연결법) 방식의 개념 및 삽입/삭제/탐색 연산에 대한 시간복잡도](./hashtable/separate_chaining.md)|
+|:book:|[Open Addressing vs Seperate Chaining](./open_addressing_vs_seperate_chaining.md)|
 
 <br/>
 
-#### :bulb:&ensp; `Open Addressing` vs `Seperate Chaining`
-
-|                   |Time Complexity    |Bucket Resize|
-|-                  |-                  |-|
-|Open Addressing    |||
-|Separate Chaining  |||
-
-* 
-
-<br/>
-
-### 4. 해시 버킷 동적 확장(Resize)
-
-
-
-<br/>
-
-### 5. 구현 및 참고자료
+### 4. 구현 및 참고자료
 
 |Lang   |Material|
 |:-:    |-|
