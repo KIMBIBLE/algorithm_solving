@@ -348,9 +348,9 @@ Collision이 많아질 수록 Search 에 필요한 Time Complexity가 <img src="
 
 |Type   |Material|
 |:-:    |-|
-|:book:|[Hashing with Division Method](./hashtable/open_addressing.md)|
-|:book:|[Hashing with Multiplication Method](./hashtable/separate_chaining.md)|
-|:book:|[Hashing with Universal Hashing](./open_addressing_vs_seperate_chaining.md)|
+|:book:|[Hashing with Division Method](./hashtable/division_hashing.md)|
+|:book:|[Hashing with Multiplication Method](./hashtable/multiplication_hashing.md)|
+|:book:|[Hashing with Universal Hashing](./hashtable/universal_hashing.md)|
 
 이처럼 Collision을 피하기 위해 좋은 해시 함수를 선택하는 것은 매우 중요하다. 하지만 사실, 해시 함수는 다대일(many-to-one) 대응이기 때문에, `비둘기집 원리(Pigeonhole principle)`에 의해 해시 함수값이 충돌하는 입력 값들의 집합이 반드시 존재하게 된다. 하지만 해시 함수를 사용할 때, 대부분 입력 값 집합에 대해 충돌이 적게 나는 해시함수를 사용하기를 원하는데, 수학적으로, 해시 함수에 충돌이 나는 입력 값 집합이 들어오지 않는다고 보장하는 것은 불가능하다.
 
