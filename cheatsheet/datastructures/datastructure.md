@@ -344,50 +344,15 @@ Collision이 많아질 수록 Search 에 필요한 Time Complexity가 <img src="
 
 이를 간단히 말하면, 좋은 Hash Function은 특정 값에 치우치지 않고 해시값을 고르게 생성하는 Hash Function이라고 할 수 있다. 
 
-좋은 Hash Function을 지향하는 Hash Function은 정말 다양하지만, 이들 중 대표적인 방법 3가지 정도만 살펴보자.
+좋은 Hash Function을 지향하는 Hash Function은 정말 다양하지만, 이들 중 가장 대표적인 방법은 `Division Method`, `Multiplication Method`, `Universal Hashing` 3가지 정도가 있다. (이들에 대한 설명은 하단 표의 별도의 문서를 참고하자.)
 
-1. **Division Method**
+|Type   |Material|
+|:-:    |-|
+|:book:|[Hashing with Division Method](./hashtable/open_addressing.md)|
+|:book:|[Hashing with Multiplication Method](./hashtable/separate_chaining.md)|
+|:book:|[Hashing with Universal Hashing](./open_addressing_vs_seperate_chaining.md)|
 
-    Division Method는 modular 연산을 활용해, 가장 간단하면서도 빠른 연산이 가능한 Hash Function이다. Division Method의 Hashing은 <img src="https://chart.apis.google.com/chart?cht=tx&chl=h(k)%5C%20%3D%5C%20k%5C%20%5Cbmod%5C%20m" />을 통해 수행되며, 생성되는 Key는 `0 ~ m-1`의 범위 내에서 생성된다. 한편, Division Method를 사용하는 경우 `m`값을 어떻게 설정하는지가 매우 중요하다.
-
-    먼저, `m`을 어떻게 설정하는지에 따라 해시 테이블의 성능이 크게 좌우되는데, m의 크기는 보통 Key의 수의 3배수가 적당하다고 한다.(적재율이 30% 정도쯤까지는 Collision 발생이 거의 일어나지 않음.)
-
-    다음으로, `m` 값은 소수(Prime Number) 형태를 권장한다. `m`값이 <img src="https://chart.apis.google.com/chart?cht=tx&chl=m%5C%20%3D%5C%202%5E3%5C%20%3D%5C%2000001000%5C%20(2)" />과 같이 2의 거듭 제곱 형태라면, 2진수의 4자리 이하의 숫자만 Hash Value에 영향을 주게되기 때문이다.
-
-        m   = 0x00001000
-        k1  = 0x10111001
-        k2  = 0x00001001
-        h(k1) = h(k2) = 1
-
-    정리하자면, Division Method을 활용하여 Hashing할 때의 최적의 `m`의 크기는 `key의 갯수의 3배 정도`이며, `2의 exponential에 근접한 Prime Number`를 선택해야 한다.
-
-<br/>
-
-2. **Multiplication Method**
-
-    숫자로 된 키가 `k`이고 `A`가 0과 1 사이의 실수일 때, Multiplication Method는 다음과 같이 정의됨. 이는 키를 0과 1 사이의 소수로 변환하고, 테이블의 크기 만큼 범위를 팽창시킨 것을 의미.
-
-    <div align="center">
-        <img src="https://chart.apis.google.com/chart?cht=tx&chl=h(k)%5C%20%3D%5C%20(kA%5C%20%5Cbmod%5C%201)%5C%20%5Ctimes%5C%20m" />
-    </div>
-
-    보통 `m`값은 얼마가 되든 크게 중요하지 않으며, 2진수 연산에 최적화된 컴퓨터 구조를 고려하여, 보통 2의 제곱수로 정한다고 함. Multiplicion를 사용하여 Hashing하는 것은 Division Method를 사용하는 방식보다 다소 느리다고 함.
-
-        m = 2 ** 12
-        A = 0.12345
-        k = 875654454
-        hash_value = int((x * A) % 1 * m)
-
-<br/>
-
-3. **Universal Hashing**
-
-    사실, 해시 함수는 다대일(many-to-one) 대응이기 때문에, `비둘기집 원리(Pigeonhole principle)`에 의해 해시 함수값이 충돌하는 입력 값들의 집합이 반드시 존재하게 된다. 하지만 해시 함수를 사용할 때, 대부분 입력 값 집합에 대해 충돌이 적게 나는 해시함수를 사용하기를 원하는데, 수학적으로, 해시 함수에 충돌이 나는 입력 값 집합이 들어오지 않는다고 보장하는 것은 불가능하다.
-
-    확률론적 알고리즘(Probabilistic Algorithms)은 해시 함수가 충돌을 일으키는 특정 입력값 집합을 만나지 않게 될 것에 대한 증명 방법을 제공한다. 어떠한 주어진 입력값의 집합에 대해서도 임의의 해시 값을 생성하는 해시 함수들의 유니버설 집합(한쪽으로 훅 쏠리지 않는 집합)을 만들 수 있다. 여기에서 중요한 것은 주어진 입력 값에 대해 랜덤한 해시 값을 내는 해시 함수를 선택해준다는 것이다. 따라서 단순히 유니버설 집합으로부터 적절한 랜덤 함수를 선택하는 것만으로 어떠한 입력값에 대해서도 해시 값의 기대값이 임의적으로 분포한다고 증명할 수 있다.
-
-    정리하자면, Universal Hashing은 다수의 해시 함수를 만들고, 이 해시 함수의 집합 `H`에서 무작위로 해시 함수를 선택해 해시 값을 만드는 기법이다. Universal Hashing의 목적은 `H`에서 무작위로 해시 함수를 선택했을 때, 임의의 키 값이 임의의 해시 값에 매핑된 확률을 `1/m`으로 만드는 것이다.
-
+이처럼 Collision을 피하기 위해 좋은 해시 함수를 선택하는 것은 매우 중요하다. 하지만 사실, 해시 함수는 다대일(many-to-one) 대응이기 때문에, `비둘기집 원리(Pigeonhole principle)`에 의해 해시 함수값이 충돌하는 입력 값들의 집합이 반드시 존재하게 된다. 하지만 해시 함수를 사용할 때, 대부분 입력 값 집합에 대해 충돌이 적게 나는 해시함수를 사용하기를 원하는데, 수학적으로, 해시 함수에 충돌이 나는 입력 값 집합이 들어오지 않는다고 보장하는 것은 불가능하다.
 
 <br/>
 
