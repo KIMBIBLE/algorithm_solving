@@ -37,7 +37,7 @@
 |<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[[외부 링크] assignment("=") vs shallow copy vs deep copy](https://medium.com/@thawsitt/assignment-vs-shallow-copy-vs-deep-copy-in-python-f70c2f0ebd86)|
 |<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[배열 내 데이터의 탐색: 순차탐색](./array/python/sequential_search.md)|
 |<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[배열 내 데이터의 탐색: 이진탐색](./../../dongbin_book/chap7_binary_search/README.md)|
-|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[Python Built-in List 자료형의 Operation 별 시간복잡도 정리](./array/timecomplexity.md)|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[Python Built-in List 자료형의 Operation 별 시간복잡도 정리](./array/python/timecomplexity.md)|
 
 <br/>
 
