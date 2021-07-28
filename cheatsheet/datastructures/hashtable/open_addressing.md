@@ -20,7 +20,8 @@ Open Addressing(Closed Hashing)은 해시 테이블 자료구조에서 collision
 해시 값을 바로 해시 테이블 내 버킷의 주소로 활용하는 naive approach와 비교했을 때, Open Addressing에서는 해시 값이 그대로 해시 테이블 내 버킷의 주소로 매핑되는 것이 아니라 x칸만큼(Probing 종류에 따라 달라짐) 떨어진 곳에 저장 될 수 있다.
 
 <div align="center">
-    <img width="60%" src="../../figure/open_addressing.png">
+    <img width="60%" src="../../figure/open_addressing(linear_probing).png">
+    <a href="https://en.wikipedia.org/wiki/Open_addressing">https://en.wikipedia.org/wiki/Open_addressing</a>
 </div>
 
 <br/>
@@ -47,7 +48,8 @@ Open Addressing(Closed Hashing)은 해시 테이블 자료구조에서 collision
 
 <div align="center">
     <img width="60%" src="../../figure/open_addressing_steps.png">
-</div>
+    <a href="https://www.geeksforgeeks.org/hashing-set-3-open-addressing/">https://www.geeksforgeeks.org/hashing-set-3-open-addressing/</a>
+</div><br/>
 
 |Setps|Descriptions|Collision|
 |-|-|:-:|
