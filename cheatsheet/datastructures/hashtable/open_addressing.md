@@ -21,7 +21,7 @@ Open Addressing(Closed Hashing)은 해시 테이블 자료구조에서 collision
 
 <div align="center">
     <img width="60%" src="../../figure/open_addressing(linear_probing).png">
-    <a href="https://en.wikipedia.org/wiki/Open_addressing">https://en.wikipedia.org/wiki/Open_addressing</a>
+    <p><a href="https://en.wikipedia.org/wiki/Open_addressing">https://en.wikipedia.org/wiki/Open_addressing</a></p>
 </div>
 
 <br/>
@@ -48,7 +48,7 @@ Open Addressing(Closed Hashing)은 해시 테이블 자료구조에서 collision
 
 <div align="center">
     <img width="60%" src="../../figure/open_addressing_steps.png">
-    <a href="https://www.geeksforgeeks.org/hashing-set-3-open-addressing/">https://www.geeksforgeeks.org/hashing-set-3-open-addressing/</a>
+    <p><a href="https://www.geeksforgeeks.org/hashing-set-3-open-addressing/">https://www.geeksforgeeks.org/hashing-set-3-open-addressing/</a></p>
 </div><br/>
 
 |Setps|Descriptions|Collision|
