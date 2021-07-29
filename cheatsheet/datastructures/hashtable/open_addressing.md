@@ -67,10 +67,67 @@ Open Addressing(Closed Hashing)은 해시 테이블 자료구조에서 collision
 ---
 <h2 id="sec_02">2️⃣&ensp; Probings(탐사)</h2>
 
-Probing(탐사)이란 삽입/삭제/탐색을 수행하기 위해 해시 테이블 내 새로운 주소(해시 값)을 찾는 과정을 의미한다. 
+Probing(탐사)이란 삽입/삭제/탐색을 수행하기 위해 해시 테이블 내 새로운 주소(해시 값)을 찾는 과정을 의미한다. Probing은 충돌이 발생했을 때, 충돌이 발생한 키를 기준으로 엑세스할 위치를 어떻게 설정할지에 따라 <sup>1)</sup>`Linear Probing`, <sup>2)</sup>`Quadratic Probing`, <sup>3)</sup>`Double Hashing` 등으로 분류할 수 있음.
+
+위의 Probing 방식들은 `이동 폭(충돌이 발생한 위치와 새롭게 저장될 위치의 offset)정`과 `초기 해시 값 설정` 등에 변화를 주어 충돌을 회피함.
+
+<br/>
+
+### 1. **Linear Probing(선형 탐사)**
+
+선형 탐사 방식은 충돌 발생 시, `고정된 이동 폭`을 (충돌이 발생한 위치와 새롭게 저장될 위치의 offset)만큼 떨어진 위치에 엑세스(삽입/삭제/탐색)하는 방식이다.
+
+예를 들어 임의의 키에 대한 해시 값을 인덱스로 하여 해시 테이블 내 버킷에 엑세스 시 충돌이 발생하면, 해당 해시 값에서 `고정 폭(x칸)`만큼 떨어진 위치에 해당되는 버킷에 엑세스를 시도. 만약 이동한 위치에 데이터가 없다면(충돌이 발생하지 않는다면) 해당 버킷에 데이터를 삽입/삭제/탐색 수행. 하지만 버킷 내 데이터가 존재한다면 다시 x칸만큼 이동을 수행하는 방법.
+
+<div align="center">
+    <img width="170px" src="../../figure/primary_clustering.png">
+    <p><a href="https://stackoverflow.com/questions/27742285/what-is-primary-and-secondary-clustering-in-hash">https://stackoverflow.com/questions/27742285/what-is-primary-and-secondary-clustering-in-hash</a></p>
+</div><br/>
+
+Linear Probing은 탐사 이동폭이 고정되어 있어, 최초 해시 값을 52로 하여 해시 테이블 내 버킷에 엑세스를 시도했을 때, 위의 그림처럼 Initial Probe 주변 버킷에 데이터가 채워져있는 경우 성능이 낮아지고, 이를 `Primary Clustering 문제`라고 한다.
+
+<br/>
+
+### **2. Quadratic Probing(제곱 탐사)**
+
+제곱 탐사 방식은 충돌 발생 시, `제곱수의 이동 폭`을 (충돌이 발생한 위치와 새롭게 저장될 위치의 offset)만큼 떨어진 위치에 엑세스(삽입/삭제/탐색)하는 방식이다.
+
+예를 들어 임의의 키에 대한 해시 값을 인덱스로 하여 해시 테이블 내 버킷에 엑세스 시 충돌이 발생하면, 해당 해시 값에서 `제곱수인 이동 폭`(<img src="https://chart.apis.google.com/chart?cht=tx&chl=x%5E2" />칸)만큼 떨어진 위치에 해당되는 버킷에 엑세스를 시도. 만약 이동한 위치에 데이터가 없다면(충돌이 발생하지 않는다면) 해당 버킷에 데이터를 삽입/삭제/탐색 수행. 하지만 버킷 내 데이터가 존재한다면 다시 <img src="https://chart.apis.google.com/chart?cht=tx&chl=x%5E2" />칸만큼 이동을 수행하는 방법.
+
+<div align="center">
+    <img width="200px" src="../../figure/secondary_clustering.png">
+    <p><a href="https://stackoverflow.com/questions/27742285/what-is-primary-and-secondary-clustering-in-hash">https://stackoverflow.com/questions/27742285/what-is-primary-and-secondary-clustering-in-hash</a></p>
+</div><br/>
+
+Quadratic Probing은 제곱수의 이동 폭을 갖는다. 따라서 Linear Probing에 비해 이동 폭이 넓어, Primary Clustering 문제를 보다 쉽게 벗어날 수 있다. 하지만 Quadratic Probing은 여러 개의 서로 다른 키들이 동일한 초기 해시값을 갖는 `Secondary Clustering`에 취약하다. 초기 해시 값이 동일하다면 이동 폭의 크기와 상관 없이 다음 탐사 위치 또한 동일하기 때문에, Probing을 통해 access하는 버킷의 순서가 동일하다. 이와 같은 문제 때문에 탐사 효율성이 저하될 수 있으며, 이를 해결하기 위한 대표적인 Probing은 `Double Hasing` 방식이 있다.
+
+<br/>
+
+### **3. Double Hashing(이중 해싱)**
+
+Double Hashing 방식은 `2개의 해시 함수를 사용`하여 탐사할 해시 값의 규칙성을 없애, clustering을 방지하는 기법이다. Double Hashing 방식에서 각각의 해시 함수는 아래와 같은 목적으로 사용된다.
+
+* Hash Function 1: `최초 해시 값`을 얻을 때 사용.
+
+* Hash Function 2: `탐사 이동 폭`을 구할 때 사용.
+
+<br/>
+
+이처럼 `최초 해시 값을 얻을 때 사용되는 해시 함수`와 `탐사 이동 폭을 구할 때 사용되는 해시 함수`를 다르게 하여, Primary Clustering과  Secondary Clustering 문제를 모두 해결할 수 있다. (단, 최초 해시 값과 탐사 이동폭이 서로소 관계여야 효과가 나타난다.)
+
+* Primary Clustering의 해결: 최초 해시 값이 같더라도 탐사 이동폭을 다르게 함.
+
+* Secondary Clustering의 해결: 탐사 이동 폭이 같다러도 최초 해시 값을 다르게 함.
 
 <br/>
 
 ---
 <h2 id="sec_03">3️⃣&ensp; Time Complexity</h2>
 
+
+<br/>
+
+---
+### Reference
+
+* https://stackoverflow.com/questions/27742285/what-is-primary-and-secondary-clustering-in-hash
