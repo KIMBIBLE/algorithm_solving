@@ -113,17 +113,72 @@ Double Hashing 방식은 `2개의 해시 함수를 사용`하여 탐사할 해�
 
 <br/>
 
-이처럼 `최초 해시 값을 얻을 때 사용되는 해시 함수`와 `탐사 이동 폭을 구할 때 사용되는 해시 함수`를 다르게 하여, Primary Clustering과  Secondary Clustering 문제를 모두 해결할 수 있다. (단, 최초 해시 값과 탐사 이동폭이 서로소 관계여야 효과가 나타난다.)
+이처럼 `최초 해시 값을 얻을 때 사용되는 해시 함수`와 `탐사 이동 폭을 구할 때 사용되는 해시 함수`를 다르게 하여, Primary Clustering과  Secondary Clustering 문제를 모두 해결할 수 있다. (단, 최초 해시 값과 탐사 이동폭이 서로소 관계여야 효과가 나타난다.) Double Hashing은 해싱이 한번 더 들어가기 때문에 Linear/Quadratic Probing 방식에 비해 더 많은 연산량이 요구된다.
 
-* Primary Clustering의 해결: 최초 해시 값이 같더라도 탐사 이동폭을 다르게 함.
+* `Primary Clustering의 해결`: 최초 해시 값이 같더라도 탐사 이동폭을 다르게 함.
 
-* Secondary Clustering의 해결: 탐사 이동 폭이 같다러도 최초 해시 값을 다르게 함.
+* `Secondary Clustering의 해결`: 탐사 이동 폭이 같더라도 최초 해시 값을 다르게 함.
 
 <br/>
 
 ---
 <h2 id="sec_03">3️⃣&ensp; Time Complexity</h2>
 
+### 1. Uniform Probing
+
+다음 두 가지를 전제하여 Open Addressing의 탐색(Search) 연산에 대한 Time Complexity를 분석해보자.(삭제와 삽입 또한 Probing 횟수에 영향을 받기 때문에 Search 연산을 대표로 살펴봄.)
+
+1. 해시 테이블에 데이터가 모두 적재되지 않은 상태를 전제.
+
+    * 다시 말해 `고정된 해시 테이블의 크기(m)`에 `n개의 데이터`를 모두 저장하는 경우에 대해, Load Factor 값인 `a`가 <img src="https://chart.apis.google.com/chart?cht=tx&chl=a%5C%20%3D%5C%20%5Cfrac%7Bn%7D%7Bm%7D%5C%20%5Cle%5C%201" />이 되는 것을 가정하여 Time Complexity를 분석한다.
+
+2. 키들이 모든 버킷에 균등하게 할당된 상황을 가정(`Uniform Hashing`).
+
+<br/>
+
+Open Addressing Probing의 Time Complexity는 Probing(탐사) 횟수에 비례한다. 다시 말해 충돌을 회피하여 원하는 버킷에 access하기 위해, Probing을 통해 특정 이동 폭으로 몇번 이동했는지에 따라 Probing의 성능이 계산되는 것이다. 이에 따라 Open Addressing Probing의 Search 연산에 대한 Time Complexity를 계산할 때는, 기대값(Expected Value: <img src="https://chart.apis.google.com/chart?cht=tx&chl=%5Cmathbb%7BE%7D%5BX%5D%5C%20%3D%5C%20%5Csum%5C%20xP(x)" /> 개념을 활용하여 Probing 횟수의 기댓값을 계산한다. 이에 따른 `Successful Search`와 `Unsuccessful Search`의 탐사 횟수에 대한 기댓값은 아래와 같다.
+
+<div align="center">
+
+|Case|Time Complexity|Load Factor </br> (`a=0.5`)|Load Factor </br> (`a=0.8`)|
+|:-:|:-:|:-:|:-:|
+|`Successful Search`|<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5Cfrac%7B1%7D%7Ba%7D%5C%20%5Cln%7B%5Cfrac%7B1%7D%7B1%5C%20-%5C%20a%7D%7D" />|`1.3862`|`2.0117`|
+|`Unsuccessful Search`|<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5Cfrac%7B1%7D%7B1%5C%20-%5C%20a%7D" />|`2`|`5`|
+
+</div>
+
+위의 표를 보면 `a = 0.5`(데이터가 반만 채워져 있음) 인 경우 최초 해시값을 만드는 1회 연산을 제외한 나머지인 1번만큼만 추가 탐사를 진행하면 검색을 완료할 수 있지만, `a = 0.8`로 load factor가 증가하면 기대값이 급격하게 증가할 수 있다.
+
+<br/>
+
+### 2. Linear Probing vs Uniform Probing
+
+||Unsuccessful Search|Successful Search|
+|-|:-:|:-:|
+|Uniform Probing|<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5Cfrac%7B1%7D%7B1-a%7D" />|<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5Cfrac%7B1%7D%7Ba%7D%5C%20%5Cln%7B%5Cfrac%7B1%7D%7B1-a%7D%7D" />|
+|Linear Probing|<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5Cfrac%7B1%7D%7B2%7D(1%5C%20%2B%5C%20(%5Cfrac%7B1%7D%7B1%5C%20-%5C%20a%7D)%5E2)" />|<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5Cfrac%7B1%7D%7B2%7D(1%5C%20%2B%5C%20%5Cfrac%7B1%7D%7B1%5C%20-%5C%20a%7D)" />|
+
+<br/>
+
+<div>
+<img src="../../figure/expected_number_of_probes.png" />
+<p align="center">
+    <a href="http://www.cs.tau.ac.il/~zwick/Adv-Alg-2015/Linear-Probing.pdf">Expected number of probes</a>
+</p>
+</div>
+
+load factor(a)가 0.6 이하인 경우, 두 probing 모두 constrants이 적게 나타난다.
+
+이처럼 Open Addressing의 Probing 연산에 대한 Time Complexity는 load factor(테이블에 데이터가 얼마나 채워져있는지)에 크게 영향을 받는다. 따라서 해시 테이블의 데이터가 어느정도 차게 되면 해시 테이블의 크기(m)을 적절히 늘리고(`Resizing`) 다시 해싱을 수행하는 것이 좋다고 한다.
+
+|Lang   |Material|
+|:-:    |-|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[CPython 3.3을 기준으로 `load factor가 2/3` 정도가 되었을 때, Resizing을 수행한다.](https://tenthousandmeters.com/blog/python-behind-the-scenes-10-how-python-dictionaries-work/)|
+|<a href="https://www.java.com/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/java.svg" title="Java" width="15px"/></a>|[Java의 HashMap은 `load factor가 3/4(=0.75)` 정도가 되었을 때, Resizing을 수행한다.](https://d2.naver.com/helloworld/831311)|
+
+<br/>
+
+> :bulb: 정리하자면 Hash Table을 사용할 때 Probing 연산의 Time Complexity는 load factor의 크기와 밀접한 연관을 갖는다. 따라서 Hash Table을 구현하게 된다면 최적의 Load Factor를 지정하는 것이 성능 향상에 매우 중요하다.
 
 <br/>
 
@@ -133,3 +188,7 @@ Double Hashing 방식은 `2개의 해시 함수를 사용`하여 탐사할 해�
 * https://ratsgo.github.io/data%20structure&algorithm/2017/10/25/hash/
 
 * https://stackoverflow.com/questions/27742285/what-is-primary-and-secondary-clustering-in-hash
+
+* https://nlp.jbnu.ac.kr/AL/ch06.pdf
+
+* http://www.cs.tau.ac.il/~zwick/Adv-Alg-2015/Linear-Probing.pdf
