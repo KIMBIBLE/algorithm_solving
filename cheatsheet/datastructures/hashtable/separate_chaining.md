@@ -1,19 +1,19 @@
+# Hashing with Separate Chaining(분리 연결법)
 
-#### :bulb:&ensp; `Open Addressing` vs `Seperate Chaining`
+본 문서에서는 다음의 내용을 중점으로 다룬다.
 
-|                   |Time Complexity    |Bucket Resize|
-|-                  |-                  |-|
-|Open Addressing    |<img src="https://chart.apis.google.com/chart?cht=tx&chl=O(M)" />|버킷을 계속 사용하기 때문에 |
-|Separate Chaining  |<img src="https://chart.apis.google.com/chart?cht=tx&chl=O(M)" />||
+1. <a href="#sec_01">Separate Chaining 기법을 활용하여 Hash Table을 관리하는 방법</a>
 
-* `해시 버킷의 밀도가 높을 때`: 일반적으로 Open Addressing 방식은 Separate Chaining 방식 보다 느림.
+2. <a href="#sec_02">Separate Chaining을 활용할 때, 삽입/삭제/탐색 연산의 시간 복잡도</a>
 
-  * Separate Chaining 방식에서는 해시 버킷을 채운 밀도가 높을수록 Worst Case 발생 빈도가 높아지기 때문.
+<br/>
 
-  * 이는 Separate Chaining 방식이 보조 해시 함수를 사용하여 해시 충돌이 발생하는 빈도를 조절할 수 있지만, Open Addressing 방식은 해시 충돌이 발생하는 빈도를 임의로 조절할 수 없기 때문.
+---
+<h2 id="sec_01">1️⃣&ensp; What is Separate Chaining?</h2>
 
-* `해시 버킷의 밀도가 낮을 때`: Open Addressing 방식이 Separate Chaining 방식보다 성능이 더 좋음.
 
-  * 먼저, Open Addressing 방식은 연속된 메모리 공간 내에 데이터를 저장하기 때문에 캐시 효율이 높음.
-  
-  * 다음으로, 
+<br/>
+
+---
+<h2 id="sec_02">3️⃣&ensp; Time Complexity</h2>
+
