@@ -367,7 +367,6 @@ Collision이 많아질 수록 Search 에 필요한 Time Complexity가 <img src="
 |:-:    |-|
 |:book:|[Open Addressing(개방 주소법) 방식의 개념 및 삽입/삭제/탐색 연산에 대한 시간복잡도](./hashtable/open_addressing.md)|
 |:book:|[Separate Chaining(분리 연결법) 방식의 개념 및 삽입/삭제/탐색 연산에 대한 시간복잡도](./hashtable/separate_chaining.md)|
-|:book:|[Open Addressing vs Seperate Chaining](./open_addressing_vs_seperate_chaining.md)|
 
 <br/>
 
