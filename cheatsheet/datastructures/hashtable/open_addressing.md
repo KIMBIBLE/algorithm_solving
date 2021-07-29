@@ -128,6 +128,8 @@ Double Hashing 방식은 `2개의 해시 함수를 사용`하여 탐사할 해�
 <br/>
 
 ---
-### Reference
+## Reference
+
+* https://ratsgo.github.io/data%20structure&algorithm/2017/10/25/hash/
 
 * https://stackoverflow.com/questions/27742285/what-is-primary-and-secondary-clustering-in-hash
