@@ -417,13 +417,30 @@ id(x['b']) == id(y['b']) # False
 ---
 <h2 id="section_06">6️⃣&ensp; Python dictionary operation의 Time Complexity</h2>
 
-
+### 1. Assumptions
 
 * dict의 Average Case 측정은 dict 객체에 대한 `해시 함수`가 충돌을 흔하지 않게 할 만큼 `충분히 강력하다고 가정`함.
 
 * Average Case는 `매개변수에 사용된 키`가 모든 키 세트에서 `무작위로 균일하게 선택된다고 가정`합니다
 
 * 실제로 `str 키`만 처리하는 dicts에 대한 fast-path가 있습니다. 이것은 알고리즘 복잡성에 영향을 미치지 않지만 일반적인 프로그램이 얼마나 빨리 완료되는지와 같은 상수 요소에 상당한 영향을 미칠 수 있음.
+
+<br/>
+
+### 2. Time Complexity
+
+|Opeartion|Average Case|Amortized Worst Case|
+|-|-|-|
+|k in d|`O(1)`|`O(n)`|
+|Copy|`O(n)`|`O(n)`|
+|Get Item<sup>1</sup>|`O(1)`|`O(n)`|
+|Set Item|`O(1)`|`O(n)`|
+|Delete Item|`O(1)`|`O(n)`|
+|Iteration<sup>2</sup>|`O(n)`|`O(n)`|
+
+1. 이러한 작업은 "Amortized Wort Case"에서 "Amortized" 부분에 의존함. 개별 작업은 컨테이너의 history에 따라 놀라울 정도로 오래 걸릴 수 있음.
+
+2. 이러한 작업의 경우 worst case의 n은 현재 크기가 아니라 컨테이너가 달성한 최대 크기를 말함. 예를 들어 N개의 개체가 dictionary에 추가되고 N-1개가 삭제되면, dictionary은 다른 삽입이 이루어질 때까지 (적어도) N개의 개체에 맞게 크기가 조정됨.
 
 <br/>
 
@@ -435,3 +452,5 @@ id(x['b']) == id(y['b']) # False
 * https://wikidocs.net/16043
 
 * https://www.delftstack.com/ko/howto/python/how-to-remove-an-element-from-a-python-dictionary/
+
+* https://wiki.python.org/moin/TimeComplexity
