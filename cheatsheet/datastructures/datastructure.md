@@ -375,6 +375,7 @@ Collision이 많아질 수록 Search 에 필요한 Time Complexity가 <img src="
 |Lang   |Material|
 |:-:    |-|
 |<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[Dictionary 자료형](./hashtable/python/dictionary.md)|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[[외부 링크] CPython의 Dictionary는 `Open Addressing`과 `Random Probing` 방식을 사용함](https://stackoverflow.com/questions/327311/how-are-pythons-built-in-dictionaries-implemented)|
 
 
 <br/>
