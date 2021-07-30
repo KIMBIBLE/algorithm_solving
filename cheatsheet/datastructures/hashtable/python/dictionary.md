@@ -430,13 +430,13 @@ id(x['b']) == id(y['b']) # False
 ### 2. Time Complexity
 
 |Opeartion|Average Case|Amortized Worst Case|
-|-|-|-|
-|k in d|`O(1)`|`O(n)`|
-|Copy|`O(n)`|`O(n)`|
-|Get Item<sup>1</sup>|`O(1)`|`O(n)`|
-|Set Item|`O(1)`|`O(n)`|
-|Delete Item|`O(1)`|`O(n)`|
-|Iteration<sup>2</sup>|`O(n)`|`O(n)`|
+|-|:-:|:-:|
+|k in d|<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(1)" />|<img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n)" />|
+|Copy|<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(n)" />|<img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n)" />|
+|Get Item<sup>1</sup>|<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(1)" />|<img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n)" />|
+|Set Item|<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(1)" />|<img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n)" />|
+|Delete Item|<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(1)" />|<img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n)" />|
+|Iteration<sup>2</sup>|<img src="https://chart.apis.google.com/chart?cht=tx&chl=%5CTheta(n)" />|<img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n)" />|
 
 1. 이러한 작업은 "Amortized Wort Case"에서 "Amortized" 부분에 의존함. 개별 작업은 컨테이너의 history에 따라 놀라울 정도로 오래 걸릴 수 있음.
 
