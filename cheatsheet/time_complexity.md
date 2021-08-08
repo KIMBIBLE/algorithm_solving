@@ -1,5 +1,14 @@
 # Time Complixity
 
+<div align="center">
+
+![](./figure/big_o.png)
+
+<a href="https://stackoverflow.com/questions/559839/big-o-summary-for-java-collections-framework-implementations">Link</a>
+
+</div>
+
+
 ## 1. 일반적인 경우의 연산 유형별 시간복잡도 & 제한시간 1초 기준 입력 크기
 
 <table>
