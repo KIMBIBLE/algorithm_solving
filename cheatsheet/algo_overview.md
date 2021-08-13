@@ -28,10 +28,20 @@
 
 ---
 
-## :four:&nbsp; Binary Search
+## :four:&nbsp; 탐색 알고리즘
 
 * [배열 이진탐색](./../dongbin_book/chap7_binary_search/README.md)
 
+* [완전 탐색](./algorithms/exhaustive_search/README.md)
+
+<br/>
+
+---
+## :four:&nbsp; 다이나믹 프로그래밍
+
+
+
+<br/>
 
 ---
 ## :hocho:&ensp; 기타 알고리즘
