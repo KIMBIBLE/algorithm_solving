@@ -13,6 +13,7 @@
 
 ## :two:&nbsp; Greedy
 
+* [Greedy 기본](./algorithms/greedy/README.md)
 
 </br>
 
@@ -39,7 +40,7 @@
 ---
 ## :four:&nbsp; 다이나믹 프로그래밍
 
-
+* [다이나믹 프로그래밍 기본](./algorithms/dynamic_programming/README.md)
 
 <br/>
 
