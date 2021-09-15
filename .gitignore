@@ -8,4 +8,4 @@ output.txt
 *.pyc
 .vscode
 .DS_Store
-.test
+test
