@@ -27,6 +27,10 @@
 
 ### 0. Overview
 
+번호(인덱스)와 번호에 대응하는 데이터들로 이루어진 자료 구조. 일반적으로 배열에는 같은 종류의 데이터들이 순차적으로 저장되어, 값의 번호가 곧 배열의 시작점으로부터 값이 저장되어 있는 상대적인 위치가 됨. <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" />의 빠른 Access가 가능함.
+
+<br/>
+
 ### 1. 구현 및 참고자료
 
 |Lang   |Material|
@@ -46,7 +50,20 @@
 
 ### 0. Overview
 
+연결 리스트(linked list)는 각 노드가 데이터와 포인터를 가지고 한 줄로 연결되어 있는 방식으로 데이터를 저장하는 자료 구조. 데이터를 담고 있는 노드들이 연결되어 있는데, 노드의 포인터가 다음이나 이전의 노드와의 연결을 담당하게 됨.
+연결 리스트는 늘어선 노드의 중간지점에서도 자료의 추가와 삭제가 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" />의 시간에 가능하다는 장점을 갖는다. 그러나 배열이나 트리 구조와는 달리 특정 위치의 데이터를 검색해 내는데에는 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n)" />의 시간이 걸리는 단점도 갖고 있다.
+
+<br/>
+
 ### 1. 구현 및 참고자료
+
+|Lang   |Material|
+|:-:    |-|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |단일 연결 리스트 구현|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |이중 연결 리스트 구현|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |원형 연결 리스트 구현|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |Straight Traversal|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |Reverse Traversal|
 
 <br/>
 
@@ -55,7 +72,7 @@
 
 ### 0. Overview
 
-> Last in First Out(LIFO) 구조의 자료형. 원소 삽입 삭제의 시간복잡도가 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" />으로 매우 빠름. 하지만 이론상 스택의 top을 제외한 나머지 스택 내 데이터의 탐색 시 원소를 하나씩 꺼내어 옮겨 담으면서 수행해야하는 단점이 있음.
+Last in First Out(LIFO) 구조의 자료형. 원소 삽입 삭제의 시간복잡도가 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(1)" />으로 매우 빠름. 하지만 이론상 스택의 top을 제외한 나머지 스택 내 데이터의 탐색 시 원소를 하나씩 꺼내어 옮겨 담으면서 수행해야하는 단점이 있음.
 
 <br/>
 
@@ -65,22 +82,15 @@
 
 <br/>
 
-:bulb:&ensp; 스택 자료형을 사용하는 대표적인 문제
-
-* 괄호 검사
-
-* 역순 문자열 만들기
-
-* 후위 표기법으로의 변환
-
-<br/>
-
 ### 1. 구현 및 참고자료
 
 |Lang   |Material|
 |:-:    |-|
 |<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[List를 활용한 구현](./stack/python/stack_list.md)|
 |<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[deque 모듈 사용](./stack/python/stack_deque.md)|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |괄호 검사|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |역순 문자열 만들기|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |후위 표기법으로의 변환|
 
 <br/>
 
@@ -100,16 +110,6 @@
 
 <br/>
 
-:bulb:&ensp; 큐 자료형을 사용하는 대표적인 문제
-
-* BFS 문제
-
-* 콜센터 대기 순서
-
-* 프로세스 관리
-
-<br/>
-
 ### 1. 구현 및 참고자료
 
 
@@ -119,6 +119,9 @@
 |<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[collections.deque 모듈 사용 방법 및 Operation 별 Time Complexity 정리](./queue/python/queue_deque.md)|
 |<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |선형 큐 구현|
 |<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |순환 큐 구현|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |콜센터 대기 순서|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |프로세스 관리|
+|<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |BFS 문제|
 
 <br/>
 
@@ -137,74 +140,76 @@
 
 이번 챕터에서는 Tree 자료구조의 기초인 `Binary Tree`, `Perfect Binary Tree`, `Perfect Binary Tree`, `Complete Binary Tree`, `Binary Search Tree(BST)`에 대해 알아본다. 더 복잡한 형태의 Tree 자료구조에 대해 궁금하다면 [Tree-Advanced 챕터](#ds-6)에서 알아보자.
 
-* Binary Tree(이진 트리)
+<br/>
 
-    > `루트 노드를 중심으로 두개의 서브 트리`로 나뉘어지고, `나뉘어진 두 서브 트리 또한 모두 이진 트리인 트리`의 형태를 이진 트리라고 함. 이처럼 이진 트리는 재귀적으로 정의되기 때문에, 재귀적 정의 과정이 Leaf Node에 도달했을 때에도 정의를 만족하기 위해, `공집합 또한 이진 트리`로 포함하여야 함.
+#### ***1) Binary Tree(이진 트리)***
 
+`루트 노드를 중심으로 두개의 서브 트리`로 나뉘어지고, `나뉘어진 두 서브 트리 또한 모두 이진 트리인 트리`의 형태를 이진 트리라고 함. 이처럼 이진 트리는 재귀적으로 정의되기 때문에, 재귀적 정의 과정이 Leaf Node에 도달했을 때에도 정의를 만족하기 위해, `공집합 또한 이진 트리`로 포함하여야 함.
 
-    배열로 구성된 이진 트리는 `노드의 갯수가 n개`이고, `root가 0이 아닌 1`에서 시작할 때, 다음과 같은 특징이 성립함.
+배열로 구성된 이진 트리는 `노드의 갯수가 n개`이고, `root가 0이 아닌 1`에서 시작할 때, 다음과 같은 특징이 성립함.
 
-    |i'th Node          |Parent     |
-    |-                  |-          |
-    |Parent Node        |`i // 2`    |
-    |Left Child Node    |`i * 2`    |
-    |Right Child Node   |`i * 2 + 1`|
-
-
-    :bulb:&ensp; `i = 4`일 때의 예시는 다음과 같다.
-
-    |Array Index|0|1|2|3|`4`|5|6|7|8|9|
-    |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-    ||Unused :x:|Root Node|Parent Node|-|`i th Node`|-|-|-|Left Child Node|Right child Node|
-    ||-|-|`i // 2`|-|`i`|-|-|`i * 2`|`i * 2 + 1`|
+|i'th Node          |Parent     |
+|-                  |-          |
+|Parent Node        |`i // 2`    |
+|Left Child Node    |`i * 2`    |
+|Right Child Node   |`i * 2 + 1`|
 
 <br/>
 
-* Perfect Binary Tree(포화 이진 트리)
+:bulb:&ensp; `i = 4`일 때의 예시는 다음과 같다.
 
-    > 트리의 모든 내부 노드가 두개의 자식 노드를 가지며, 모든 Leaf Node가 동일한 깊이 또는 레벨을 갖는 트리. 다시 말해, `모든 리프 노드의 레벨이 동일`하고, `모든 레벨이 꽉 찬 이진 트리`를 의미.
-
-<br/>
-
-* Complete Binary Tree(완전 이진 트리)
-
-    > 부모 노드, 왼쪽 자식 노드, 오른쪽 자식 노드 순으로 채워지는 이진 트리. 마지막 레벨을 제외하고 모든 레벨이 완전히 채워져 있으며, 마지막 레벨의 노드들이 왼쪽부터 순서대로 채워져 있는 노드의 형태를 의미.
+|Array Index|0|1|2|3|`4`|5|6|7|8|9|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+||Unused :x:|Root Node|Parent Node|-|`i th Node`|-|-|-|Left Child Node|Right child Node|
+||-|-|`i // 2`|-|`i`|-|-|`i * 2`|`i * 2 + 1`|
 
 <br/>
 
-* Full Binary Tree(정 이진 트리) or Proper Binary Tree(적정 이진 트리)
+### 2) ***Perfect Binary Tree(포화 이진 트리)***
 
-    > 모든 노드가 0개 또는 2개의 자식 노드를 갖는 트리를 의미. (자식 노드의 갯수가 홀수 개가 아니여야 함.)
+트리의 모든 내부 노드가 두개의 자식 노드를 가지며, 모든 Leaf Node가 동일한 깊이 또는 레벨을 갖는 트리. 다시 말해, `모든 리프 노드의 레벨이 동일`하고, `모든 레벨이 꽉 찬 이진 트리`를 의미.
 
 <br/>
 
-* Binary Search Tree(BST)
+### 3) ***Complete Binary Tree(완전 이진 트리)***
 
-    > 효율적인 탐색을 위해서는 `데이터를 찾는 방법` 뿐만 아니라 `데이터를 저장하는 방법` 또한 중요하게 고려해야함. `Binary Search Tree(이진 탐색 트리)`는 이진트리의 일종으로, 특정 규칙에 따라 데이터를 저장하고, 이 규칙을 이후 데이터 탐색 시 활용하는 형태의 자료구조.
+부모 노드, 왼쪽 자식 노드, 오른쪽 자식 노드 순으로 채워지는 이진 트리. 마지막 레벨을 제외하고 모든 레벨이 완전히 채워져 있으며, 마지막 레벨의 노드들이 왼쪽부터 순서대로 채워져 있는 노드의 형태를 의미.
 
-    * 규칙 1. 이진 탐색 트리에서 노드에 저장된 키는 유일해야 함.
+<br/>
 
-    * 규칙 2. 부모 노드의 키가 왼쪽 자식 노드의 키보다 커야 함.
+### 4) ***Full Binary Tree(정 이진 트리) or Proper Binary Tree(적정 이진 트리)***
 
-    * 규칙 3. 부모 노드의 키보다 오른쪽 자식 노드의 키가 커야 함.
+모든 노드가 0개 또는 2개의 자식 노드를 갖는 트리를 의미. (자식 노드의 갯수가 홀수 개가 아니여야 함.)
 
-    * 규칙 4. 특정 노드를 기준으로 왼쪽과 오른쪽의 서브트리 또한 이진 탐색 트리인 조건을 만족해야 함.
+<br/>
 
-    <br/>
+### 5) ***Binary Search Tree(BST)***
 
-    :pushpin:&ensp; 이진 탐색 트리의 탐색 연산의 시간복잡도
+효율적인 탐색을 위해서는 `데이터를 찾는 방법` 뿐만 아니라 `데이터를 저장하는 방법` 또한 중요하게 고려해야함. `Binary Search Tree(이진 탐색 트리)`는 이진트리의 일종으로, 특정 규칙에 따라 데이터를 저장하고, 이 규칙을 이후 데이터 탐색 시 활용하는 형태의 자료구조.
 
-    이진 탐색 트리의 탐색 연산은 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(h)%5C%20%5Capprox%5C%20O(%5Clog%7B%7D%7Bn%7D)" />의 시간 복잡도를 가짐. 이는 트리의 높이가 하나씩 증가될수록, 추가되는 노드의 수가 두 배씩 증가하기 때문.
+* 규칙 1. 이진 탐색 트리에서 노드에 저장된 키는 유일해야 함.
 
-    이와 같은 이진 탐색 트리는 `Skewed Tree(편향 트리)`가 될 수 있음. 저장 순서에 따라 계속 한 쪽으로만 노드가 추가되는 경우가 발생하기 때문. 이 경우, 성능에 영향을 미치게 되며, 탐색의 Worst Case가 되고 시간 복잡도는 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n)" />이 됨.
+* 규칙 2. 부모 노드의 키가 왼쪽 자식 노드의 키보다 커야 함.
 
-    이처럼 배열보다 많은 메모리를 사용하며 데이터를 저장했지만 탐색에 필요한 시간 복잡도가 같게 되는 비효율적인 상황이 발생함. 이를 해결하기 위해 `Rebalancing 기법`이 등장함. `균형을 잡기 위한 트리 구조의 재조정`을 Rebalancing이라 하며, 이 기법을 구현한 트리에는 여러 종류가 존재하는데, 그 중에서 하나가 `Red-Black Tree`.
+* 규칙 3. 부모 노드의 키보다 오른쪽 자식 노드의 키가 커야 함.
 
-    <br/>
+* 규칙 4. 특정 노드를 기준으로 왼쪽과 오른쪽의 서브트리 또한 이진 탐색 트리인 조건을 만족해야 함.
 
-    :bulb:&ensp; 코딩테스트에서의 이진 탐색 트리 문제
+<br/>
 
-    > 사실 코딩테스트에서는 문제 해결을 위해 필수적으로 이진 탐색 트리 자료구조를 구현해야하는 문제는 출제 빈도가 높지 않음.
+:bulb:&ensp; 이진 탐색 트리의 탐색 연산의 시간복잡도
+
+> 이진 탐색 트리의 탐색 연산은 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(h)%5C%20%5Capprox%5C%20O(%5Clog%7B%7D%7Bn%7D)" />의 시간 복잡도를 가짐. 이는 트리의 높이가 하나씩 증가될수록, 추가되는 노드의 수가 두 배씩 증가하기 때문.
+> 
+> 이와 같은 이진 탐색 트리는 `Skewed Tree(편향 트리)`가 될 수 있음. 저장 순서에 따라 계속 한 쪽으로만 노드가 추가되는 경우가 발생하기 때문. 이 경우, 성능에 영향을 미치게 되며, 탐색의 Worst Case가 되고 시간 복잡도는 <img src="https://chart.apis.google.com/chart?cht=tx&chl=O(n)" />이 됨.
+> 
+> 이처럼 배열보다 많은 메모리를 사용하며 데이터를 저장했지만 탐색에 필요한 시간 복잡도가 같게 되는 비효율적인 상황이 발생함. 이를 해결하기 위해 `Rebalancing 기법`이 등장함. `균형을 잡기 위한 트리 구조의 재조정`을 Rebalancing이라 하며, 이 기법을 구현한 트리에는 여러 종류가 존재하는데, 그 중에서 하나가 `Red-Black Tree`.
+
+<br/>
+
+:bulb:&ensp; 코딩테스트에서의 이진 탐색 트리 문제
+
+> 사실 코딩테스트에서는 문제 해결을 위해 필수적으로 이진 탐색 트리 자료구조를 구현해야하는 문제는 출제 빈도가 높지 않음.
 
 <br/>
 
@@ -393,8 +398,6 @@ Collision이 많아질 수록 Search 에 필요한 Time Complexity가 <img src="
 |<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[인접 리스트 구현](./graph/python/adjacent_list.md)|
 |<a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/KIMBIBLE/KIMBIBLE/main/icons/python.svg" title="Python" width="15px"/></a> |[간선리스트 구현](./graph/python/edge_list.md)|
 
-### 2.  Edge Cases
-
 <br/>
 
 ---
@@ -403,6 +406,8 @@ Collision이 많아질 수록 Search 에 필요한 Time Complexity가 <img src="
 ### 0. Overview
 
 `집합(Set)`은 `원소(Member)`라는 구별되는 객체들이 연관되어 모인 것을 말하며, `서로 다른 연관된 원소`들의 `순서 없는` 모임이다.
+
+<br/>
 
 ### 1. 구현 및 참고자료
 
@@ -426,6 +431,15 @@ Collision이 많아질 수록 Search 에 필요한 Time Complexity가 <img src="
 - 동빈북
 
 - 파이썬 알고리즘 인터뷰
+
+
+### Array
+
+- https://ko.wikipedia.org/wiki/%EB%B0%B0%EC%97%B4
+
+### Linked List
+
+- https://ko.wikipedia.org/wiki/%EC%97%B0%EA%B2%B0_%EB%A6%AC%EC%8A%A4%ED%8A%B8
 
 ### Hash Table
 
