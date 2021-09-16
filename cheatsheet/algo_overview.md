@@ -5,8 +5,16 @@
 <br/>
 
 ---
-## :open_file_folder:&nbsp; 정렬 알고리즘
+## :open_file_folder:&nbsp; 구현
 
+|Documentation|Description|
+|-|-|
+|[구현/시뮬레이션 문제 유형](./algorithms/implementation/impl_cases.md)|-|
+
+<br/>
+
+---
+## :open_file_folder:&nbsp; 정렬 알고리즘
 
 |Documentation|Description|
 |-|-|
