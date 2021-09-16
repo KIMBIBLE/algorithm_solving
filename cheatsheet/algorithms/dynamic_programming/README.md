@@ -2,7 +2,7 @@
 
 ## :one:&ensp; Dynamic Programming 이란?
 
-Dynamic Programmig은 복잡한 문제를 여러 개의 하위 문제(sub-problem)으로 나누어 해결하는 방식. DP는 작은 문제와 큰 문제가 동일한 구조를 가져, 큰 문제의 답을 구할 시 작은 문제에서 구한 결과를 기억하고, 이를 그대로 사용해 수행 속도를 높인 방법을 말함. 
+Dynamic Programmig은 복잡한 문제를 여러 개의 하위 문제(sub-problem)으로 나누어 해결하는 방식. DP는 작은 문제와 큰 문제가 동일한 구조를 가져, 큰 문제의 답을 구할 시 작은 문제에서 구한 결과를 기억하고, 이를 그대로 사용해 수행 속도를 높인 방법을 말함.
 
 <br/>
 
@@ -12,11 +12,11 @@ DP는 문제가 다음 두 가지의 조건을 만족하는 경우 사용이 가
 
 1. `Optimal Substructrue(최적 부분 구조)`
 
-    부분 문제의 최적 결과 값을 사용하여 전체 문제의 최적 결과값을 구할 수 있는 경우를 의미함. 다시 말해 특정 문제의 정답은 문제의 크기에 관계 없이 항상 동일해야 함.
+    주어진 문제에 대한 최적해를 구하고자 할 때, 부분 문제의 최적 결과 값을 결합하여 전체 문제의 최적 결과값(optimal solution)을 구할 수 있는 경우를 의미함. 다시 말해 특정 문제의 정답은 문제의 크기에 관계 없이 항상 동일해야 함.(Optimal Substructure는 그리디 알고리즘에서도 유사하게 적용됨.)
 
 2. `Overlapping Subproblems(부분 문제 반복)`
 
-    DP는 기본적으로 문제를 나누고 문제의 결과 값을 재활용하여 전체 답을 구함. 따라서 동일한 작은 문제들이 반복적으로 나타나는 경우 사용이 가능함. 다시 말해, DP는 부분 문제의 결과를 저장(Memoization)하여, 같은 답을 중복해서 구하는 과정을 제거한 방법이다. 따라서 부분 문제가 반복적으로 나타나지 않는다면 재사용이 불가능해짐.
+    sub-problem 간에 중복되는 경우가 여러번 발생하는 경우를 말함. DP는 기본적으로 문제를 나누고 문제의 결과 값을 재활용하여 전체 답을 구함. 따라서 동일한 작은 문제들이 반복적으로 나타나는 경우 사용이 가능함. 다시 말해, DP는 부분 문제의 결과를 저장(Memoization)하여, 같은 답을 중복해서 구하는 과정을 제거한 방법이다. 따라서 부분 문제가 반복적으로 나타나지 않는다면 재사용이 불가능해짐.
 
 <br/>
 
@@ -120,7 +120,6 @@ def fibo(number):
     return sequence[number]
 ```
 
-
 <br/>
 
 ---
@@ -132,7 +131,7 @@ def fibo(number):
 |Jump Game|1번 돌에서 N번 돌까지 특정 조건을 만족하면서 점프를 해 갈 때, 필요한 최소의 점프 횟수를 구하기|BOJ-2253|
 |Unique Paths Problem|가능한 모든 고유한 경로의 수 구하기<br/><img src="./unique_path/unique_path.png"/>|Leetcode-62-Unique-Paths|
 |Rain Terraces (Trapping Rain Water) Problem|빗물 가두기.<br/><img src="./rain_terraces/rain_terraces.png"/>|BOJ-14719|
-|Recursive Staircase Problem(재귀 계단 문제)|정상에 도달하는 방법의 수 세기.<br/><img src="./recursive_staircase_problem/recursive_staircase_problem.png" width="70%"/>|
+|Recursive Staircase Problem(재귀 계단 문제)|정상에 도달하는 방법의 수 세기.<br/><img src="./recursive_staircase_problem/recursive_staircase_problem.png"/>|
 |Assembly-line scheduling|생산 라인에서 최소 경로를 구하기.<br/><img src="./assembly_line_scheduling/assembly_line_scheduling.png"/>||
 |Rod cutting|막대 자르기||
 |Matrix-chain multiplication|||
