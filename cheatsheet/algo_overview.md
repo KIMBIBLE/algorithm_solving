@@ -88,6 +88,53 @@
 |[다이나믹 프로그래밍 기본](./algorithms/dynamic_programming/README.md)|다이나믹 프로그래밍 설명과 DP 문제의 접근 방법 설명|
 |[다이나믹 프로그래밍 문제 유형](./algorithms/dynamic_programming/dp_case.md)|DP 문제 유형|
 
+</br>
+
+---
+
+## :open_file_folder:&nbsp; Brute Force Paradigm
+
+|Documentation|Description|
+|-|-|
+|Brute Force|Brute Force 패러다임 설명|
+|Brute Force 문제 유형|Brute Force 패러다임으로 해결 가능한 PS 문제 유형|
+
+
+</br>
+
+---
+
+## :open_file_folder:&nbsp; Divide and Conquer Paradigm
+
+|Documentation|Description|
+|-|-|
+|Divide & Conquer|Divide & Conquer 패러다임 설명|
+|Divide & Conquer 문제 유형|Divide & Conquer 패러다임으로 해결 가능한 PS 문제 유형|
+
+
+</br>
+
+---
+
+## :open_file_folder:&nbsp; Backtracking Paradigm
+
+|Documentation|Description|
+|-|-|
+|Backtracking|Backtracking 패러다임 설명|
+|Backtracking 문제 유형|Backtracking 패러다임으로 해결 가능한 PS 문제 유형|
+
+
+</br>
+
+---
+
+## :open_file_folder:&nbsp; Branch & Bound Paradigm
+
+|Documentation|Description|
+|-|-|
+|Branch & Bound|Branch & Bound 패러다임 설명|
+|Branch & Bound 문제 유형|Branch & Bound 패러다임으로 해결 가능한 PS 문제 유형|
+
 
 <br/>
 
