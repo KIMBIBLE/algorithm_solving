@@ -35,9 +35,10 @@
 
 <br/>
 
----
+[Top](#table-of-contents)
 
-## :two:&ensp; Collections
+---
+<h2 id="h2-2"> 2️⃣&ensp; Collections</h2>
 
 |Contents|Description|
 |-|-|
@@ -54,8 +55,10 @@
 
 <br/>
 
+[Top](#table-of-contents)
+
 ---
-## :three:&ensp; Types
+<h2 id="h2-3"> 3️⃣&ensp; Types</h2>
 
 |Contents|Description|
 |-|-|
@@ -68,8 +71,10 @@
 
 <br/>
 
+[Top](#table-of-contents)
+
 ---
-## :four:&ensp; Syntax
+<h2 id="h2-4"> 4️⃣&ensp; Syntax</h2>
 
 |Contents|Description|
 |-|-|
@@ -111,8 +116,10 @@
 
 <br/>
 
+[Top](#table-of-contents)
+
 ---
-## :five:&ensp; System
+<h2 id="h2-5"> 5️⃣&ensp; System</h2>
 
 |Contents|Description|
 |-|-|
@@ -126,8 +133,10 @@
 
 <br/>
 
+[Top](#table-of-contents)
+
 ---
-## :six:&ensp; Data
+<h2 id="h2-6"> 6️⃣&ensp; Data</h2>
 
 |Contents|Description|
 |-|-|
@@ -144,8 +153,10 @@
 
 <br/>
 
+[Top](#table-of-contents)
+
 ---
-## :seven:&ensp; Advanced
+<h2 id="h2-7"> 7️⃣&ensp; Advanced</h2>
 
 |Contents|Description|
 |-|-|
@@ -158,8 +169,10 @@
 
 <br/>
 
+[Top](#table-of-contents)
+
 ---
-## :eight:&ensp; Libraries
+<h2 id="h2-8"> 8️⃣&ensp; Libraries</h2> 
 
 |Contents|Description|
 |-|-|
@@ -184,6 +197,8 @@
 |PyInstaller||
 
 <br/>
+
+[Top](#table-of-contents)
 
 ---
 
