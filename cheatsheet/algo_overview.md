@@ -21,7 +21,7 @@
 |[정렬 알고리즘의 종류 I - 코딩테스트용](./cheatsheet/../algorithms/sorting/sorting_algorithms.md)|선택정렬, 삽입정렬, 퀵정렬, 계수정렬 설명|
 |소팅 알고리즘의 종류 II|병합정렬, 버블정렬, 힙정렬, 쉘소트, ... 설명|
 |[정렬 알고리즘의 시간복잡도/공간복잡도 비교](./cheatsheet/../algorithms/sorting/sorting_time_complexity.md)|정렬 알고리즘의 시간복잡도 분석|
-|[프로그래밍 언어별 정렬 알고리즘의 활용](./cheatsheet/../algorithms/sorting/sorting_in_various_programming_languages.md.md)|프로그래밍 언어별 정렬 알고리즘의 활용 방법 정리|
+|[프로그래밍 언어별 정렬 알고리즘의 활용](./cheatsheet/../algorithms/sorting/sorting_in_various_programming_languages.md)|프로그래밍 언어별 정렬 알고리즘의 활용 방법 정리|
 |[정렬 알고리즘의 문제 유형](./cheatsheet/../algorithms/sorting/sorting_cases.md)|정렬 알고리즘의 종류, 구현, 시간/공간 복잡도 정리 및 분석|
 
 <br/>
@@ -47,9 +47,9 @@
 
 |Documentation|Description|
 |-|-|
-|[DFS 알고리즘](./algorithms/dfs.md)|깊이 우선 탐색|
-|[BFS 알고리즘](./algorithms/bfs.md)|너비 우선 탐색|
-|DFS & BFS 문제 유형|DFS & BFS 문제 유형|
+|[DFS 알고리즘](./algorithms/dfs_bfs/dfs.md)|깊이 우선 탐색|
+|[BFS 알고리즘](./algorithms/dfs_bfs/bfs.md)|너비 우선 탐색|
+|[DFS & BFS 문제 유형](./algorithms/dfs_bfs/dfs_bfs_case.md)|DFS & BFS 문제 유형|
 |크루스칼 알고리즘(Kruskal’s Algorithm)|가중 무방향 그래프에 대한 최소 스패닝 트리(MST) 찾기|
 |다익스트라 알고리즘(Dijkstra Algorithm)|단일 정점에서 모든 그래프 정점에 대한 최단 경로 찾기|
 |벨만-포드 알고리즘(Bellman-Ford Algorithm)|단일 정점에서 모든 그래프 정점에 대한 최단 경로 찾기|
