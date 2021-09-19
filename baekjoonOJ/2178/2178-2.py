@@ -20,26 +20,26 @@ class Graph:
 
     
     def bfs(self):
-        move = [(0, 1), (0, -1), (-1, 0), (1, 0)] # dx, dy: 상하좌우 이동
+        move = [(-1, 0), (1, 0), (0, -1), (0, 1)] # d_row, d_col: 상하좌우 이동
         queue = deque()
-        queue.append((1, 1)) # start pos(x, y)
+        queue.append((1, 1)) # start pos(row, col)
         self.matrix[1][1] = Graph.START_LEVEL
 
         while queue:
-            cur_x, cur_y = queue.popleft()
-            if cur_x == self.m and cur_y == self.n:
-                return self.matrix[cur_y][cur_x] # 도착
+            cur_row, cur_col = queue.popleft()
+            if cur_row == self.n and cur_col == self.m:
+                return self.matrix[cur_row][cur_col] # 도착
             
             for offset in move:
-                next_x = cur_x + offset[0]
-                next_y = cur_y + offset[1]
-                if self.matrix[next_y][next_x] == Graph.AVAILABLE:
-                    queue.append((next_x, next_y))
+                next_row = cur_row + offset[0]
+                next_col = cur_col + offset[1]
+                if self.matrix[next_row][next_col] == Graph.AVAILABLE:
+                    queue.append((next_row, next_col))
 
-                    if self.matrix[cur_y][cur_x] == Graph.START_LEVEL:
-                        self.matrix[next_y][next_x] = 2
+                    if self.matrix[cur_row][cur_col] == Graph.START_LEVEL:
+                        self.matrix[next_row][next_col] = 2
                     else:
-                        self.matrix[next_y][next_x] = self.matrix[cur_y][cur_x] + 1
+                        self.matrix[next_row][next_col] = self.matrix[cur_row][cur_col] + 1
 
     
     def show(self):
@@ -55,5 +55,3 @@ if __name__ == '__main__':
     graph.show()
     print(graph.bfs())
     graph.show()
-
-
