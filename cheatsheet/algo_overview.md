@@ -94,8 +94,6 @@
 
 
 ---
-
-## :open_file_folder:&nbsp; Cryptography
 <h2 id="h2-6">📂 &nbsp; Cryptography</h2>
 
 |Documentation|Description|
