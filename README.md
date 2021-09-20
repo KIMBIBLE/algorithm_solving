@@ -4,7 +4,8 @@
 
 [![bbkim's solved.ac](http://mazassumnida.wtf/api/v2/generate_badge?boj=jotun9935)](https://solved.ac/profile/jotun9935)
 
-:point_right:&ensp; `문제 코드` and `writeup`
+:point_right:&ensp; `문제 코드` and `writeup` 
+
 1. [BOJ](./baekjoonOJ/)
 
 2. [codeforce](./codeforce/)
@@ -29,5 +30,3 @@
 5. [Input and Output](./cheatsheet/input_output_style/input_output.md)
 
 6. [Python](./cheatsheet/python.md)
-
-7. [Math](./cheatsheet/math.md)

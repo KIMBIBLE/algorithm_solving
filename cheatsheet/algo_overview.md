@@ -2,10 +2,26 @@
 
 해당 문서에서는 문제를 해결하는 방법인 `알고리즘`과, 알고리즘 클래스 설계의 기초가 되는 일반적인 방법 또는 접근 방식인 `알고리즘 패러다임`에 대해 토픽별로 다루고있습니다.
 
+## Table of Contents
+
+* [구현](#h2-1)
+* [Math](#h2-2)
+* [정렬 알고리즘](#h2-3)
+* [탐색 알고리즘](#h2-4)
+* [Graph 알고리즘](#h2-5)
+* [Cryptography](#h2-6)
+* [Greedy Paradigm](#h2-7)
+* [Dynamic Programming Paradigm](#h2-8)
+* [Brute Force Paradigm](#h2-9)
+* [Divide and Conquer Paradigm](#h2-10)
+* [Backtracking Paradigm](#h2-11)
+* [Branch & Bound Paradigm](#h2-12)
+* [기타 알고리즘](#h2-13)
+
 <br/>
 
 ---
-## :open_file_folder:&nbsp; 구현
+<h2 id="h2-1">📂 &nbsp; 구현</h2>
 
 |Documentation|Description|
 |-|-|
@@ -14,7 +30,19 @@
 <br/>
 
 ---
-## :open_file_folder:&nbsp; 정렬 알고리즘
+<h2 id="h2-2">📂 &nbsp; Math</h2>
+
+|Documentation|Description|
+|-|-|
+|[Combinations](./algorithms/math/combinations.md)|Combaination 설명|
+|[GCD](./algorithms/math/lcm)|구현 문제 유형|
+|[LCM](./algorithms/math/lcm.md)|구현 문제 유형|
+|[Modular](./algorithms/math/modular.md)|구현 문제 유형|
+
+<br/>
+
+---
+<h2 id="h2-3">📂 &nbsp; 정렬 알고리즘</h2>
 
 |Documentation|Description|
 |-|-|
@@ -27,8 +55,7 @@
 <br/>
 
 ---
-
-## :open_file_folder:&nbsp; 탐색 알고리즘
+<h2 id="h2-4">📂 &nbsp; 탐색 알고리즘</h2>
 
 |Documentation|Description|
 |-|-|
@@ -42,8 +69,7 @@
 </br>
 
 ---
-
-## :open_file_folder:&nbsp; Graphs
+<h2 id="h2-5">📂 &nbsp; Graph 알고리즘</h2>
 
 |Documentation|Description|
 |-|-|
@@ -70,6 +96,7 @@
 ---
 
 ## :open_file_folder:&nbsp; Cryptography
+<h2 id="h2-6">📂 &nbsp; Cryptography</h2>
 
 |Documentation|Description|
 |-|-|
@@ -81,8 +108,7 @@
 </br>
 
 ---
-
-## :open_file_folder:&nbsp; Greedy Paradigm
+<h2 id="h2-7">📂 &nbsp; Greedy Paradigm</h2>
 
 |Documentation|Description|
 |-|-|
@@ -92,7 +118,7 @@
 </br>
 
 ---
-## :open_file_folder:&nbsp; Dynamic Programming Paradigm
+<h2 id="h2-8">📂 &nbsp; Dynamic Programming Paradigm</h2>
 
 
 |Documentation|Description|
@@ -103,8 +129,7 @@
 </br>
 
 ---
-
-## :open_file_folder:&nbsp; Brute Force Paradigm
+<h2 id="h2-9">📂 &nbsp; Brute Force Paradigm</h2>
 
 |Documentation|Description|
 |-|-|
@@ -115,8 +140,7 @@
 </br>
 
 ---
-
-## :open_file_folder:&nbsp; Divide and Conquer Paradigm
+<h2 id="h2-10">📂 &nbsp; Divide and Conquer Paradigm</h2>
 
 |Documentation|Description|
 |-|-|
@@ -127,8 +151,7 @@
 </br>
 
 ---
-
-## :open_file_folder:&nbsp; Backtracking Paradigm
+<h2 id="h2-11">📂 &nbsp; Backtracking Paradigm</h2>
 
 |Documentation|Description|
 |-|-|
@@ -139,8 +162,7 @@
 </br>
 
 ---
-
-## :open_file_folder:&nbsp; Branch & Bound Paradigm
+<h2 id="h2-12">📂 &nbsp; Branch & Bound Paradigm</h2>
 
 |Documentation|Description|
 |-|-|
@@ -151,7 +173,7 @@
 <br/>
 
 ---
-## :open_file_folder:&ensp; 기타 알고리즘
+<h2 id="h2-13">📂 &nbsp; 기타 알고리즘</h2>
 
 * [파라메트릭 서치](./algorithms/parametric_search.md)
 
