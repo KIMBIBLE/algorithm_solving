@@ -53,7 +53,7 @@ N×M크기의 배열로 표현되는 미로가 있다.
 
 ### 2. 입출력 예제
 
-:bulb:&ensp; ***Case 1: xxx한 입력의 경우***
+:bulb:&ensp; ***Case 1***
 
 * 입력 
     
@@ -69,7 +69,7 @@ N×M크기의 배열로 표현되는 미로가 있다.
 
 <br/>
 
-:bulb:&ensp; ***Case 2: xxx한 입력의 경우***
+:bulb:&ensp; ***Case 2***
 
 * 입력
     
@@ -83,10 +83,6 @@ N×M크기의 배열로 표현되는 미로가 있다.
 
 * 출력: `9`
 
-    ```
-    <output>
-    ```
-
 <br/>
 
 ### 3. 문제 분석
@@ -96,25 +92,6 @@ N×M크기의 배열로 표현되는 미로가 있다.
 <br/>
 
 ### 4. 구현전 blueprint
-
-
-```py
-# 문제에 주어진 바에 따라 미로 표현
-
-UN_AVAILABLE    = 0
-AVAILABLE       = 1
-START_POS       = -1 # 나중에 미로 찾기 시작할 때, 시작 지점에서 이동하는 경우, 다음 위치 값을 2로 수동으로 처리해줘야함.
-```
-
-```py
-# x, y 움직임에 대한 offset 표현
-move = [(1, 0), (-1, 0) (0, -1), (0, 1)] # 상하좌우 이동
-```
-
-<br/>
-
----
-## :four:&ensp; 문제 구현 코드
 
 ```py
 import sys
@@ -139,26 +116,26 @@ class Graph:
 
     
     def bfs(self):
-        move = [(0, 1), (0, -1), (-1, 0), (1, 0)] # dx, dy: 상하좌우 이동
+        move = [(-1, 0), (1, 0), (0, -1), (0, 1)] # d_row, d_col: 상하좌우 이동
         queue = deque()
-        queue.append((1, 1)) # start pos(x, y)
+        queue.append((1, 1)) # start pos(row, col)
         self.matrix[1][1] = Graph.START_LEVEL
 
         while queue:
-            cur_x, cur_y = queue.popleft()
-            if cur_x == self.m and cur_y == self.n:
-                return self.matrix[cur_y][cur_x] # 도착
+            cur_row, cur_col = queue.popleft()
+            if cur_row == self.n and cur_col == self.m:
+                return self.matrix[cur_row][cur_col] # 도착
             
             for offset in move:
-                next_x = cur_x + offset[0]
-                next_y = cur_y + offset[1]
-                if self.matrix[next_y][next_x] == Graph.AVAILABLE:
-                    queue.append((next_x, next_y))
+                next_row = cur_row + offset[0]
+                next_col = cur_col + offset[1]
+                if self.matrix[next_row][next_col] == Graph.AVAILABLE:
+                    queue.append((next_row, next_col))
 
-                    if self.matrix[cur_y][cur_x] == Graph.START_LEVEL:
-                        self.matrix[next_y][next_x] = 2
+                    if self.matrix[cur_row][cur_col] == Graph.START_LEVEL:
+                        self.matrix[next_row][next_col] = 2
                     else:
-                        self.matrix[next_y][next_x] = self.matrix[cur_y][cur_x] + 1
+                        self.matrix[next_row][next_col] = self.matrix[cur_row][cur_col] + 1
 
     
     def show(self):
@@ -199,7 +176,9 @@ if __name__ == '__main__':
 
 ### 2. 해당 문제 해결을 위해 알아야하는 개념의 카테고리 정리
 
-ex) 배열 인덱스 계산, swap, 다이나믹 프로그래밍-Unique Paths Problem...
+* BFS
+
+* 미로 표현
 
 <br/>
 
