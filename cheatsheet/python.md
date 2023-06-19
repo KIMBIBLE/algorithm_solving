@@ -54,7 +54,7 @@
 |Generator||
 
 * defaultdict: https://www.daleseo.com/python-collections-defaultdict/
-  * 알파벳 글자의 수를 세어서 사전에 저장하고자 할 때, 어떤 키(key)에 대한 값(value)이 없는 경우에 대한 처리를 해야하는 경우 활용하기 좋음
+  * 아이템의 갯수를 세어서 사전에 저장하고자 할 때, 어떤 키(key)에 대한 값(value)이 없는 경우에 대한 처리를 해야하는 경우 활용하기 좋음
 
 
 <br/>
